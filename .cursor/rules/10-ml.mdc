@@ -1,0 +1,10 @@
+---
+description: ML training/eval rules
+globs: ["model/**", "train.py", "evaluate.py"]
+alwaysApply: false
+---
+
+# 训练/评估规范
+- 所有指标打印：loss、Exact Match、样例对比（gold vs pred）。
+- 数据生成与 scorer 的单元测试必须覆盖（确保“生成->解码”100%正确）。
+- 评估必须同时给 IID + OOD（长度/符号）。

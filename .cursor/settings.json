@@ -1,0 +1,5 @@
+﻿{
+  "ai.chatModel": "gpt-4.1",
+  "ai.editModel": "gpt-5-codex-high",
+  "ai.composerModel": "gpt-5-codex-high"
+}

@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/jericho/__init__.py
+src/jericho/scorer.py
+src/jericho/symbols.py
+src/jericho.egg-info/PKG-INFO
+src/jericho.egg-info/SOURCES.txt
+src/jericho.egg-info/dependency_links.txt
+src/jericho.egg-info/requires.txt
+src/jericho.egg-info/top_level.txt
+src/jericho/data/__init__.py
+src/jericho/data/make_manifest.py
+src/jericho/data/manifest.py
+tests/test_manifest_generator.py
+tests/test_task1_roundtrip.py
