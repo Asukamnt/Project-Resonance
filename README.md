@@ -159,9 +159,8 @@ python .\train.py --task mod --model oracle_mod --manifest manifests\task3.jsonl
 - 🤝 合作或交流
 
 请通过以下方式联系我：
-- 📧 Email: [你的邮箱]
-- 🐦 Twitter/X: [你的账号]
-- 💬 GitHub Issues: 欢迎提问
+- 📧 Email: 928112278@qq.com
+- 💬 GitHub Issues: 
 
 ---
 
