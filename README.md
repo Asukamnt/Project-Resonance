@@ -160,7 +160,7 @@ python .\train.py --task mod --model oracle_mod --manifest manifests\task3.jsonl
 
 请通过以下方式联系我：
 - 📧 Email: 928112278@qq.com
-- 💬 GitHub Issues: 
+- 💬 GitHub Issues: 欢迎提问
 
 ---
 
@@ -170,10 +170,10 @@ python .\train.py --task mod --model oracle_mod --manifest manifests\task3.jsonl
 
 ```
 @misc{jericho2024,
-  author = {[Your Name]},
+  author = {王柏毅},
   title = {Jericho: End-to-End Reasoning on Raw Audio Waveforms},
-  year = {2024},
-  url = {https://github.com/[your-username]/Project-Resonance}
+  year = {2025},
+  url = {https://github.com/Asukamnt/Project-Resonance}
 }
 ```
 
