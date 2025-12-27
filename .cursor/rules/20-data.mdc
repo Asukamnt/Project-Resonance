@@ -1,9 +1,0 @@
----
-description: Data & scorer rules
-globs: ["data/**", "scorer.py"]
-alwaysApply: false
----
-
-# 数据/打分器规范
-- scorer 必须确定性（同输入同输出），并提供 debug 模式（可打印分段/频率匹配结果）。
-- 数据集 split 要可复现（seed + manifest）。

@@ -1,0 +1,19 @@
+# Task2 (Bracket Validity) 基础训练配置
+# 端到端音频推理：输入括号序列音频 -> 输出 V/X 判定音频
+# 
+# 说明：这是一个可复现的基础配置
+# 更优的参数组合请联系作者获取
+
+# Training
+epochs: 50
+batch_size: 16
+lr: 0.001
+seed: 123
+
+# Task2 specific
+task2_binary_ce_weight: 1.0
+task2_symbol_guidance_weight: 1.0
+task2_thinking_gap_s: 0.3
+
+# Training warmup
+symbol_warmup_epochs: 5

@@ -1,0 +1,900 @@
+{"split": "train", "symbols": ["A", "E", "B", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000000", "seed": 123, "sequence_seed": 6293585094778680550}
+{"split": "train", "symbols": ["E", "C", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000001", "seed": 123, "sequence_seed": 1622445569185411179}
+{"split": "train", "symbols": ["E", "E", "E", "A", "C", "B", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000002", "seed": 123, "sequence_seed": 2550948566751778932}
+{"split": "train", "symbols": ["B", "C", "D", "A", "D", "C", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000003", "seed": 123, "sequence_seed": 7602286889057412703}
+{"split": "train", "symbols": ["D", "B", "C", "D", "B", "B", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000004", "seed": 123, "sequence_seed": 2138975501910086797}
+{"split": "train", "symbols": ["C"], "length": 1, "difficulty_tag": "iid", "example_id": "train-000005", "seed": 123, "sequence_seed": 4591292852297335618}
+{"split": "train", "symbols": ["A", "A", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000006", "seed": 123, "sequence_seed": 1700217838577927748}
+{"split": "train", "symbols": ["E", "A", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000007", "seed": 123, "sequence_seed": 6716859149191551534}
+{"split": "train", "symbols": ["E", "C", "B", "A", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000008", "seed": 123, "sequence_seed": 8458962690003871646}
+{"split": "train", "symbols": ["B", "C", "D", "C", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000009", "seed": 123, "sequence_seed": 6739996975804103555}
+{"split": "train", "symbols": ["C", "C", "A", "B", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000010", "seed": 123, "sequence_seed": 2761827113397162099}
+{"split": "train", "symbols": ["D", "E", "A", "D", "B", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000011", "seed": 123, "sequence_seed": 2194299233732612163}
+{"split": "train", "symbols": ["B"], "length": 1, "difficulty_tag": "iid", "example_id": "train-000012", "seed": 123, "sequence_seed": 300238483492105662}
+{"split": "train", "symbols": ["E", "A", "B", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000013", "seed": 123, "sequence_seed": 4319420734538672791}
+{"split": "train", "symbols": ["B", "C", "C", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000014", "seed": 123, "sequence_seed": 29340554502109217}
+{"split": "train", "symbols": ["A", "D", "A", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000015", "seed": 123, "sequence_seed": 7702459638077645740}
+{"split": "train", "symbols": ["C", "C", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000016", "seed": 123, "sequence_seed": 7480358662802129247}
+{"split": "train", "symbols": ["C", "E", "B", "C", "A", "C", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000017", "seed": 123, "sequence_seed": 5221250249194527899}
+{"split": "train", "symbols": ["E", "C", "C", "E", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000018", "seed": 123, "sequence_seed": 5751311129810916916}
+{"split": "train", "symbols": ["C", "C", "C", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000019", "seed": 123, "sequence_seed": 4787992102888320547}
+{"split": "train", "symbols": ["D", "A", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000020", "seed": 123, "sequence_seed": 4504545771971818781}
+{"split": "train", "symbols": ["C", "A", "E", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000021", "seed": 123, "sequence_seed": 2792856723651628710}
+{"split": "train", "symbols": ["C", "E"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000022", "seed": 123, "sequence_seed": 715512034261429670}
+{"split": "train", "symbols": ["A", "E", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000023", "seed": 123, "sequence_seed": 7755215618585219947}
+{"split": "train", "symbols": ["E", "B", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000024", "seed": 123, "sequence_seed": 8280450931657402817}
+{"split": "train", "symbols": ["E", "D", "D", "B", "C", "A", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000025", "seed": 123, "sequence_seed": 7368031704158887967}
+{"split": "train", "symbols": ["C", "E", "B", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000026", "seed": 123, "sequence_seed": 1397698297098117770}
+{"split": "train", "symbols": ["C", "C", "C", "A", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000027", "seed": 123, "sequence_seed": 279418934781117355}
+{"split": "train", "symbols": ["B", "C", "D", "C", "E", "E", "B", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000028", "seed": 123, "sequence_seed": 1483407611703017170}
+{"split": "train", "symbols": ["E", "D", "B", "B", "D", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000029", "seed": 123, "sequence_seed": 1374768065753487784}
+{"split": "train", "symbols": ["B", "D", "B", "D", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000030", "seed": 123, "sequence_seed": 2119728623288566344}
+{"split": "train", "symbols": ["D", "D"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000031", "seed": 123, "sequence_seed": 5024112790171694547}
+{"split": "train", "symbols": ["A", "C", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000032", "seed": 123, "sequence_seed": 8859544398190853289}
+{"split": "train", "symbols": ["A", "A", "C", "A", "A", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000033", "seed": 123, "sequence_seed": 6348071106654118977}
+{"split": "train", "symbols": ["B", "C", "A", "B", "C", "D", "D", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000034", "seed": 123, "sequence_seed": 4813987157190966841}
+{"split": "train", "symbols": ["B", "E"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000035", "seed": 123, "sequence_seed": 2014552602887855234}
+{"split": "train", "symbols": ["A", "A", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000036", "seed": 123, "sequence_seed": 6685957218684053840}
+{"split": "train", "symbols": ["B", "D", "E", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000037", "seed": 123, "sequence_seed": 78363302597074682}
+{"split": "train", "symbols": ["A"], "length": 1, "difficulty_tag": "iid", "example_id": "train-000038", "seed": 123, "sequence_seed": 7883360925766410278}
+{"split": "train", "symbols": ["E", "D"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000039", "seed": 123, "sequence_seed": 1653207144182915985}
+{"split": "train", "symbols": ["C", "C", "A", "E", "B", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000040", "seed": 123, "sequence_seed": 8258829204883059984}
+{"split": "train", "symbols": ["C", "D", "A", "E", "C", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000041", "seed": 123, "sequence_seed": 2446187057394948525}
+{"split": "train", "symbols": ["E", "D", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000042", "seed": 123, "sequence_seed": 1910248530407755019}
+{"split": "train", "symbols": ["E", "A", "B", "D", "A", "E", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000043", "seed": 123, "sequence_seed": 1244285035969979042}
+{"split": "train", "symbols": ["B", "E", "C", "D", "A", "D", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000044", "seed": 123, "sequence_seed": 7038832451855660445}
+{"split": "train", "symbols": ["D", "E", "C", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000045", "seed": 123, "sequence_seed": 3632442005118661422}
+{"split": "train", "symbols": ["D", "A", "D", "D", "E", "D", "C", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000046", "seed": 123, "sequence_seed": 6378592063969119501}
+{"split": "train", "symbols": ["D", "B"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000047", "seed": 123, "sequence_seed": 4997959390649787270}
+{"split": "train", "symbols": ["D", "D", "B", "D", "B", "E", "E", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000048", "seed": 123, "sequence_seed": 768556080454221708}
+{"split": "train", "symbols": ["E", "E", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000049", "seed": 123, "sequence_seed": 4070385644173586016}
+{"split": "train", "symbols": ["C", "C"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000050", "seed": 123, "sequence_seed": 7927323053470226766}
+{"split": "train", "symbols": ["D", "A"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000051", "seed": 123, "sequence_seed": 605411224646809926}
+{"split": "train", "symbols": ["B", "C", "D", "B", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000052", "seed": 123, "sequence_seed": 1263505612690700334}
+{"split": "train", "symbols": ["C", "B", "B", "A", "A", "A", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000053", "seed": 123, "sequence_seed": 3890359124657412650}
+{"split": "train", "symbols": ["E", "B", "B", "A", "C", "C", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000054", "seed": 123, "sequence_seed": 7861581565235652891}
+{"split": "train", "symbols": ["D", "D", "D", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000055", "seed": 123, "sequence_seed": 3370577132881375476}
+{"split": "train", "symbols": ["B", "D", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000056", "seed": 123, "sequence_seed": 1337574205123650874}
+{"split": "train", "symbols": ["E", "C", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000057", "seed": 123, "sequence_seed": 8451332222246463746}
+{"split": "train", "symbols": ["E", "C", "C", "C", "E", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000058", "seed": 123, "sequence_seed": 6697446825443020235}
+{"split": "train", "symbols": ["E", "A"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000059", "seed": 123, "sequence_seed": 3744191317330788330}
+{"split": "train", "symbols": ["E", "D", "B", "D", "B", "E", "A", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000060", "seed": 123, "sequence_seed": 4705877211125257645}
+{"split": "train", "symbols": ["E", "A", "D", "B", "D", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000061", "seed": 123, "sequence_seed": 5180535909815990726}
+{"split": "train", "symbols": ["D", "A", "C", "A", "B", "C", "C", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000062", "seed": 123, "sequence_seed": 261056623763537160}
+{"split": "train", "symbols": ["B", "E", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000063", "seed": 123, "sequence_seed": 591489406121558116}
+{"split": "train", "symbols": ["D", "C", "C", "E", "E", "D", "C", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000064", "seed": 123, "sequence_seed": 4665838457608729339}
+{"split": "train", "symbols": ["D", "A", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000065", "seed": 123, "sequence_seed": 7433830159506814814}
+{"split": "train", "symbols": ["A", "E", "B", "B", "B", "B", "A", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000066", "seed": 123, "sequence_seed": 6211145158908342713}
+{"split": "train", "symbols": ["A", "C", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000067", "seed": 123, "sequence_seed": 1372030196594819676}
+{"split": "train", "symbols": ["D", "B", "C", "E", "E", "A", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000068", "seed": 123, "sequence_seed": 8199439702695103973}
+{"split": "train", "symbols": ["E"], "length": 1, "difficulty_tag": "iid", "example_id": "train-000069", "seed": 123, "sequence_seed": 6505987587776102797}
+{"split": "train", "symbols": ["A", "D", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000070", "seed": 123, "sequence_seed": 1187267632451531116}
+{"split": "train", "symbols": ["C", "C", "B", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000071", "seed": 123, "sequence_seed": 8301730142983130845}
+{"split": "train", "symbols": ["A", "E", "A", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000072", "seed": 123, "sequence_seed": 1506574394919008957}
+{"split": "train", "symbols": ["C", "E", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000073", "seed": 123, "sequence_seed": 695243338692128251}
+{"split": "train", "symbols": ["D", "E", "C", "D", "A", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000074", "seed": 123, "sequence_seed": 4094968103648837629}
+{"split": "train", "symbols": ["C", "C", "B", "D", "E", "A", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000075", "seed": 123, "sequence_seed": 6572995145907365805}
+{"split": "train", "symbols": ["C", "C", "D", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000076", "seed": 123, "sequence_seed": 2548172827247498352}
+{"split": "train", "symbols": ["B", "B", "C", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000077", "seed": 123, "sequence_seed": 3982041323993169131}
+{"split": "train", "symbols": ["A", "A", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000078", "seed": 123, "sequence_seed": 7185919830983364693}
+{"split": "train", "symbols": ["E", "D", "B", "D", "B", "A", "E", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000079", "seed": 123, "sequence_seed": 1924622693865618650}
+{"split": "train", "symbols": ["C", "C", "A", "C", "A", "A", "E", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000080", "seed": 123, "sequence_seed": 6130117307589000794}
+{"split": "train", "symbols": ["A", "A", "E", "B", "E", "E", "B", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000081", "seed": 123, "sequence_seed": 4706218883007727138}
+{"split": "train", "symbols": ["B", "A", "D", "D", "A", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000082", "seed": 123, "sequence_seed": 1305878670549628176}
+{"split": "train", "symbols": ["C", "E", "E", "A", "D", "D", "E", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000083", "seed": 123, "sequence_seed": 5431879938641883385}
+{"split": "train", "symbols": ["E", "E", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000084", "seed": 123, "sequence_seed": 9035313190266014543}
+{"split": "train", "symbols": ["B", "B"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000085", "seed": 123, "sequence_seed": 3102508450499804027}
+{"split": "train", "symbols": ["C", "C", "B", "A", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000086", "seed": 123, "sequence_seed": 478140946731955575}
+{"split": "train", "symbols": ["B", "B", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000087", "seed": 123, "sequence_seed": 7226396468925674489}
+{"split": "train", "symbols": ["C", "C", "B", "A", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000088", "seed": 123, "sequence_seed": 7697254206426948688}
+{"split": "train", "symbols": ["D", "B", "A", "D", "B", "B", "C", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000089", "seed": 123, "sequence_seed": 2634677474603688078}
+{"split": "train", "symbols": ["E", "B", "B", "B", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000090", "seed": 123, "sequence_seed": 6851328372867616341}
+{"split": "train", "symbols": ["B", "D", "C", "A", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000091", "seed": 123, "sequence_seed": 6726493081052826781}
+{"split": "train", "symbols": ["B", "C", "A", "D", "D", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000092", "seed": 123, "sequence_seed": 5950480432573014916}
+{"split": "train", "symbols": ["A", "B", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000093", "seed": 123, "sequence_seed": 878828650408477376}
+{"split": "train", "symbols": ["E", "B", "D", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000094", "seed": 123, "sequence_seed": 950528961728370639}
+{"split": "train", "symbols": ["B", "D", "C", "E", "C", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000095", "seed": 123, "sequence_seed": 8802997563093299947}
+{"split": "train", "symbols": ["D", "B", "B", "B", "B", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000096", "seed": 123, "sequence_seed": 8006298728902495723}
+{"split": "train", "symbols": ["B", "D", "C", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000097", "seed": 123, "sequence_seed": 5311165626975855634}
+{"split": "train", "symbols": ["D", "E", "E", "A", "D", "C", "E", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000098", "seed": 123, "sequence_seed": 8055714896310826007}
+{"split": "train", "symbols": ["B", "D", "C", "E", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000099", "seed": 123, "sequence_seed": 840025003793048896}
+{"split": "train", "symbols": ["D"], "length": 1, "difficulty_tag": "iid", "example_id": "train-000100", "seed": 123, "sequence_seed": 5737793290926634235}
+{"split": "train", "symbols": ["B", "E", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000101", "seed": 123, "sequence_seed": 3727925300449534885}
+{"split": "train", "symbols": ["A", "C", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000102", "seed": 123, "sequence_seed": 5772105820684200088}
+{"split": "train", "symbols": ["B", "A", "A", "C", "D", "C", "A", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000103", "seed": 123, "sequence_seed": 3400437381582514827}
+{"split": "train", "symbols": ["B", "A", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000104", "seed": 123, "sequence_seed": 3056757883061478026}
+{"split": "train", "symbols": ["C", "A"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000105", "seed": 123, "sequence_seed": 6373439897983821374}
+{"split": "train", "symbols": ["C", "A", "A", "A", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000106", "seed": 123, "sequence_seed": 6550601255799823512}
+{"split": "train", "symbols": ["C", "E", "B", "D", "D", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000107", "seed": 123, "sequence_seed": 8367216859892320415}
+{"split": "train", "symbols": ["E", "A", "E", "C", "B", "A", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000108", "seed": 123, "sequence_seed": 5904080552745791728}
+{"split": "train", "symbols": ["D", "B", "B", "A", "E", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000109", "seed": 123, "sequence_seed": 1817921256010643854}
+{"split": "train", "symbols": ["D", "B", "A", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000110", "seed": 123, "sequence_seed": 9100285555446728910}
+{"split": "train", "symbols": ["A", "B", "C", "C", "A", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000111", "seed": 123, "sequence_seed": 6123508813478571787}
+{"split": "train", "symbols": ["C", "C", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000112", "seed": 123, "sequence_seed": 6869461230939430759}
+{"split": "train", "symbols": ["B", "D", "B", "A", "A", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000113", "seed": 123, "sequence_seed": 8294994851609005610}
+{"split": "train", "symbols": ["C", "E", "E", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000114", "seed": 123, "sequence_seed": 2915810738449424979}
+{"split": "train", "symbols": ["E", "C", "C", "D", "E", "B", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000115", "seed": 123, "sequence_seed": 2173952344989778072}
+{"split": "train", "symbols": ["E", "E", "C", "D", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000116", "seed": 123, "sequence_seed": 2736930843568607662}
+{"split": "train", "symbols": ["A", "C", "E", "E", "E", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000117", "seed": 123, "sequence_seed": 8619679503823377644}
+{"split": "train", "symbols": ["B", "B", "B", "A", "E", "B", "B", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000118", "seed": 123, "sequence_seed": 5349001281317851832}
+{"split": "train", "symbols": ["A", "E", "D", "E", "A", "B", "E", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000119", "seed": 123, "sequence_seed": 526169665620800924}
+{"split": "train", "symbols": ["A", "D", "C", "E", "E", "C", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000120", "seed": 123, "sequence_seed": 3429536517618742257}
+{"split": "train", "symbols": ["A", "B", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000121", "seed": 123, "sequence_seed": 6391541236318796879}
+{"split": "train", "symbols": ["E", "B", "E", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000122", "seed": 123, "sequence_seed": 1422427829759986155}
+{"split": "train", "symbols": ["A", "B", "E", "C", "D", "B", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000123", "seed": 123, "sequence_seed": 8101953457970423460}
+{"split": "train", "symbols": ["E", "C"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000124", "seed": 123, "sequence_seed": 2194245256566730413}
+{"split": "train", "symbols": ["D", "E", "A", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000125", "seed": 123, "sequence_seed": 3099246960120635060}
+{"split": "train", "symbols": ["D", "D", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000126", "seed": 123, "sequence_seed": 2049967076460136414}
+{"split": "train", "symbols": ["D", "C", "D", "A", "B", "C", "B", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000127", "seed": 123, "sequence_seed": 5708186759020088756}
+{"split": "train", "symbols": ["C", "D", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000128", "seed": 123, "sequence_seed": 7280630248734751887}
+{"split": "train", "symbols": ["B", "E", "A", "C", "E", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000129", "seed": 123, "sequence_seed": 8958799046206617869}
+{"split": "train", "symbols": ["C", "E", "A", "D", "C", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000130", "seed": 123, "sequence_seed": 5940315377107252756}
+{"split": "train", "symbols": ["A", "D"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000131", "seed": 123, "sequence_seed": 7456710475352407391}
+{"split": "train", "symbols": ["A", "D", "A", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000132", "seed": 123, "sequence_seed": 1651825647269274091}
+{"split": "train", "symbols": ["E", "B", "E", "A", "E", "D", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000133", "seed": 123, "sequence_seed": 8683952799262759290}
+{"split": "train", "symbols": ["A", "C", "D", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000134", "seed": 123, "sequence_seed": 5586324051704988832}
+{"split": "train", "symbols": ["E", "D", "B", "D", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000135", "seed": 123, "sequence_seed": 7399107548212510577}
+{"split": "train", "symbols": ["C", "B", "E", "B", "D", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000136", "seed": 123, "sequence_seed": 5332839200756303892}
+{"split": "train", "symbols": ["C", "E", "E", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000137", "seed": 123, "sequence_seed": 342908453118429419}
+{"split": "train", "symbols": ["C", "B", "E", "A", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000138", "seed": 123, "sequence_seed": 3549979098891059530}
+{"split": "train", "symbols": ["E", "C", "E", "A", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000139", "seed": 123, "sequence_seed": 5628306236008983891}
+{"split": "train", "symbols": ["A", "E", "D", "B", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000140", "seed": 123, "sequence_seed": 8945579277689526073}
+{"split": "train", "symbols": ["E", "B", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000141", "seed": 123, "sequence_seed": 8859373547172474092}
+{"split": "train", "symbols": ["A", "B", "C", "D", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000142", "seed": 123, "sequence_seed": 428253701776638100}
+{"split": "train", "symbols": ["A", "D", "B", "C", "C", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000143", "seed": 123, "sequence_seed": 1395649686906527463}
+{"split": "train", "symbols": ["D", "C", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000144", "seed": 123, "sequence_seed": 2627890901252274574}
+{"split": "train", "symbols": ["D", "A", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000145", "seed": 123, "sequence_seed": 3742608579840383411}
+{"split": "train", "symbols": ["C", "B"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000146", "seed": 123, "sequence_seed": 9156292303672324169}
+{"split": "train", "symbols": ["D", "A", "B", "C", "C", "B", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000147", "seed": 123, "sequence_seed": 8452039828506547233}
+{"split": "train", "symbols": ["E", "C", "A", "E", "C", "C", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000148", "seed": 123, "sequence_seed": 6780728520468961313}
+{"split": "train", "symbols": ["C", "D"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000149", "seed": 123, "sequence_seed": 6047563094692915060}
+{"split": "train", "symbols": ["B", "E", "D", "B", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000150", "seed": 123, "sequence_seed": 1310110443245271033}
+{"split": "train", "symbols": ["A", "B", "B", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000151", "seed": 123, "sequence_seed": 2108434613299630635}
+{"split": "train", "symbols": ["C", "D", "E", "B", "E", "E", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000152", "seed": 123, "sequence_seed": 2403652779369424939}
+{"split": "train", "symbols": ["C", "C", "A", "A", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000153", "seed": 123, "sequence_seed": 5555077187757648117}
+{"split": "train", "symbols": ["E", "A", "D", "D", "E", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000154", "seed": 123, "sequence_seed": 8721472512442018314}
+{"split": "train", "symbols": ["A", "D", "A", "D", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000155", "seed": 123, "sequence_seed": 8617747922154902691}
+{"split": "train", "symbols": ["B", "B", "D", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000156", "seed": 123, "sequence_seed": 1837444423217308809}
+{"split": "train", "symbols": ["B", "D", "B", "D", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000157", "seed": 123, "sequence_seed": 2976805126180490463}
+{"split": "train", "symbols": ["A", "B", "C", "A", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000158", "seed": 123, "sequence_seed": 4299199896073041028}
+{"split": "train", "symbols": ["C", "B", "E", "C", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000159", "seed": 123, "sequence_seed": 6764135430279692786}
+{"split": "train", "symbols": ["D", "C", "C", "A", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000160", "seed": 123, "sequence_seed": 4391804226769818017}
+{"split": "train", "symbols": ["A", "D", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000161", "seed": 123, "sequence_seed": 2570659845777937166}
+{"split": "train", "symbols": ["B", "A"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000162", "seed": 123, "sequence_seed": 4850169371358126962}
+{"split": "train", "symbols": ["A", "B", "B", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000163", "seed": 123, "sequence_seed": 5835133967595182748}
+{"split": "train", "symbols": ["A", "C", "B", "B", "B", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000164", "seed": 123, "sequence_seed": 9136402142777334065}
+{"split": "train", "symbols": ["E", "B", "A", "A", "C", "D", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000165", "seed": 123, "sequence_seed": 2566253822512136365}
+{"split": "train", "symbols": ["D", "C", "B", "E", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000166", "seed": 123, "sequence_seed": 869568339308241814}
+{"split": "train", "symbols": ["B", "B", "C", "C", "E", "C", "C", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000167", "seed": 123, "sequence_seed": 5187075561221079167}
+{"split": "train", "symbols": ["D", "D", "C", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000168", "seed": 123, "sequence_seed": 6735915804373123222}
+{"split": "train", "symbols": ["C", "B", "B", "E", "E", "A", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000169", "seed": 123, "sequence_seed": 5247054770219712511}
+{"split": "train", "symbols": ["D", "B", "D", "C", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000170", "seed": 123, "sequence_seed": 3297695929388375353}
+{"split": "train", "symbols": ["A", "C"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000171", "seed": 123, "sequence_seed": 218483111721462496}
+{"split": "train", "symbols": ["E", "D", "D", "C", "E", "B", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000172", "seed": 123, "sequence_seed": 1393158799568355857}
+{"split": "train", "symbols": ["C", "C", "A", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000173", "seed": 123, "sequence_seed": 3864805387709194031}
+{"split": "train", "symbols": ["A", "D", "C", "C", "B", "C", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000174", "seed": 123, "sequence_seed": 8448347059411183081}
+{"split": "train", "symbols": ["D", "D", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000175", "seed": 123, "sequence_seed": 4474309407931043656}
+{"split": "train", "symbols": ["E", "C", "B", "C", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000176", "seed": 123, "sequence_seed": 6856986257550077537}
+{"split": "train", "symbols": ["E", "C", "B", "E", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000177", "seed": 123, "sequence_seed": 7167437066832498064}
+{"split": "train", "symbols": ["A", "E", "A", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000178", "seed": 123, "sequence_seed": 964814978739463030}
+{"split": "train", "symbols": ["B", "B", "E", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000179", "seed": 123, "sequence_seed": 9199722381506039308}
+{"split": "train", "symbols": ["D", "B", "B", "A", "D", "C", "E", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000180", "seed": 123, "sequence_seed": 7757404071255487549}
+{"split": "train", "symbols": ["E", "B", "A", "A", "D", "E", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000181", "seed": 123, "sequence_seed": 32450969015213113}
+{"split": "train", "symbols": ["C", "C", "C", "C", "C", "A", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000182", "seed": 123, "sequence_seed": 3821174599844676188}
+{"split": "train", "symbols": ["A", "A", "D", "D", "D", "C", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000183", "seed": 123, "sequence_seed": 373199036156444117}
+{"split": "train", "symbols": ["B", "A", "B", "E", "E", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000184", "seed": 123, "sequence_seed": 741347221191679155}
+{"split": "train", "symbols": ["D", "E", "D", "E", "D", "D", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000185", "seed": 123, "sequence_seed": 6932669321119750494}
+{"split": "train", "symbols": ["C", "C", "D", "D", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000186", "seed": 123, "sequence_seed": 7541527392623890508}
+{"split": "train", "symbols": ["C", "A", "D", "A", "D", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000187", "seed": 123, "sequence_seed": 4470113093853094110}
+{"split": "train", "symbols": ["A", "A", "A", "D", "A", "B", "E", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000188", "seed": 123, "sequence_seed": 2024976393668833667}
+{"split": "train", "symbols": ["C", "E", "C", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000189", "seed": 123, "sequence_seed": 1654987566346405047}
+{"split": "train", "symbols": ["E", "C", "D", "C", "D", "B", "C", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000190", "seed": 123, "sequence_seed": 6227475006841549027}
+{"split": "train", "symbols": ["D", "E", "A", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000191", "seed": 123, "sequence_seed": 1073192841671247698}
+{"split": "train", "symbols": ["A", "C", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000192", "seed": 123, "sequence_seed": 1995916899054253636}
+{"split": "train", "symbols": ["A", "D", "B", "D", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000193", "seed": 123, "sequence_seed": 4638147252272289652}
+{"split": "train", "symbols": ["C", "B", "D", "D", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000194", "seed": 123, "sequence_seed": 4793290719482852983}
+{"split": "train", "symbols": ["D", "B", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000195", "seed": 123, "sequence_seed": 8208536217433666390}
+{"split": "train", "symbols": ["D", "C", "D", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000196", "seed": 123, "sequence_seed": 90026015015626954}
+{"split": "train", "symbols": ["B", "C", "B", "B", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000197", "seed": 123, "sequence_seed": 5917339211462289236}
+{"split": "train", "symbols": ["A", "D", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000198", "seed": 123, "sequence_seed": 7954203321352235820}
+{"split": "train", "symbols": ["E", "B"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000199", "seed": 123, "sequence_seed": 7821026513198524868}
+{"split": "train", "symbols": ["B", "C"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000200", "seed": 123, "sequence_seed": 3551378317055649844}
+{"split": "train", "symbols": ["D", "C"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000201", "seed": 123, "sequence_seed": 4119407305175236194}
+{"split": "train", "symbols": ["B", "B", "B", "E", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000202", "seed": 123, "sequence_seed": 4176680857129962188}
+{"split": "train", "symbols": ["A", "A", "A", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000203", "seed": 123, "sequence_seed": 8402306293852430254}
+{"split": "train", "symbols": ["A", "D", "D", "A", "A", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000204", "seed": 123, "sequence_seed": 5454432211197100941}
+{"split": "train", "symbols": ["B", "C", "A", "B", "D", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000205", "seed": 123, "sequence_seed": 8689998990423101288}
+{"split": "train", "symbols": ["C", "A", "D", "D", "D", "D", "C", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000206", "seed": 123, "sequence_seed": 8811734009008721279}
+{"split": "train", "symbols": ["E", "D", "B", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000207", "seed": 123, "sequence_seed": 4252109790884530974}
+{"split": "train", "symbols": ["E", "D", "D", "C", "E", "A", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000208", "seed": 123, "sequence_seed": 1683637565042860414}
+{"split": "train", "symbols": ["B", "E", "B", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000209", "seed": 123, "sequence_seed": 5573707663165074258}
+{"split": "train", "symbols": ["B", "B", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000210", "seed": 123, "sequence_seed": 8933410910655742242}
+{"split": "train", "symbols": ["E", "C", "C", "D", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000211", "seed": 123, "sequence_seed": 9160944654258142966}
+{"split": "train", "symbols": ["B", "D", "B", "D", "E", "D", "D", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000212", "seed": 123, "sequence_seed": 5804200329432970298}
+{"split": "train", "symbols": ["B", "D", "A", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000213", "seed": 123, "sequence_seed": 5985166701895268145}
+{"split": "train", "symbols": ["E", "E", "C", "E", "E", "C", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000214", "seed": 123, "sequence_seed": 8875660298474035903}
+{"split": "train", "symbols": ["E", "D", "A", "A", "E", "D", "B", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000215", "seed": 123, "sequence_seed": 3316505385681290143}
+{"split": "train", "symbols": ["B", "C", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000216", "seed": 123, "sequence_seed": 1681568572367979125}
+{"split": "train", "symbols": ["D", "A", "C", "A", "B", "C", "A", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000217", "seed": 123, "sequence_seed": 5112276360846623671}
+{"split": "train", "symbols": ["C", "D", "E", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000218", "seed": 123, "sequence_seed": 35183955723688817}
+{"split": "train", "symbols": ["E", "D", "E", "D", "A", "C", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000219", "seed": 123, "sequence_seed": 3085210776821227970}
+{"split": "train", "symbols": ["A", "D", "B", "D", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000220", "seed": 123, "sequence_seed": 1645539392414171182}
+{"split": "train", "symbols": ["E", "D", "E", "A", "E", "B", "D", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000221", "seed": 123, "sequence_seed": 5417667672965297963}
+{"split": "train", "symbols": ["E", "C", "A", "C", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000222", "seed": 123, "sequence_seed": 745125539597906450}
+{"split": "train", "symbols": ["B", "B", "C", "D", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000223", "seed": 123, "sequence_seed": 4956067354265507772}
+{"split": "train", "symbols": ["A", "C", "D", "A", "E", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000224", "seed": 123, "sequence_seed": 5549510314505976319}
+{"split": "train", "symbols": ["B", "D"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000225", "seed": 123, "sequence_seed": 8661178747603354736}
+{"split": "train", "symbols": ["A", "A", "A", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000226", "seed": 123, "sequence_seed": 530944403480468608}
+{"split": "train", "symbols": ["C", "D", "D", "C", "C", "C", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000227", "seed": 123, "sequence_seed": 8760508818576585937}
+{"split": "train", "symbols": ["C", "B", "E", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000228", "seed": 123, "sequence_seed": 3686447192358013208}
+{"split": "train", "symbols": ["B", "E", "D", "E", "B", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000229", "seed": 123, "sequence_seed": 8911126171649331589}
+{"split": "train", "symbols": ["B", "E", "B", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000230", "seed": 123, "sequence_seed": 6571880966601353045}
+{"split": "train", "symbols": ["E", "D", "E", "D", "C", "A", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000231", "seed": 123, "sequence_seed": 9002333343713343330}
+{"split": "train", "symbols": ["B", "E", "B", "C", "D", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000232", "seed": 123, "sequence_seed": 3611673367006355741}
+{"split": "train", "symbols": ["B", "D", "B", "B", "A", "E", "B", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000233", "seed": 123, "sequence_seed": 5257029931955654090}
+{"split": "train", "symbols": ["E", "B", "B", "C", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000234", "seed": 123, "sequence_seed": 6108182866398287874}
+{"split": "train", "symbols": ["E", "D", "E", "B", "A", "B", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000235", "seed": 123, "sequence_seed": 5138740022038604681}
+{"split": "train", "symbols": ["A", "D", "B", "C", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000236", "seed": 123, "sequence_seed": 2538799172440599905}
+{"split": "train", "symbols": ["E", "E", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000237", "seed": 123, "sequence_seed": 4471999934288792451}
+{"split": "train", "symbols": ["A", "A", "C", "C", "B", "B", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000238", "seed": 123, "sequence_seed": 6938220259620790277}
+{"split": "train", "symbols": ["A", "E", "D", "E", "B", "D", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000239", "seed": 123, "sequence_seed": 8437321442597344775}
+{"split": "train", "symbols": ["C", "D", "C", "A", "C", "E", "A", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000240", "seed": 123, "sequence_seed": 4860148361751387396}
+{"split": "train", "symbols": ["C", "B", "E", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000241", "seed": 123, "sequence_seed": 4304369204631486850}
+{"split": "train", "symbols": ["A", "B"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000242", "seed": 123, "sequence_seed": 3991676730718023520}
+{"split": "train", "symbols": ["C", "C", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000243", "seed": 123, "sequence_seed": 8940550499796459606}
+{"split": "train", "symbols": ["D", "D", "C", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000244", "seed": 123, "sequence_seed": 3366281053026657866}
+{"split": "train", "symbols": ["A", "A", "C", "B", "E", "D", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000245", "seed": 123, "sequence_seed": 1849569753490606168}
+{"split": "train", "symbols": ["C", "E", "B", "D", "C", "C", "E", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000246", "seed": 123, "sequence_seed": 1886594834081409210}
+{"split": "train", "symbols": ["C", "B", "A", "B", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000247", "seed": 123, "sequence_seed": 5067945388589867366}
+{"split": "train", "symbols": ["C", "C", "E", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000248", "seed": 123, "sequence_seed": 7160104714113259782}
+{"split": "train", "symbols": ["A", "B", "E", "A", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000249", "seed": 123, "sequence_seed": 6467618921244725044}
+{"split": "train", "symbols": ["B", "C", "D", "A", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000250", "seed": 123, "sequence_seed": 6758838187116997108}
+{"split": "train", "symbols": ["B", "C", "A", "E", "C", "B", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000251", "seed": 123, "sequence_seed": 1623584482972767208}
+{"split": "train", "symbols": ["E", "C", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000252", "seed": 123, "sequence_seed": 50563863491978507}
+{"split": "train", "symbols": ["E", "D", "A", "A", "A", "A", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000253", "seed": 123, "sequence_seed": 2358188030859218311}
+{"split": "train", "symbols": ["A", "E", "A", "D", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000254", "seed": 123, "sequence_seed": 1019941448706138319}
+{"split": "train", "symbols": ["C", "A", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000255", "seed": 123, "sequence_seed": 4043773113969470891}
+{"split": "train", "symbols": ["C", "D", "C", "D", "B", "D", "B", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000256", "seed": 123, "sequence_seed": 8914575932225014612}
+{"split": "train", "symbols": ["A", "A", "A", "A", "B", "B", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000257", "seed": 123, "sequence_seed": 5583589700418505271}
+{"split": "train", "symbols": ["D", "D", "A", "A", "C", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000258", "seed": 123, "sequence_seed": 7481026004307473903}
+{"split": "train", "symbols": ["B", "A", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000259", "seed": 123, "sequence_seed": 1044354363235970052}
+{"split": "train", "symbols": ["D", "B", "B", "A", "A", "A", "E", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000260", "seed": 123, "sequence_seed": 7640030079104420772}
+{"split": "train", "symbols": ["A", "E", "B", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000261", "seed": 123, "sequence_seed": 759705866744752269}
+{"split": "train", "symbols": ["A", "B", "D", "B", "E", "A", "A", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000262", "seed": 123, "sequence_seed": 343772141918945300}
+{"split": "train", "symbols": ["D", "E", "A", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000263", "seed": 123, "sequence_seed": 1098043413526889713}
+{"split": "train", "symbols": ["A", "C", "E", "C", "B", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000264", "seed": 123, "sequence_seed": 4052151859546624646}
+{"split": "train", "symbols": ["D", "A", "C", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000265", "seed": 123, "sequence_seed": 2597328604565490647}
+{"split": "train", "symbols": ["E", "A", "E", "B", "A", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000266", "seed": 123, "sequence_seed": 3324718137511158695}
+{"split": "train", "symbols": ["D", "B", "C", "B", "E", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000267", "seed": 123, "sequence_seed": 2214147844998587945}
+{"split": "train", "symbols": ["E", "E", "D", "D", "E", "B", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000268", "seed": 123, "sequence_seed": 8495474089495132419}
+{"split": "train", "symbols": ["B", "D", "A", "E", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000269", "seed": 123, "sequence_seed": 82565705022565174}
+{"split": "train", "symbols": ["B", "B", "B", "A", "D", "D", "E", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000270", "seed": 123, "sequence_seed": 1688413122480756628}
+{"split": "train", "symbols": ["B", "B", "A", "B", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000271", "seed": 123, "sequence_seed": 1163468791189637881}
+{"split": "train", "symbols": ["A", "D", "E", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000272", "seed": 123, "sequence_seed": 2824550987303848780}
+{"split": "train", "symbols": ["A", "B", "B", "D", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000273", "seed": 123, "sequence_seed": 5260148415341565126}
+{"split": "train", "symbols": ["D", "B", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000274", "seed": 123, "sequence_seed": 5462275839909098891}
+{"split": "train", "symbols": ["C", "E", "B", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000275", "seed": 123, "sequence_seed": 2203708858702828666}
+{"split": "train", "symbols": ["D", "E", "E", "C", "C", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000276", "seed": 123, "sequence_seed": 5521117870154368984}
+{"split": "train", "symbols": ["D", "E", "D", "C", "C", "B", "A", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000277", "seed": 123, "sequence_seed": 7406825913108472174}
+{"split": "train", "symbols": ["A", "D", "C", "C", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000278", "seed": 123, "sequence_seed": 6239293875317726884}
+{"split": "train", "symbols": ["E", "C", "B", "A", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000279", "seed": 123, "sequence_seed": 1798283334768823675}
+{"split": "train", "symbols": ["C", "B", "C", "D", "E", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000280", "seed": 123, "sequence_seed": 2523936845748714857}
+{"split": "train", "symbols": ["A", "D", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000281", "seed": 123, "sequence_seed": 7574585316411459602}
+{"split": "train", "symbols": ["D", "D", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000282", "seed": 123, "sequence_seed": 6063519727209768107}
+{"split": "train", "symbols": ["C", "E", "B", "E", "C", "D", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000283", "seed": 123, "sequence_seed": 570066789903921779}
+{"split": "train", "symbols": ["C", "C", "A", "D", "B", "E", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000284", "seed": 123, "sequence_seed": 8178055162515718069}
+{"split": "train", "symbols": ["D", "E", "B", "B", "B", "D", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000285", "seed": 123, "sequence_seed": 9120514160365138270}
+{"split": "train", "symbols": ["C", "E", "E", "B", "C", "A", "C", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000286", "seed": 123, "sequence_seed": 7227444851549669210}
+{"split": "train", "symbols": ["E", "D", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000287", "seed": 123, "sequence_seed": 5500219877777176905}
+{"split": "train", "symbols": ["D", "A", "A", "C", "C", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000288", "seed": 123, "sequence_seed": 4755936205713543553}
+{"split": "train", "symbols": ["E", "C", "D", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000289", "seed": 123, "sequence_seed": 1116474883997701429}
+{"split": "train", "symbols": ["E", "B", "B", "A", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000290", "seed": 123, "sequence_seed": 2906419910860854616}
+{"split": "train", "symbols": ["B", "D", "C", "E", "B", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000291", "seed": 123, "sequence_seed": 6034095529698236560}
+{"split": "train", "symbols": ["E", "C", "C", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000292", "seed": 123, "sequence_seed": 6008293468223204075}
+{"split": "train", "symbols": ["A", "B", "A", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000293", "seed": 123, "sequence_seed": 1462507798092061645}
+{"split": "train", "symbols": ["D", "C", "C", "E", "A", "C", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000294", "seed": 123, "sequence_seed": 2365169342454650036}
+{"split": "train", "symbols": ["C", "E", "C", "B", "B", "C", "C", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000295", "seed": 123, "sequence_seed": 5657514244569422838}
+{"split": "train", "symbols": ["A", "D", "D", "A", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000296", "seed": 123, "sequence_seed": 6259430975030361021}
+{"split": "train", "symbols": ["D", "E", "D", "B", "B", "B", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000297", "seed": 123, "sequence_seed": 8826026091034730703}
+{"split": "train", "symbols": ["A", "B", "B", "C", "A", "B", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000298", "seed": 123, "sequence_seed": 2673144891496462250}
+{"split": "train", "symbols": ["A", "C", "C", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000299", "seed": 123, "sequence_seed": 8829889263386186953}
+{"split": "train", "symbols": ["A", "D", "E", "B", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000300", "seed": 123, "sequence_seed": 1373563336047513231}
+{"split": "train", "symbols": ["C", "C", "A", "A", "A", "C", "C", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000301", "seed": 123, "sequence_seed": 7791425344178012927}
+{"split": "train", "symbols": ["E", "D", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000302", "seed": 123, "sequence_seed": 7088684073167701689}
+{"split": "train", "symbols": ["A", "A", "B", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000303", "seed": 123, "sequence_seed": 3389376403675760226}
+{"split": "train", "symbols": ["C", "A", "B", "D", "C", "A", "A", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000304", "seed": 123, "sequence_seed": 2465917127424726658}
+{"split": "train", "symbols": ["D", "C", "C", "B", "B", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000305", "seed": 123, "sequence_seed": 5780229608064006312}
+{"split": "train", "symbols": ["B", "E", "E", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000306", "seed": 123, "sequence_seed": 6225564938488155173}
+{"split": "train", "symbols": ["A", "C", "C", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000307", "seed": 123, "sequence_seed": 8066915270780123981}
+{"split": "train", "symbols": ["D", "D", "C", "C", "C", "B", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000308", "seed": 123, "sequence_seed": 6823840915570994454}
+{"split": "train", "symbols": ["B", "D", "D", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000309", "seed": 123, "sequence_seed": 2447448013556108414}
+{"split": "train", "symbols": ["D", "E", "B", "A", "D", "D", "A", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000310", "seed": 123, "sequence_seed": 2181373419212879626}
+{"split": "train", "symbols": ["C", "C", "B", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000311", "seed": 123, "sequence_seed": 5734665254694830363}
+{"split": "train", "symbols": ["B", "E", "D", "A", "A", "B", "A", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000312", "seed": 123, "sequence_seed": 9153406502029289972}
+{"split": "train", "symbols": ["E", "B", "B", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000313", "seed": 123, "sequence_seed": 3419296312932871158}
+{"split": "train", "symbols": ["E", "B", "B", "D", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000314", "seed": 123, "sequence_seed": 8704797204656626291}
+{"split": "train", "symbols": ["B", "A", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000315", "seed": 123, "sequence_seed": 6278013226082353091}
+{"split": "train", "symbols": ["C", "A", "A", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000316", "seed": 123, "sequence_seed": 7585184486670024732}
+{"split": "train", "symbols": ["C", "E", "A", "D", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000317", "seed": 123, "sequence_seed": 3091124307118990707}
+{"split": "train", "symbols": ["A", "C", "D", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000318", "seed": 123, "sequence_seed": 3871690953434501669}
+{"split": "train", "symbols": ["E", "A", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000319", "seed": 123, "sequence_seed": 7012597446529783526}
+{"split": "train", "symbols": ["B", "B", "C", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000320", "seed": 123, "sequence_seed": 5899344873985957101}
+{"split": "train", "symbols": ["A", "B", "E", "C", "D", "C", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000321", "seed": 123, "sequence_seed": 8568962155811282005}
+{"split": "train", "symbols": ["E", "C", "D", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000322", "seed": 123, "sequence_seed": 6217616027574211077}
+{"split": "train", "symbols": ["D", "D", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000323", "seed": 123, "sequence_seed": 3610697242278485803}
+{"split": "train", "symbols": ["A", "A", "C", "D", "A", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000324", "seed": 123, "sequence_seed": 3524200072774832363}
+{"split": "train", "symbols": ["E", "D", "E", "D", "D", "D", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000325", "seed": 123, "sequence_seed": 5336731610575605768}
+{"split": "train", "symbols": ["E", "C", "E", "C", "D", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000326", "seed": 123, "sequence_seed": 4654386480851318192}
+{"split": "train", "symbols": ["D", "B", "A", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000327", "seed": 123, "sequence_seed": 3391469513389188820}
+{"split": "train", "symbols": ["B", "E", "D", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000328", "seed": 123, "sequence_seed": 5026700869904114645}
+{"split": "train", "symbols": ["E", "B", "E", "E", "B", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000329", "seed": 123, "sequence_seed": 4559046139861720234}
+{"split": "train", "symbols": ["B", "B", "A", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000330", "seed": 123, "sequence_seed": 3267153174264388116}
+{"split": "train", "symbols": ["E", "B", "D", "D", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000331", "seed": 123, "sequence_seed": 1449629570521906451}
+{"split": "train", "symbols": ["D", "E"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000332", "seed": 123, "sequence_seed": 451206305521601582}
+{"split": "train", "symbols": ["A", "D", "C", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000333", "seed": 123, "sequence_seed": 1531339701306245286}
+{"split": "train", "symbols": ["A", "A", "C", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000334", "seed": 123, "sequence_seed": 2483130410681681510}
+{"split": "train", "symbols": ["A", "C", "B", "C", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000335", "seed": 123, "sequence_seed": 5883367269279316757}
+{"split": "train", "symbols": ["C", "B", "A", "D", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000336", "seed": 123, "sequence_seed": 8358519604031390285}
+{"split": "train", "symbols": ["E", "C", "E", "A", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000337", "seed": 123, "sequence_seed": 2358507380932667243}
+{"split": "train", "symbols": ["C", "D", "D", "E", "A", "A", "C", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000338", "seed": 123, "sequence_seed": 209373847945796978}
+{"split": "train", "symbols": ["A", "A", "D", "B", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000339", "seed": 123, "sequence_seed": 3943639500532896249}
+{"split": "train", "symbols": ["B", "D", "D", "C", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000340", "seed": 123, "sequence_seed": 1936728203013162547}
+{"split": "train", "symbols": ["E", "A", "D", "E", "E", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000341", "seed": 123, "sequence_seed": 4758574445991396790}
+{"split": "train", "symbols": ["D", "A", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000342", "seed": 123, "sequence_seed": 3336616275148088425}
+{"split": "train", "symbols": ["A", "A"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000343", "seed": 123, "sequence_seed": 2614739330380976647}
+{"split": "train", "symbols": ["B", "B", "D", "D", "D", "A", "B", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000344", "seed": 123, "sequence_seed": 7742120819050124495}
+{"split": "train", "symbols": ["B", "B", "B", "A", "B", "A", "E", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000345", "seed": 123, "sequence_seed": 2723744177251845079}
+{"split": "train", "symbols": ["D", "C", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000346", "seed": 123, "sequence_seed": 3965142502887909732}
+{"split": "train", "symbols": ["C", "E", "D", "C", "A", "D", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000347", "seed": 123, "sequence_seed": 8916488364509923243}
+{"split": "train", "symbols": ["A", "E", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000348", "seed": 123, "sequence_seed": 1072477771321691737}
+{"split": "train", "symbols": ["E", "B", "A", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000349", "seed": 123, "sequence_seed": 3159279956134448123}
+{"split": "train", "symbols": ["C", "C", "B", "E", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000350", "seed": 123, "sequence_seed": 6262262425991268967}
+{"split": "train", "symbols": ["C", "D", "D", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000351", "seed": 123, "sequence_seed": 7169218803902306421}
+{"split": "train", "symbols": ["A", "E", "A", "C", "E", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000352", "seed": 123, "sequence_seed": 3777167324468129726}
+{"split": "train", "symbols": ["A", "C", "D", "B", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000353", "seed": 123, "sequence_seed": 8038174595786713168}
+{"split": "train", "symbols": ["A", "B", "E", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000354", "seed": 123, "sequence_seed": 83753117335910330}
+{"split": "train", "symbols": ["E", "E", "A", "B", "A", "B", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000355", "seed": 123, "sequence_seed": 1153492387422221293}
+{"split": "train", "symbols": ["D", "A", "C", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000356", "seed": 123, "sequence_seed": 7902017627458237555}
+{"split": "train", "symbols": ["A", "C", "E", "D", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000357", "seed": 123, "sequence_seed": 411177052761519700}
+{"split": "train", "symbols": ["D", "B", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000358", "seed": 123, "sequence_seed": 6973097432194050792}
+{"split": "train", "symbols": ["A", "A", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000359", "seed": 123, "sequence_seed": 5557876459720153927}
+{"split": "train", "symbols": ["B", "D", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000360", "seed": 123, "sequence_seed": 6791705919860045537}
+{"split": "train", "symbols": ["E", "B", "A", "D", "C", "C", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000361", "seed": 123, "sequence_seed": 277079733862264955}
+{"split": "train", "symbols": ["B", "A", "C", "B", "D", "D", "A", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000362", "seed": 123, "sequence_seed": 1995402508381539661}
+{"split": "train", "symbols": ["E", "C", "B", "E", "B", "E", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000363", "seed": 123, "sequence_seed": 8874920199620176343}
+{"split": "train", "symbols": ["D", "E", "D", "C", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000364", "seed": 123, "sequence_seed": 4786552429784824697}
+{"split": "train", "symbols": ["A", "B", "C", "E", "D", "C", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000365", "seed": 123, "sequence_seed": 7797361164328399718}
+{"split": "train", "symbols": ["E", "C", "A", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000366", "seed": 123, "sequence_seed": 8269248827755375975}
+{"split": "train", "symbols": ["D", "B", "A", "E", "A", "E", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000367", "seed": 123, "sequence_seed": 6118408522308165491}
+{"split": "train", "symbols": ["A", "E", "E", "D", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000368", "seed": 123, "sequence_seed": 1071599590092034615}
+{"split": "train", "symbols": ["E", "C", "D", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000369", "seed": 123, "sequence_seed": 8854963860030711322}
+{"split": "train", "symbols": ["A", "D", "C", "A", "E", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000370", "seed": 123, "sequence_seed": 3887835996771902007}
+{"split": "train", "symbols": ["B", "E", "A", "D", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000371", "seed": 123, "sequence_seed": 4073745355511218178}
+{"split": "train", "symbols": ["C", "D", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000372", "seed": 123, "sequence_seed": 2703395609407553681}
+{"split": "train", "symbols": ["C", "B", "B", "E", "B", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000373", "seed": 123, "sequence_seed": 8393773482249928679}
+{"split": "train", "symbols": ["C", "D", "D", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000374", "seed": 123, "sequence_seed": 1673598798457043425}
+{"split": "train", "symbols": ["C", "C", "B", "B", "D", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000375", "seed": 123, "sequence_seed": 3109992440059338245}
+{"split": "train", "symbols": ["E", "C", "A", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000376", "seed": 123, "sequence_seed": 2704759938076290775}
+{"split": "train", "symbols": ["E", "B", "E", "D", "D", "D", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000377", "seed": 123, "sequence_seed": 4345825511073566362}
+{"split": "train", "symbols": ["A", "C", "B", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000378", "seed": 123, "sequence_seed": 7147558452530231682}
+{"split": "train", "symbols": ["C", "D", "A", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000379", "seed": 123, "sequence_seed": 7966770337699083222}
+{"split": "train", "symbols": ["B", "A", "E", "A", "E", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000380", "seed": 123, "sequence_seed": 4974073268575838937}
+{"split": "train", "symbols": ["E", "A", "D", "B", "D", "E", "E", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000381", "seed": 123, "sequence_seed": 3534576291453522578}
+{"split": "train", "symbols": ["D", "B", "B", "E", "C", "B", "A", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000382", "seed": 123, "sequence_seed": 124568455701926587}
+{"split": "train", "symbols": ["E", "D", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000383", "seed": 123, "sequence_seed": 7164927297049024719}
+{"split": "train", "symbols": ["A", "B", "E", "B", "E", "C", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000384", "seed": 123, "sequence_seed": 1361484014234010692}
+{"split": "train", "symbols": ["D", "B", "C", "E", "C", "C", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000385", "seed": 123, "sequence_seed": 4245767147153416003}
+{"split": "train", "symbols": ["A", "B", "D", "E", "A", "B", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000386", "seed": 123, "sequence_seed": 1863611858363535997}
+{"split": "train", "symbols": ["D", "D", "E", "E", "A", "A", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000387", "seed": 123, "sequence_seed": 2562721619890259015}
+{"split": "train", "symbols": ["C", "E", "A", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000388", "seed": 123, "sequence_seed": 5335100330123858499}
+{"split": "train", "symbols": ["B", "B", "B", "A", "B", "D", "B", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000389", "seed": 123, "sequence_seed": 4369168171072804813}
+{"split": "train", "symbols": ["E", "C", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000390", "seed": 123, "sequence_seed": 5367232441962326205}
+{"split": "train", "symbols": ["D", "B", "E", "B", "E", "D", "A", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000391", "seed": 123, "sequence_seed": 25557060083310890}
+{"split": "train", "symbols": ["C", "E", "D", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000392", "seed": 123, "sequence_seed": 7658694341525753880}
+{"split": "train", "symbols": ["D", "A", "B", "D", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000393", "seed": 123, "sequence_seed": 9011598927842200829}
+{"split": "train", "symbols": ["A", "B", "A", "A", "D", "C", "E", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000394", "seed": 123, "sequence_seed": 5708828197593345733}
+{"split": "train", "symbols": ["E", "C", "B", "E", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000395", "seed": 123, "sequence_seed": 1701589305681382296}
+{"split": "train", "symbols": ["C", "D", "B", "B", "A", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000396", "seed": 123, "sequence_seed": 7644702870690007247}
+{"split": "train", "symbols": ["E", "B", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000397", "seed": 123, "sequence_seed": 18775930115548660}
+{"split": "train", "symbols": ["E", "B", "E", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000398", "seed": 123, "sequence_seed": 7698660580291508832}
+{"split": "train", "symbols": ["E", "C", "E", "A", "A", "D", "D", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000399", "seed": 123, "sequence_seed": 2860881884093861617}
+{"split": "train", "symbols": ["D", "C", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000400", "seed": 123, "sequence_seed": 4226160086021724861}
+{"split": "train", "symbols": ["D", "D", "C", "A", "C", "B", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000401", "seed": 123, "sequence_seed": 53866870611056743}
+{"split": "train", "symbols": ["A", "B", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000402", "seed": 123, "sequence_seed": 3339068956524818148}
+{"split": "train", "symbols": ["B", "B", "D", "D", "B", "D", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000403", "seed": 123, "sequence_seed": 8782816223171054316}
+{"split": "train", "symbols": ["D", "D", "E", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000404", "seed": 123, "sequence_seed": 8658592442101511818}
+{"split": "train", "symbols": ["E", "B", "E", "E", "C", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000405", "seed": 123, "sequence_seed": 2045959190720291130}
+{"split": "train", "symbols": ["D", "C", "E", "C", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000406", "seed": 123, "sequence_seed": 4410182677190216203}
+{"split": "train", "symbols": ["A", "B", "D", "E", "E", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000407", "seed": 123, "sequence_seed": 3381334514374509095}
+{"split": "train", "symbols": ["B", "D", "A", "A", "B", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000408", "seed": 123, "sequence_seed": 7129902753430357440}
+{"split": "train", "symbols": ["A", "A", "E", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000409", "seed": 123, "sequence_seed": 1463936109101027969}
+{"split": "train", "symbols": ["C", "A", "E", "B", "B", "A", "A", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000410", "seed": 123, "sequence_seed": 6594556306797926925}
+{"split": "train", "symbols": ["E", "C", "E", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000411", "seed": 123, "sequence_seed": 5744028263253707306}
+{"split": "train", "symbols": ["B", "D", "C", "B", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000412", "seed": 123, "sequence_seed": 4178522012210123212}
+{"split": "train", "symbols": ["C", "E", "B", "E", "D", "D", "B", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000413", "seed": 123, "sequence_seed": 1491443327487781617}
+{"split": "train", "symbols": ["E", "B", "C", "B", "D", "B", "E", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000414", "seed": 123, "sequence_seed": 221093028210319111}
+{"split": "train", "symbols": ["B", "C", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000415", "seed": 123, "sequence_seed": 1040380225394361631}
+{"split": "train", "symbols": ["B", "C", "A", "A", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000416", "seed": 123, "sequence_seed": 2482792187490098012}
+{"split": "train", "symbols": ["B", "A", "A", "B", "B", "B", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000417", "seed": 123, "sequence_seed": 8737275478601177322}
+{"split": "train", "symbols": ["B", "E", "D", "C", "A", "C", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000418", "seed": 123, "sequence_seed": 6973407667294962147}
+{"split": "train", "symbols": ["B", "B", "E", "E", "C", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000419", "seed": 123, "sequence_seed": 1720519030605343513}
+{"split": "train", "symbols": ["A", "C", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000420", "seed": 123, "sequence_seed": 976895890406041217}
+{"split": "train", "symbols": ["E", "C", "B", "C", "C", "D", "D", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000421", "seed": 123, "sequence_seed": 8717715443115903591}
+{"split": "train", "symbols": ["D", "C", "E", "C", "D", "E", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000422", "seed": 123, "sequence_seed": 1986912119451518452}
+{"split": "train", "symbols": ["C", "D", "B", "B", "C", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000423", "seed": 123, "sequence_seed": 2972085895886372308}
+{"split": "train", "symbols": ["A", "A", "A", "A", "C", "C", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000424", "seed": 123, "sequence_seed": 3769073858151903155}
+{"split": "train", "symbols": ["E", "A", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000425", "seed": 123, "sequence_seed": 8677310497720453486}
+{"split": "train", "symbols": ["E", "C", "B", "D", "A", "D", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000426", "seed": 123, "sequence_seed": 7766414419466787937}
+{"split": "train", "symbols": ["B", "E", "C", "B", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000427", "seed": 123, "sequence_seed": 556807807351224095}
+{"split": "train", "symbols": ["B", "E", "A", "E", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000428", "seed": 123, "sequence_seed": 1983411320742237484}
+{"split": "train", "symbols": ["A", "D", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000429", "seed": 123, "sequence_seed": 230495587793512818}
+{"split": "train", "symbols": ["A", "D", "D", "B", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000430", "seed": 123, "sequence_seed": 6137635220595086644}
+{"split": "train", "symbols": ["A", "B", "C", "E", "D", "D", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000431", "seed": 123, "sequence_seed": 2989015222471317865}
+{"split": "train", "symbols": ["C", "B", "A", "C", "C", "C", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000432", "seed": 123, "sequence_seed": 5897366436008084432}
+{"split": "train", "symbols": ["E", "A", "B", "E", "A", "C", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000433", "seed": 123, "sequence_seed": 3548920713882490328}
+{"split": "train", "symbols": ["C", "D", "D", "D", "B", "C", "C", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000434", "seed": 123, "sequence_seed": 7076034470778023359}
+{"split": "train", "symbols": ["D", "A", "E", "D", "C", "D", "D", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000435", "seed": 123, "sequence_seed": 2091071550918215226}
+{"split": "train", "symbols": ["C", "D", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000436", "seed": 123, "sequence_seed": 2560340178814818456}
+{"split": "train", "symbols": ["D", "A", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000437", "seed": 123, "sequence_seed": 3832492582888621534}
+{"split": "train", "symbols": ["A", "D", "A", "D", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000438", "seed": 123, "sequence_seed": 4330277561661423389}
+{"split": "train", "symbols": ["D", "A", "C", "B", "A", "D", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000439", "seed": 123, "sequence_seed": 2632862016877438405}
+{"split": "train", "symbols": ["C", "A", "D", "B", "C", "E", "D", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000440", "seed": 123, "sequence_seed": 7988047952357567544}
+{"split": "train", "symbols": ["B", "A", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000441", "seed": 123, "sequence_seed": 6750248621012440891}
+{"split": "train", "symbols": ["A", "B", "E", "C", "D", "E", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000442", "seed": 123, "sequence_seed": 684711207188111180}
+{"split": "train", "symbols": ["C", "E", "B", "D", "B", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000443", "seed": 123, "sequence_seed": 411036533359010646}
+{"split": "train", "symbols": ["A", "C", "B", "E", "E", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000444", "seed": 123, "sequence_seed": 5351088474168778656}
+{"split": "train", "symbols": ["E", "E", "E", "D", "E", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000445", "seed": 123, "sequence_seed": 798678593507972338}
+{"split": "train", "symbols": ["E", "D", "B", "D", "C", "B", "B", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000446", "seed": 123, "sequence_seed": 4542678719342576988}
+{"split": "train", "symbols": ["A", "B", "C", "B", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000447", "seed": 123, "sequence_seed": 6105594588512299018}
+{"split": "train", "symbols": ["C", "A", "E", "C", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000448", "seed": 123, "sequence_seed": 7620838164510766494}
+{"split": "train", "symbols": ["A", "C", "D", "B", "E", "B", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000449", "seed": 123, "sequence_seed": 8658739774941253531}
+{"split": "train", "symbols": ["B", "E", "C", "B", "C", "A", "B", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000450", "seed": 123, "sequence_seed": 6024526002005304362}
+{"split": "train", "symbols": ["E", "B", "A", "B", "D", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000451", "seed": 123, "sequence_seed": 1178591790114831756}
+{"split": "train", "symbols": ["C", "D", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000452", "seed": 123, "sequence_seed": 8275459289346987676}
+{"split": "train", "symbols": ["C", "A", "C", "A", "A", "D", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000453", "seed": 123, "sequence_seed": 7055346902482214624}
+{"split": "train", "symbols": ["D", "C", "B", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000454", "seed": 123, "sequence_seed": 1302289570221795543}
+{"split": "train", "symbols": ["C", "B", "B", "B", "D", "C", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000455", "seed": 123, "sequence_seed": 1542761424748825524}
+{"split": "train", "symbols": ["D", "C", "C", "D", "B", "C", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000456", "seed": 123, "sequence_seed": 6972152913408551610}
+{"split": "train", "symbols": ["E", "C", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000457", "seed": 123, "sequence_seed": 3837791668791263045}
+{"split": "train", "symbols": ["A", "B", "D", "A", "C", "B", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000458", "seed": 123, "sequence_seed": 195536392976971834}
+{"split": "train", "symbols": ["E", "A", "D", "D", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000459", "seed": 123, "sequence_seed": 4267887328771568747}
+{"split": "train", "symbols": ["C", "D", "C", "C", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000460", "seed": 123, "sequence_seed": 3167809802049208072}
+{"split": "train", "symbols": ["C", "B", "D", "E", "D", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000461", "seed": 123, "sequence_seed": 6022743151043533568}
+{"split": "train", "symbols": ["B", "A", "A", "A", "C", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000462", "seed": 123, "sequence_seed": 2478427373066006528}
+{"split": "train", "symbols": ["D", "D", "A", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000463", "seed": 123, "sequence_seed": 7538634972614875491}
+{"split": "train", "symbols": ["A", "E", "E", "B", "B", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000464", "seed": 123, "sequence_seed": 4963451895475105751}
+{"split": "train", "symbols": ["C", "D", "E", "E", "A", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000465", "seed": 123, "sequence_seed": 6901156916903185250}
+{"split": "train", "symbols": ["E", "C", "C", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000466", "seed": 123, "sequence_seed": 359456444052222252}
+{"split": "train", "symbols": ["C", "B", "B", "E", "E", "E", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000467", "seed": 123, "sequence_seed": 1997954017184623113}
+{"split": "train", "symbols": ["C", "B", "C", "B", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000468", "seed": 123, "sequence_seed": 3401881735578449566}
+{"split": "train", "symbols": ["E", "B", "B", "B", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000469", "seed": 123, "sequence_seed": 2762667572372029098}
+{"split": "train", "symbols": ["C", "D", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000470", "seed": 123, "sequence_seed": 7772003566716861681}
+{"split": "train", "symbols": ["B", "B", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000471", "seed": 123, "sequence_seed": 2076231850515968778}
+{"split": "train", "symbols": ["B", "C", "B", "A", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000472", "seed": 123, "sequence_seed": 9211207449209395356}
+{"split": "train", "symbols": ["C", "C", "E", "C", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000473", "seed": 123, "sequence_seed": 6514837143999633834}
+{"split": "train", "symbols": ["A", "A", "B", "D", "E", "E", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000474", "seed": 123, "sequence_seed": 4741774509291437590}
+{"split": "train", "symbols": ["D", "A", "C", "D", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000475", "seed": 123, "sequence_seed": 138575903775880047}
+{"split": "train", "symbols": ["B", "A", "D", "D", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000476", "seed": 123, "sequence_seed": 1976923919138232769}
+{"split": "train", "symbols": ["C", "B", "D", "D", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000477", "seed": 123, "sequence_seed": 8500893423685405140}
+{"split": "train", "symbols": ["D", "E", "E", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000478", "seed": 123, "sequence_seed": 1624838659330111929}
+{"split": "train", "symbols": ["B", "B", "D", "B", "C", "B", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000479", "seed": 123, "sequence_seed": 2239788469711731724}
+{"split": "train", "symbols": ["C", "A", "D", "A", "A", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000480", "seed": 123, "sequence_seed": 2654653672916407116}
+{"split": "train", "symbols": ["E", "C", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000481", "seed": 123, "sequence_seed": 1581884981522428382}
+{"split": "train", "symbols": ["C", "C", "E", "B", "C", "A", "A", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000482", "seed": 123, "sequence_seed": 5175863029973444319}
+{"split": "train", "symbols": ["E", "C", "E", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000483", "seed": 123, "sequence_seed": 5019632600375730625}
+{"split": "train", "symbols": ["C", "C", "E", "D", "E", "D", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000484", "seed": 123, "sequence_seed": 811665208551917974}
+{"split": "train", "symbols": ["A", "A", "E", "B", "D", "A", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000485", "seed": 123, "sequence_seed": 7363994633142443075}
+{"split": "train", "symbols": ["E", "C", "C", "B", "B", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000486", "seed": 123, "sequence_seed": 1807171856783975921}
+{"split": "train", "symbols": ["B", "E", "C", "E", "B", "D", "E", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000487", "seed": 123, "sequence_seed": 7681121832580257364}
+{"split": "train", "symbols": ["E", "E", "D", "C", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000488", "seed": 123, "sequence_seed": 2538148347393629831}
+{"split": "train", "symbols": ["B", "A", "D"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000489", "seed": 123, "sequence_seed": 5578909118408162316}
+{"split": "train", "symbols": ["C", "A", "A", "D", "A", "D", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000490", "seed": 123, "sequence_seed": 2557199193866596443}
+{"split": "train", "symbols": ["B", "A", "E", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000491", "seed": 123, "sequence_seed": 2962774652216215470}
+{"split": "train", "symbols": ["E", "C", "B", "D", "E", "A", "D", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000492", "seed": 123, "sequence_seed": 440009138879861668}
+{"split": "train", "symbols": ["C", "B", "B", "E", "E", "B", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000493", "seed": 123, "sequence_seed": 7330707967771531270}
+{"split": "train", "symbols": ["B", "A", "A", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000494", "seed": 123, "sequence_seed": 2545381589916950317}
+{"split": "train", "symbols": ["A", "A", "C", "A", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000495", "seed": 123, "sequence_seed": 2419565299617696187}
+{"split": "train", "symbols": ["C", "E", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000496", "seed": 123, "sequence_seed": 6264107880400551449}
+{"split": "train", "symbols": ["D", "A", "D", "C", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000497", "seed": 123, "sequence_seed": 1981346025673769533}
+{"split": "train", "symbols": ["B", "E", "B", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000498", "seed": 123, "sequence_seed": 4149063088395284725}
+{"split": "train", "symbols": ["D", "A", "A", "D", "C", "A", "A", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000499", "seed": 123, "sequence_seed": 1456057365348688443}
+{"split": "val", "symbols": ["B", "E", "C", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000000", "seed": 123, "sequence_seed": 1252533544961531822}
+{"split": "val", "symbols": ["D", "E", "C", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000001", "seed": 123, "sequence_seed": 3841716704982297331}
+{"split": "val", "symbols": ["B", "B", "E", "D", "A", "B", "D", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000002", "seed": 123, "sequence_seed": 6135435175336796601}
+{"split": "val", "symbols": ["E", "E", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000003", "seed": 123, "sequence_seed": 5935410589179671304}
+{"split": "val", "symbols": ["B", "D", "D", "E", "C", "C", "E", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000004", "seed": 123, "sequence_seed": 3941782180735791226}
+{"split": "val", "symbols": ["A", "E", "E", "D", "D", "B", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000005", "seed": 123, "sequence_seed": 6239106987036719568}
+{"split": "val", "symbols": ["E", "A", "A", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000006", "seed": 123, "sequence_seed": 8261130068247437382}
+{"split": "val", "symbols": ["D", "D", "E", "B", "B", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000007", "seed": 123, "sequence_seed": 517550291378356760}
+{"split": "val", "symbols": ["A", "B", "B", "D", "D", "B", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000008", "seed": 123, "sequence_seed": 5199262083492984900}
+{"split": "val", "symbols": ["E", "D", "C", "D", "C", "B", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000009", "seed": 123, "sequence_seed": 4160024315787196133}
+{"split": "val", "symbols": ["C", "B", "A", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000010", "seed": 123, "sequence_seed": 963065571946415497}
+{"split": "val", "symbols": ["A", "D", "C", "D", "D", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000011", "seed": 123, "sequence_seed": 4716929516936946378}
+{"split": "val", "symbols": ["D", "B", "A", "B", "A", "D", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000012", "seed": 123, "sequence_seed": 9146451919040388701}
+{"split": "val", "symbols": ["E", "D", "D", "D", "C", "C", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000013", "seed": 123, "sequence_seed": 4474044804558225428}
+{"split": "val", "symbols": ["A", "D", "B", "E", "D", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000014", "seed": 123, "sequence_seed": 5552611078255894186}
+{"split": "val", "symbols": ["A", "D", "B", "B", "D", "E", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000015", "seed": 123, "sequence_seed": 7524796763654422697}
+{"split": "val", "symbols": ["D", "E", "C", "D", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000016", "seed": 123, "sequence_seed": 1857226254716587597}
+{"split": "val", "symbols": ["D", "E", "A", "C", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000017", "seed": 123, "sequence_seed": 8873611937682125639}
+{"split": "val", "symbols": ["A", "A", "E", "D", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000018", "seed": 123, "sequence_seed": 7015497003187224591}
+{"split": "val", "symbols": ["B", "C", "D", "C", "B", "C", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000019", "seed": 123, "sequence_seed": 4143384518242876890}
+{"split": "val", "symbols": ["A", "A", "B", "D", "D", "D", "D", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000020", "seed": 123, "sequence_seed": 591693161081164600}
+{"split": "val", "symbols": ["B", "B", "A", "A", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000021", "seed": 123, "sequence_seed": 1482538153600176495}
+{"split": "val", "symbols": ["D", "E", "B", "A", "B", "C", "E", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000022", "seed": 123, "sequence_seed": 7067065225994592950}
+{"split": "val", "symbols": ["B", "B", "A", "A", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000023", "seed": 123, "sequence_seed": 2908400630016298105}
+{"split": "val", "symbols": ["A", "C", "A", "D", "A", "D", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000024", "seed": 123, "sequence_seed": 1156444340805186583}
+{"split": "val", "symbols": ["C", "B", "C", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000025", "seed": 123, "sequence_seed": 1238100888458287847}
+{"split": "val", "symbols": ["A", "A", "D", "C", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000026", "seed": 123, "sequence_seed": 463726844906975111}
+{"split": "val", "symbols": ["E", "A", "A", "D", "B", "C", "D", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000027", "seed": 123, "sequence_seed": 2823338258805939100}
+{"split": "val", "symbols": ["A", "A", "E", "D", "E", "C", "E", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000028", "seed": 123, "sequence_seed": 1401872992344629731}
+{"split": "val", "symbols": ["A", "D", "B", "A", "A", "C", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000029", "seed": 123, "sequence_seed": 41325723313201137}
+{"split": "val", "symbols": ["D", "A", "B", "B", "C", "E", "B", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000030", "seed": 123, "sequence_seed": 2567461715468316665}
+{"split": "val", "symbols": ["E", "A", "E", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000031", "seed": 123, "sequence_seed": 5191892121154453814}
+{"split": "val", "symbols": ["D", "B", "E", "B", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000032", "seed": 123, "sequence_seed": 7347590625478427818}
+{"split": "val", "symbols": ["C", "B", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000033", "seed": 123, "sequence_seed": 2835818837034613598}
+{"split": "val", "symbols": ["D", "D", "C", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000034", "seed": 123, "sequence_seed": 4113600931167419161}
+{"split": "val", "symbols": ["E", "A", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000035", "seed": 123, "sequence_seed": 9198825595387601260}
+{"split": "val", "symbols": ["D", "E", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000036", "seed": 123, "sequence_seed": 2033834563254504648}
+{"split": "val", "symbols": ["A", "A", "B", "E", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000037", "seed": 123, "sequence_seed": 8036657024655853193}
+{"split": "val", "symbols": ["E", "E"], "length": 2, "difficulty_tag": "iid", "example_id": "val-000038", "seed": 123, "sequence_seed": 7482458261208865135}
+{"split": "val", "symbols": ["C", "E", "D", "D", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000039", "seed": 123, "sequence_seed": 5555774854120195148}
+{"split": "val", "symbols": ["B", "E", "D", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000040", "seed": 123, "sequence_seed": 5056564895843614349}
+{"split": "val", "symbols": ["A", "B", "A", "A", "B", "B", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000041", "seed": 123, "sequence_seed": 1094637967530801096}
+{"split": "val", "symbols": ["C", "D", "D", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000042", "seed": 123, "sequence_seed": 7916450876117773957}
+{"split": "val", "symbols": ["B", "D", "D", "B", "D", "A", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000043", "seed": 123, "sequence_seed": 5230361976314452550}
+{"split": "val", "symbols": ["D", "B", "D", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000044", "seed": 123, "sequence_seed": 909324505341550049}
+{"split": "val", "symbols": ["C", "B", "B", "D", "C", "E", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000045", "seed": 123, "sequence_seed": 5073051934216441689}
+{"split": "val", "symbols": ["A", "C", "B", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000046", "seed": 123, "sequence_seed": 258817027090981547}
+{"split": "val", "symbols": ["B", "A", "A", "E", "D", "D", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000047", "seed": 123, "sequence_seed": 5268418544614003315}
+{"split": "val", "symbols": ["D", "D", "B", "D", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000048", "seed": 123, "sequence_seed": 5317341625400984625}
+{"split": "val", "symbols": ["E", "D", "D", "D", "B", "D", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000049", "seed": 123, "sequence_seed": 6498567071752153594}
+{"split": "val", "symbols": ["A", "A", "E", "A", "E", "E", "B", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000050", "seed": 123, "sequence_seed": 4679434024167404984}
+{"split": "val", "symbols": ["D", "C", "C", "C", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000051", "seed": 123, "sequence_seed": 4910574692737547811}
+{"split": "val", "symbols": ["E", "A", "A", "D", "A", "E", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000052", "seed": 123, "sequence_seed": 6138022214463474324}
+{"split": "val", "symbols": ["E", "C", "E", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000053", "seed": 123, "sequence_seed": 3925408869244225067}
+{"split": "val", "symbols": ["E", "A", "C", "A", "C", "E", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000054", "seed": 123, "sequence_seed": 5659104480239173753}
+{"split": "val", "symbols": ["E", "A", "C", "C", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000055", "seed": 123, "sequence_seed": 1319760295080873514}
+{"split": "val", "symbols": ["D", "A", "A", "A", "A", "E", "A", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000056", "seed": 123, "sequence_seed": 3952622331318849585}
+{"split": "val", "symbols": ["B", "E", "C", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000057", "seed": 123, "sequence_seed": 8930544416639386057}
+{"split": "val", "symbols": ["E", "D", "C", "A", "A", "A", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000058", "seed": 123, "sequence_seed": 1195858150133318228}
+{"split": "val", "symbols": ["B", "E", "D", "E", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000059", "seed": 123, "sequence_seed": 7729129826332665634}
+{"split": "val", "symbols": ["B", "E", "E", "D", "D", "A", "E", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000060", "seed": 123, "sequence_seed": 8957610963204291285}
+{"split": "val", "symbols": ["B", "B", "A", "C", "B", "E", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000061", "seed": 123, "sequence_seed": 1595482650680223975}
+{"split": "val", "symbols": ["A", "B", "A", "B", "B", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000062", "seed": 123, "sequence_seed": 6869922515411005143}
+{"split": "val", "symbols": ["C", "C", "A", "D", "C", "C", "A", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000063", "seed": 123, "sequence_seed": 2965267190104062622}
+{"split": "val", "symbols": ["B", "C", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000064", "seed": 123, "sequence_seed": 4357502746572706709}
+{"split": "val", "symbols": ["D", "B", "D", "C", "A", "A", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000065", "seed": 123, "sequence_seed": 2892654246636245680}
+{"split": "val", "symbols": ["B", "C", "C", "B", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000066", "seed": 123, "sequence_seed": 142581478706001110}
+{"split": "val", "symbols": ["E", "E", "A", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000067", "seed": 123, "sequence_seed": 1256099664033734060}
+{"split": "val", "symbols": ["B", "C", "D", "D", "E", "E", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000068", "seed": 123, "sequence_seed": 7929054343674933895}
+{"split": "val", "symbols": ["D", "B", "A", "A", "C", "E", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000069", "seed": 123, "sequence_seed": 5513541757665495623}
+{"split": "val", "symbols": ["D", "D", "E", "E", "C", "D", "C", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000070", "seed": 123, "sequence_seed": 7149310986988964880}
+{"split": "val", "symbols": ["A", "E", "C", "B", "E", "D", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000071", "seed": 123, "sequence_seed": 4866007544659204259}
+{"split": "val", "symbols": ["D", "D", "E", "A", "B", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000072", "seed": 123, "sequence_seed": 4304795495990544755}
+{"split": "val", "symbols": ["D", "A", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000073", "seed": 123, "sequence_seed": 6178419714101670201}
+{"split": "val", "symbols": ["D", "E", "B", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000074", "seed": 123, "sequence_seed": 8105473042975208421}
+{"split": "val", "symbols": ["B", "A", "E", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000075", "seed": 123, "sequence_seed": 3039087138172234718}
+{"split": "val", "symbols": ["A", "D", "C", "E", "B", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000076", "seed": 123, "sequence_seed": 1695520433681361654}
+{"split": "val", "symbols": ["B", "C", "E", "E", "A", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000077", "seed": 123, "sequence_seed": 1419961702860158710}
+{"split": "val", "symbols": ["E", "A", "B", "B", "E", "D", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000078", "seed": 123, "sequence_seed": 2654284153619941420}
+{"split": "val", "symbols": ["C", "E", "A", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000079", "seed": 123, "sequence_seed": 3748558748794296674}
+{"split": "val", "symbols": ["C", "A", "B", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000080", "seed": 123, "sequence_seed": 7235713118079523816}
+{"split": "val", "symbols": ["B", "B", "C"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000081", "seed": 123, "sequence_seed": 3639950504690448656}
+{"split": "val", "symbols": ["A", "C", "E"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000082", "seed": 123, "sequence_seed": 5501921173590486295}
+{"split": "val", "symbols": ["D", "E", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000083", "seed": 123, "sequence_seed": 5447415787580465510}
+{"split": "val", "symbols": ["D", "B", "B", "C", "E", "B", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "val-000084", "seed": 123, "sequence_seed": 1517783582057657692}
+{"split": "val", "symbols": ["B", "E", "B", "D", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000085", "seed": 123, "sequence_seed": 3764667728213768645}
+{"split": "val", "symbols": ["D", "D", "B", "A", "C", "A", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000086", "seed": 123, "sequence_seed": 5457206114225916110}
+{"split": "val", "symbols": ["E", "E", "C", "B", "A", "C", "A", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000087", "seed": 123, "sequence_seed": 4374383018360752622}
+{"split": "val", "symbols": ["D", "B", "B", "B", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000088", "seed": 123, "sequence_seed": 4122885630542047399}
+{"split": "val", "symbols": ["B", "B", "E", "A", "C", "D", "A", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000089", "seed": 123, "sequence_seed": 1034151250152553680}
+{"split": "val", "symbols": ["E", "D", "B", "B", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000090", "seed": 123, "sequence_seed": 6282267851931546059}
+{"split": "val", "symbols": ["C", "E", "A", "A", "E", "D"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000091", "seed": 123, "sequence_seed": 6062629716195320837}
+{"split": "val", "symbols": ["B", "E", "C", "E", "B", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000092", "seed": 123, "sequence_seed": 2502235114917736738}
+{"split": "val", "symbols": ["A", "E", "C", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000093", "seed": 123, "sequence_seed": 880649005719525267}
+{"split": "val", "symbols": ["E", "B", "E", "C", "C", "C", "A", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000094", "seed": 123, "sequence_seed": 7879201445236848465}
+{"split": "val", "symbols": ["C", "C", "B", "A", "D", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000095", "seed": 123, "sequence_seed": 1511267116153899021}
+{"split": "val", "symbols": ["A", "C", "D", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000096", "seed": 123, "sequence_seed": 2903415731746009401}
+{"split": "val", "symbols": ["E", "E", "E", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000097", "seed": 123, "sequence_seed": 4398822158733549419}
+{"split": "val", "symbols": ["C", "A", "D", "C", "B", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000098", "seed": 123, "sequence_seed": 8886151918178995926}
+{"split": "val", "symbols": ["C", "E", "B", "C", "D", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000099", "seed": 123, "sequence_seed": 3818183933950609451}
+{"split": "iid_test", "symbols": ["B", "B", "E", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000000", "seed": 123, "sequence_seed": 4712666826902721669}
+{"split": "iid_test", "symbols": ["B", "D", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000001", "seed": 123, "sequence_seed": 6381469148097360349}
+{"split": "iid_test", "symbols": ["B", "E", "A", "C", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000002", "seed": 123, "sequence_seed": 3759403706610541103}
+{"split": "iid_test", "symbols": ["C", "B", "A", "B", "E", "E", "C", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000003", "seed": 123, "sequence_seed": 2699091355733421740}
+{"split": "iid_test", "symbols": ["D", "B", "A", "C", "D"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000004", "seed": 123, "sequence_seed": 5164748952326590523}
+{"split": "iid_test", "symbols": ["E", "A", "B", "E", "C", "C", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000005", "seed": 123, "sequence_seed": 6195474315020718533}
+{"split": "iid_test", "symbols": ["E", "A", "B", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000006", "seed": 123, "sequence_seed": 4899914120714194347}
+{"split": "iid_test", "symbols": ["C", "C", "E", "D", "D", "E", "C", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000007", "seed": 123, "sequence_seed": 1592974333129968088}
+{"split": "iid_test", "symbols": ["A", "D", "C", "D", "C", "E", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000008", "seed": 123, "sequence_seed": 1712033867151606211}
+{"split": "iid_test", "symbols": ["B", "B", "C", "E", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000009", "seed": 123, "sequence_seed": 4962518689365057924}
+{"split": "iid_test", "symbols": ["C", "D", "A", "C", "C", "C", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000010", "seed": 123, "sequence_seed": 1358753621674508601}
+{"split": "iid_test", "symbols": ["E", "E", "A", "D", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000011", "seed": 123, "sequence_seed": 6968477414744861281}
+{"split": "iid_test", "symbols": ["B", "E", "B", "E", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000012", "seed": 123, "sequence_seed": 2663780139562326239}
+{"split": "iid_test", "symbols": ["C", "D", "A", "C", "E", "D", "B", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000013", "seed": 123, "sequence_seed": 1083391774114310043}
+{"split": "iid_test", "symbols": ["D", "A", "A", "C", "E", "C", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000014", "seed": 123, "sequence_seed": 7383039060695321266}
+{"split": "iid_test", "symbols": ["A", "B", "B", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000015", "seed": 123, "sequence_seed": 8780055385017448228}
+{"split": "iid_test", "symbols": ["E", "D", "A", "C", "C", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000016", "seed": 123, "sequence_seed": 6578495583316428529}
+{"split": "iid_test", "symbols": ["C", "B", "C", "A", "D", "A", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000017", "seed": 123, "sequence_seed": 2155839527532568762}
+{"split": "iid_test", "symbols": ["A", "A", "E", "B", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000018", "seed": 123, "sequence_seed": 7054737631979380691}
+{"split": "iid_test", "symbols": ["E", "A", "C", "E", "A", "E", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000019", "seed": 123, "sequence_seed": 2437821306871380}
+{"split": "iid_test", "symbols": ["C", "D", "D", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000020", "seed": 123, "sequence_seed": 6608423290237525122}
+{"split": "iid_test", "symbols": ["C", "C", "E", "A", "B", "B", "B"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000021", "seed": 123, "sequence_seed": 3226795370593907103}
+{"split": "iid_test", "symbols": ["A", "C", "D", "E", "E", "C", "D", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000022", "seed": 123, "sequence_seed": 931336249801967425}
+{"split": "iid_test", "symbols": ["B", "D", "A", "C", "B", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000023", "seed": 123, "sequence_seed": 3968164669145064938}
+{"split": "iid_test", "symbols": ["A", "B", "A", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000024", "seed": 123, "sequence_seed": 1505342212992644796}
+{"split": "iid_test", "symbols": ["D", "D", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000025", "seed": 123, "sequence_seed": 3296286146677683991}
+{"split": "iid_test", "symbols": ["C", "E", "D", "B", "C", "C", "A", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000026", "seed": 123, "sequence_seed": 3006472109005526003}
+{"split": "iid_test", "symbols": ["D", "C", "E", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000027", "seed": 123, "sequence_seed": 7528184010583950770}
+{"split": "iid_test", "symbols": ["D", "D", "B", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000028", "seed": 123, "sequence_seed": 6139448682782169556}
+{"split": "iid_test", "symbols": ["B", "E", "D", "E", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000029", "seed": 123, "sequence_seed": 7180074143022549423}
+{"split": "iid_test", "symbols": ["D", "C", "B", "A", "D", "A", "E", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000030", "seed": 123, "sequence_seed": 5223563221592547005}
+{"split": "iid_test", "symbols": ["B", "E", "D", "A", "D", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000031", "seed": 123, "sequence_seed": 8611084615728833939}
+{"split": "iid_test", "symbols": ["A", "A", "D", "B", "E", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000032", "seed": 123, "sequence_seed": 3866371304600597073}
+{"split": "iid_test", "symbols": ["D", "C", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000033", "seed": 123, "sequence_seed": 4113647985371280965}
+{"split": "iid_test", "symbols": ["C", "A", "C", "C", "E", "E", "D", "D"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000034", "seed": 123, "sequence_seed": 6655885577997227609}
+{"split": "iid_test", "symbols": ["E", "E", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000035", "seed": 123, "sequence_seed": 3573894085111224394}
+{"split": "iid_test", "symbols": ["E", "E", "C", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000036", "seed": 123, "sequence_seed": 3958529759342596301}
+{"split": "iid_test", "symbols": ["B", "B", "C", "C", "E", "E", "C", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000037", "seed": 123, "sequence_seed": 7334101468345240509}
+{"split": "iid_test", "symbols": ["C", "A", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000038", "seed": 123, "sequence_seed": 6517305078124714786}
+{"split": "iid_test", "symbols": ["A", "A", "C", "A", "A", "C", "D", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000039", "seed": 123, "sequence_seed": 8007966976007278537}
+{"split": "iid_test", "symbols": ["A", "A", "B", "A", "E", "D", "B", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000040", "seed": 123, "sequence_seed": 1319379697477211461}
+{"split": "iid_test", "symbols": ["D", "A", "D", "B", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000041", "seed": 123, "sequence_seed": 1535012596859515631}
+{"split": "iid_test", "symbols": ["A", "B", "E", "A", "A", "C", "D"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000042", "seed": 123, "sequence_seed": 910736112772705952}
+{"split": "iid_test", "symbols": ["A", "E"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000043", "seed": 123, "sequence_seed": 5393160761110837345}
+{"split": "iid_test", "symbols": ["A", "C", "C", "A", "A", "A", "B", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000044", "seed": 123, "sequence_seed": 8249390600642140606}
+{"split": "iid_test", "symbols": ["C", "A", "B", "E", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000045", "seed": 123, "sequence_seed": 3884183978093259671}
+{"split": "iid_test", "symbols": ["C", "B", "E", "A", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000046", "seed": 123, "sequence_seed": 9144189921583579346}
+{"split": "iid_test", "symbols": ["C", "B", "E", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000047", "seed": 123, "sequence_seed": 4359758264936745521}
+{"split": "iid_test", "symbols": ["E", "B", "C", "E", "D", "A", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000048", "seed": 123, "sequence_seed": 3929243522270269566}
+{"split": "iid_test", "symbols": ["C", "E", "A", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000049", "seed": 123, "sequence_seed": 8270552732013267328}
+{"split": "iid_test", "symbols": ["E", "D", "D", "C", "E"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000050", "seed": 123, "sequence_seed": 8502786509420855044}
+{"split": "iid_test", "symbols": ["A", "E", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000051", "seed": 123, "sequence_seed": 8002921447430100889}
+{"split": "iid_test", "symbols": ["C", "C", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000052", "seed": 123, "sequence_seed": 8314554734756891912}
+{"split": "iid_test", "symbols": ["D", "A", "D", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000053", "seed": 123, "sequence_seed": 310450698859635823}
+{"split": "iid_test", "symbols": ["A", "E", "C", "B", "A", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000054", "seed": 123, "sequence_seed": 2531477734756956560}
+{"split": "iid_test", "symbols": ["A", "C", "A", "E", "B", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000055", "seed": 123, "sequence_seed": 6692641775984159977}
+{"split": "iid_test", "symbols": ["D", "B", "B", "C", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000056", "seed": 123, "sequence_seed": 5376059693505973577}
+{"split": "iid_test", "symbols": ["C", "B", "B", "B", "C"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000057", "seed": 123, "sequence_seed": 345495781844368411}
+{"split": "iid_test", "symbols": ["B", "E", "B", "A", "E", "C", "A", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000058", "seed": 123, "sequence_seed": 4541433502252232652}
+{"split": "iid_test", "symbols": ["D", "E", "C", "B", "E", "E", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000059", "seed": 123, "sequence_seed": 966264813539130234}
+{"split": "iid_test", "symbols": ["E", "D", "A", "B", "B", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000060", "seed": 123, "sequence_seed": 7802469984755940524}
+{"split": "iid_test", "symbols": ["E", "D", "C", "B"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000061", "seed": 123, "sequence_seed": 6257602823135371077}
+{"split": "iid_test", "symbols": ["C", "C", "D", "B", "E", "D", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000062", "seed": 123, "sequence_seed": 8150352756943224001}
+{"split": "iid_test", "symbols": ["C", "A", "D", "D"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000063", "seed": 123, "sequence_seed": 8257770937001918588}
+{"split": "iid_test", "symbols": ["B", "E", "A"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000064", "seed": 123, "sequence_seed": 8141497172693959250}
+{"split": "iid_test", "symbols": ["D", "E", "A", "C", "C", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000065", "seed": 123, "sequence_seed": 1429874325579805786}
+{"split": "iid_test", "symbols": ["C", "C", "E", "E", "C", "A", "A"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000066", "seed": 123, "sequence_seed": 5358594455893782067}
+{"split": "iid_test", "symbols": ["E", "A", "B", "B", "D", "E", "C", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000067", "seed": 123, "sequence_seed": 4152046881550100612}
+{"split": "iid_test", "symbols": ["E", "B", "E", "B", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000068", "seed": 123, "sequence_seed": 4331771147794264831}
+{"split": "iid_test", "symbols": ["D", "B", "A", "B", "A", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000069", "seed": 123, "sequence_seed": 8964923554384670423}
+{"split": "iid_test", "symbols": ["C", "E", "E", "C", "B"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000070", "seed": 123, "sequence_seed": 1519936243477652050}
+{"split": "iid_test", "symbols": ["C", "C", "B", "B", "B", "D", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000071", "seed": 123, "sequence_seed": 4805499845775106171}
+{"split": "iid_test", "symbols": ["C", "D", "A", "E", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000072", "seed": 123, "sequence_seed": 6014798940268823152}
+{"split": "iid_test", "symbols": ["E", "E", "B", "A", "B", "D", "D", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000073", "seed": 123, "sequence_seed": 4848101419186258858}
+{"split": "iid_test", "symbols": ["A", "B", "B", "B", "E", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000074", "seed": 123, "sequence_seed": 6947478540911226014}
+{"split": "iid_test", "symbols": ["B", "D", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000075", "seed": 123, "sequence_seed": 7305343161533056593}
+{"split": "iid_test", "symbols": ["A", "C", "E", "E"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000076", "seed": 123, "sequence_seed": 2137019589594923449}
+{"split": "iid_test", "symbols": ["C", "C", "B", "E", "A", "B", "D", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000077", "seed": 123, "sequence_seed": 8710731918412403226}
+{"split": "iid_test", "symbols": ["C", "A", "A", "D", "A", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000078", "seed": 123, "sequence_seed": 3359450889766412727}
+{"split": "iid_test", "symbols": ["A", "E", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000079", "seed": 123, "sequence_seed": 3951608773636263256}
+{"split": "iid_test", "symbols": ["E", "A", "D", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000080", "seed": 123, "sequence_seed": 7477544554143662217}
+{"split": "iid_test", "symbols": ["B", "A", "D", "B", "C", "C"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000081", "seed": 123, "sequence_seed": 7572747546078883448}
+{"split": "iid_test", "symbols": ["D", "D", "B", "B", "C", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000082", "seed": 123, "sequence_seed": 8600880727523923789}
+{"split": "iid_test", "symbols": ["B", "D", "C", "C"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000083", "seed": 123, "sequence_seed": 4134613155265564186}
+{"split": "iid_test", "symbols": ["A", "B", "A", "E", "E", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000084", "seed": 123, "sequence_seed": 5713009131399202513}
+{"split": "iid_test", "symbols": ["B", "D", "C", "B", "A", "C", "C", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000085", "seed": 123, "sequence_seed": 4191566879343073258}
+{"split": "iid_test", "symbols": ["A", "C", "A", "C", "A"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000086", "seed": 123, "sequence_seed": 2321053824717452774}
+{"split": "iid_test", "symbols": ["A", "B", "A", "D", "D", "D", "E"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000087", "seed": 123, "sequence_seed": 5928568258567085057}
+{"split": "iid_test", "symbols": ["E", "B", "B", "B", "E", "E", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000088", "seed": 123, "sequence_seed": 6423632896600707581}
+{"split": "iid_test", "symbols": ["E", "A", "A", "B", "E", "E"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000089", "seed": 123, "sequence_seed": 8525751729761748302}
+{"split": "iid_test", "symbols": ["A", "D", "E", "E", "C", "B", "C", "A"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000090", "seed": 123, "sequence_seed": 4480411796570678550}
+{"split": "iid_test", "symbols": ["C", "C", "C", "A", "E", "B"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000091", "seed": 123, "sequence_seed": 8227217317180023139}
+{"split": "iid_test", "symbols": ["D", "C", "B", "C", "C", "C", "C", "E"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000092", "seed": 123, "sequence_seed": 4620478071256414141}
+{"split": "iid_test", "symbols": ["D", "C", "A", "C", "B", "B", "D", "C"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000093", "seed": 123, "sequence_seed": 3706246669112395032}
+{"split": "iid_test", "symbols": ["C", "C", "B", "D", "D", "C", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000094", "seed": 123, "sequence_seed": 6493471660117680860}
+{"split": "iid_test", "symbols": ["B", "B", "C", "A"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000095", "seed": 123, "sequence_seed": 3538895799575092878}
+{"split": "iid_test", "symbols": ["C", "A", "A", "A", "A", "B", "C", "B"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000096", "seed": 123, "sequence_seed": 5485875568017081573}
+{"split": "iid_test", "symbols": ["D", "E", "C", "E", "E", "C", "C"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000097", "seed": 123, "sequence_seed": 979000442479059186}
+{"split": "iid_test", "symbols": ["C", "D", "B"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000098", "seed": 123, "sequence_seed": 7546198961109556574}
+{"split": "iid_test", "symbols": ["B", "E", "B", "A", "B", "A"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000099", "seed": 123, "sequence_seed": 6457223667477120342}
+{"split": "ood_length", "symbols": ["A", "E", "B", "A", "D", "C", "A", "B", "E"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000000", "seed": 123, "sequence_seed": 8061465354900195054}
+{"split": "ood_length", "symbols": ["D", "D", "C", "D", "E", "D", "B", "C", "D"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000001", "seed": 123, "sequence_seed": 1055056107617986930}
+{"split": "ood_length", "symbols": ["E", "E", "E", "C", "D", "A", "B", "B", "D", "E", "D"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000002", "seed": 123, "sequence_seed": 3950443621103952427}
+{"split": "ood_length", "symbols": ["A", "E", "D", "A", "C", "A", "D", "E", "B", "B", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000003", "seed": 123, "sequence_seed": 4560030615132102968}
+{"split": "ood_length", "symbols": ["A", "B", "E", "B", "A", "A", "D", "E", "A"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000004", "seed": 123, "sequence_seed": 3740321508129729832}
+{"split": "ood_length", "symbols": ["C", "B", "C", "D", "E", "D", "E", "D", "D"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000005", "seed": 123, "sequence_seed": 166957255213416310}
+{"split": "ood_length", "symbols": ["D", "C", "C", "D", "D", "D", "A", "E", "C", "E", "C", "A"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000006", "seed": 123, "sequence_seed": 7837509444310931583}
+{"split": "ood_length", "symbols": ["E", "B", "D", "D", "C", "E", "C", "B", "C", "C", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000007", "seed": 123, "sequence_seed": 5235057645808938300}
+{"split": "ood_length", "symbols": ["D", "D", "B", "E", "D", "E", "B", "A", "C", "C", "D"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000008", "seed": 123, "sequence_seed": 2896311652446999212}
+{"split": "ood_length", "symbols": ["B", "E", "E", "C", "D", "A", "B", "C", "E", "A"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000009", "seed": 123, "sequence_seed": 1878976824911202073}
+{"split": "ood_length", "symbols": ["C", "A", "B", "A", "A", "B", "A", "A", "A", "E", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000010", "seed": 123, "sequence_seed": 5584089470017248097}
+{"split": "ood_length", "symbols": ["B", "D", "C", "A", "D", "E", "B", "C", "E"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000011", "seed": 123, "sequence_seed": 2958329609946110135}
+{"split": "ood_length", "symbols": ["D", "A", "C", "C", "E", "B", "B", "C", "D", "D", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000012", "seed": 123, "sequence_seed": 6195813495205891364}
+{"split": "ood_length", "symbols": ["C", "B", "E", "A", "A", "B", "E", "C", "B", "C", "C"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000013", "seed": 123, "sequence_seed": 2976980776432744760}
+{"split": "ood_length", "symbols": ["B", "C", "D", "A", "B", "A", "C", "D", "B", "D", "A"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000014", "seed": 123, "sequence_seed": 729575669060203444}
+{"split": "ood_length", "symbols": ["C", "E", "C", "B", "E", "B", "D", "C", "E", "E"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000015", "seed": 123, "sequence_seed": 5076486316952808270}
+{"split": "ood_length", "symbols": ["C", "E", "E", "A", "B", "B", "B", "A", "A", "D", "C"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000016", "seed": 123, "sequence_seed": 6166676652722322981}
+{"split": "ood_length", "symbols": ["C", "C", "C", "E", "D", "B", "D", "C", "D"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000017", "seed": 123, "sequence_seed": 1445676895032690413}
+{"split": "ood_length", "symbols": ["C", "A", "C", "D", "C", "B", "D", "A", "A", "D", "E", "E"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000018", "seed": 123, "sequence_seed": 7119553123030365020}
+{"split": "ood_length", "symbols": ["C", "D", "C", "D", "C", "B", "D", "D", "B"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000019", "seed": 123, "sequence_seed": 143139278520253086}
+{"split": "ood_length", "symbols": ["B", "E", "C", "B", "D", "A", "D", "B", "E", "B", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000020", "seed": 123, "sequence_seed": 5200659690542469368}
+{"split": "ood_length", "symbols": ["D", "C", "A", "C", "E", "E", "D", "B", "B", "A", "A", "B"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000021", "seed": 123, "sequence_seed": 5531498867573131262}
+{"split": "ood_length", "symbols": ["B", "E", "E", "D", "A", "C", "D", "A", "B", "A"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000022", "seed": 123, "sequence_seed": 1835547348410284410}
+{"split": "ood_length", "symbols": ["B", "E", "E", "B", "C", "E", "A", "E", "E", "B"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000023", "seed": 123, "sequence_seed": 7531707454221220804}
+{"split": "ood_length", "symbols": ["C", "A", "C", "B", "C", "E", "A", "C", "B", "A", "C"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000024", "seed": 123, "sequence_seed": 1013413000337623123}
+{"split": "ood_length", "symbols": ["E", "B", "B", "D", "A", "B", "C", "A", "D", "A", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000025", "seed": 123, "sequence_seed": 2656800385163605376}
+{"split": "ood_length", "symbols": ["E", "C", "A", "D", "B", "A", "C", "A", "B"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000026", "seed": 123, "sequence_seed": 6411112970496043485}
+{"split": "ood_length", "symbols": ["C", "A", "B", "C", "D", "E", "C", "E", "C", "B"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000027", "seed": 123, "sequence_seed": 7899086089224242338}
+{"split": "ood_length", "symbols": ["D", "A", "C", "C", "E", "C", "E", "E", "C", "D"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000028", "seed": 123, "sequence_seed": 6693795554803372872}
+{"split": "ood_length", "symbols": ["C", "C", "E", "B", "E", "A", "C", "C", "B"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000029", "seed": 123, "sequence_seed": 8154516972427489500}
+{"split": "ood_length", "symbols": ["B", "E", "A", "D", "A", "E", "E", "C", "A", "B"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000030", "seed": 123, "sequence_seed": 3611775633144718310}
+{"split": "ood_length", "symbols": ["E", "E", "E", "A", "D", "C", "A", "E", "D", "D", "A"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000031", "seed": 123, "sequence_seed": 294420672045123949}
+{"split": "ood_length", "symbols": ["E", "E", "D", "A", "A", "A", "A", "B", "B"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000032", "seed": 123, "sequence_seed": 7562467178374395901}
+{"split": "ood_length", "symbols": ["E", "E", "A", "E", "D", "B", "C", "C", "E"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000033", "seed": 123, "sequence_seed": 7835992156681835943}
+{"split": "ood_length", "symbols": ["A", "A", "C", "C", "A", "E", "B", "B", "E", "D", "E", "C"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000034", "seed": 123, "sequence_seed": 3557099858335210379}
+{"split": "ood_length", "symbols": ["A", "C", "D", "A", "B", "B", "D", "B", "C", "D"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000035", "seed": 123, "sequence_seed": 9207174688307681670}
+{"split": "ood_length", "symbols": ["A", "A", "A", "D", "E", "C", "B", "B", "D", "E", "A"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000036", "seed": 123, "sequence_seed": 4838346334028022183}
+{"split": "ood_length", "symbols": ["E", "A", "A", "C", "B", "E", "C", "C", "A", "B", "D", "D"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000037", "seed": 123, "sequence_seed": 2010687081058648510}
+{"split": "ood_length", "symbols": ["E", "B", "A", "C", "A", "A", "E", "D", "C", "A", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000038", "seed": 123, "sequence_seed": 6572307525208626057}
+{"split": "ood_length", "symbols": ["D", "D", "D", "D", "B", "C", "D", "D", "C", "A"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000039", "seed": 123, "sequence_seed": 392796697955997515}
+{"split": "ood_length", "symbols": ["E", "A", "D", "C", "A", "A", "A", "C", "B", "A"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000040", "seed": 123, "sequence_seed": 8692536171140103211}
+{"split": "ood_length", "symbols": ["D", "C", "E", "C", "C", "C", "C", "A", "B", "D", "C"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000041", "seed": 123, "sequence_seed": 620900442002761717}
+{"split": "ood_length", "symbols": ["A", "E", "A", "D", "C", "C", "C", "E", "A", "D"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000042", "seed": 123, "sequence_seed": 4357233571337376569}
+{"split": "ood_length", "symbols": ["A", "D", "C", "B", "E", "D", "C", "A", "A", "A", "D"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000043", "seed": 123, "sequence_seed": 4570455438724221810}
+{"split": "ood_length", "symbols": ["C", "E", "B", "E", "E", "B", "C", "E", "A", "A", "B"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000044", "seed": 123, "sequence_seed": 7358909667487198939}
+{"split": "ood_length", "symbols": ["B", "E", "A", "C", "A", "E", "D", "B", "C", "B"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000045", "seed": 123, "sequence_seed": 5663021783471886976}
+{"split": "ood_length", "symbols": ["D", "D", "E", "C", "B", "A", "B", "C", "A", "C", "A", "E"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000046", "seed": 123, "sequence_seed": 65084965570258588}
+{"split": "ood_length", "symbols": ["D", "A", "B", "C", "D", "E", "D", "B", "C", "C", "A", "B"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000047", "seed": 123, "sequence_seed": 8675416214472432968}
+{"split": "ood_length", "symbols": ["D", "E", "A", "B", "C", "C", "E", "E", "C", "D"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000048", "seed": 123, "sequence_seed": 3557008314873265688}
+{"split": "ood_length", "symbols": ["C", "C", "D", "D", "E", "B", "E", "B", "E", "D", "A", "E"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000049", "seed": 123, "sequence_seed": 5968455355447555396}
+{"split": "ood_length", "symbols": ["A", "C", "B", "E", "D", "B", "B", "B", "E", "C"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000050", "seed": 123, "sequence_seed": 6360868733281424677}
+{"split": "ood_length", "symbols": ["B", "B", "C", "A", "B", "B", "A", "E", "C", "C", "B", "C"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000051", "seed": 123, "sequence_seed": 1321748286552066606}
+{"split": "ood_length", "symbols": ["C", "B", "D", "C", "B", "E", "E", "B", "A", "A", "A"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000052", "seed": 123, "sequence_seed": 6948273929703187343}
+{"split": "ood_length", "symbols": ["D", "A", "A", "D", "A", "E", "C", "C", "D", "D"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000053", "seed": 123, "sequence_seed": 3589343998471372684}
+{"split": "ood_length", "symbols": ["E", "D", "C", "E", "A", "B", "D", "B", "E", "B", "C", "E"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000054", "seed": 123, "sequence_seed": 683351590388659733}
+{"split": "ood_length", "symbols": ["C", "D", "B", "B", "C", "D", "A", "D", "C"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000055", "seed": 123, "sequence_seed": 7372315484165421430}
+{"split": "ood_length", "symbols": ["B", "C", "B", "E", "B", "C", "C", "B", "A", "B", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000056", "seed": 123, "sequence_seed": 7031389816101169403}
+{"split": "ood_length", "symbols": ["E", "A", "B", "C", "C", "E", "E", "E", "E"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000057", "seed": 123, "sequence_seed": 3799224714793762051}
+{"split": "ood_length", "symbols": ["A", "C", "C", "D", "C", "C", "C", "E", "C", "B"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000058", "seed": 123, "sequence_seed": 1384387682879547909}
+{"split": "ood_length", "symbols": ["C", "A", "E", "E", "C", "E", "D", "A", "B", "B", "D"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000059", "seed": 123, "sequence_seed": 9024612980239168962}
+{"split": "ood_length", "symbols": ["A", "B", "B", "C", "D", "B", "E", "E", "C"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000060", "seed": 123, "sequence_seed": 3162608657578682310}
+{"split": "ood_length", "symbols": ["D", "C", "B", "D", "E", "C", "D", "A", "D", "A", "D", "A"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000061", "seed": 123, "sequence_seed": 2568331435651164849}
+{"split": "ood_length", "symbols": ["B", "B", "A", "D", "E", "D", "E", "A", "E"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000062", "seed": 123, "sequence_seed": 7972789713156472020}
+{"split": "ood_length", "symbols": ["B", "C", "D", "A", "E", "B", "D", "E", "D", "B", "D", "D"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000063", "seed": 123, "sequence_seed": 8383966540516448846}
+{"split": "ood_length", "symbols": ["E", "E", "A", "E", "C", "D", "D", "B", "D", "E", "C", "B"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000064", "seed": 123, "sequence_seed": 825008021949902413}
+{"split": "ood_length", "symbols": ["C", "A", "B", "E", "B", "E", "E", "A", "A", "C"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000065", "seed": 123, "sequence_seed": 1365869059224552229}
+{"split": "ood_length", "symbols": ["B", "E", "C", "B", "D", "A", "D", "C", "D", "C"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000066", "seed": 123, "sequence_seed": 3503880653641494846}
+{"split": "ood_length", "symbols": ["D", "C", "E", "D", "B", "E", "B", "B", "D", "D", "E", "A"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000067", "seed": 123, "sequence_seed": 6656355237284718763}
+{"split": "ood_length", "symbols": ["C", "C", "D", "D", "E", "D", "A", "D", "D", "B", "D", "E"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000068", "seed": 123, "sequence_seed": 863880577484458410}
+{"split": "ood_length", "symbols": ["D", "D", "B", "A", "A", "B", "A", "D", "B", "D", "D", "B"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000069", "seed": 123, "sequence_seed": 5457628007554420829}
+{"split": "ood_length", "symbols": ["B", "D", "D", "C", "E", "D", "D", "B", "B"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000070", "seed": 123, "sequence_seed": 3659731719121507031}
+{"split": "ood_length", "symbols": ["C", "B", "E", "E", "D", "D", "A", "C", "D"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000071", "seed": 123, "sequence_seed": 5443431128558898365}
+{"split": "ood_length", "symbols": ["D", "B", "E", "D", "E", "B", "D", "B", "C", "D", "E", "C"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000072", "seed": 123, "sequence_seed": 7416345191268182034}
+{"split": "ood_length", "symbols": ["B", "D", "D", "C", "D", "B", "B", "B", "E", "E", "B"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000073", "seed": 123, "sequence_seed": 9019737630790874118}
+{"split": "ood_length", "symbols": ["A", "A", "D", "A", "C", "B", "D", "E", "D", "B"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000074", "seed": 123, "sequence_seed": 7878680998966039815}
+{"split": "ood_length", "symbols": ["B", "B", "A", "A", "D", "A", "D", "D", "B", "E", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000075", "seed": 123, "sequence_seed": 7573320798824888128}
+{"split": "ood_length", "symbols": ["B", "D", "C", "B", "B", "B", "E", "A", "B", "D"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000076", "seed": 123, "sequence_seed": 5577037782864396975}
+{"split": "ood_length", "symbols": ["D", "D", "C", "B", "E", "B", "A", "C", "D", "C", "A", "C"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000077", "seed": 123, "sequence_seed": 6355170325453865118}
+{"split": "ood_length", "symbols": ["A", "D", "D", "B", "C", "C", "A", "C", "A", "D", "B", "C"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000078", "seed": 123, "sequence_seed": 7050143260089128629}
+{"split": "ood_length", "symbols": ["E", "A", "B", "B", "B", "B", "C", "D", "E", "A", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000079", "seed": 123, "sequence_seed": 6536151951829933047}
+{"split": "ood_length", "symbols": ["D", "C", "B", "E", "A", "D", "C", "E", "B"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000080", "seed": 123, "sequence_seed": 4907517064715659588}
+{"split": "ood_length", "symbols": ["B", "A", "D", "E", "D", "D", "C", "A", "C", "D", "A", "D"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000081", "seed": 123, "sequence_seed": 7099545170452291577}
+{"split": "ood_length", "symbols": ["E", "A", "B", "C", "C", "D", "D", "E", "A", "E"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000082", "seed": 123, "sequence_seed": 7338983574673598227}
+{"split": "ood_length", "symbols": ["B", "B", "D", "B", "D", "B", "D", "E", "A", "E"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000083", "seed": 123, "sequence_seed": 5170939306649058717}
+{"split": "ood_length", "symbols": ["D", "D", "C", "E", "E", "B", "A", "C", "A"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000084", "seed": 123, "sequence_seed": 6915888942605873835}
+{"split": "ood_length", "symbols": ["B", "B", "D", "A", "A", "C", "B", "A", "D", "A", "B", "A"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000085", "seed": 123, "sequence_seed": 1678823306541605601}
+{"split": "ood_length", "symbols": ["A", "C", "D", "D", "E", "C", "C", "B", "E", "D", "A", "A"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000086", "seed": 123, "sequence_seed": 2098659537560067013}
+{"split": "ood_length", "symbols": ["E", "B", "B", "A", "C", "B", "A", "C", "E"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000087", "seed": 123, "sequence_seed": 8367590789448894683}
+{"split": "ood_length", "symbols": ["A", "C", "C", "E", "C", "A", "B", "C", "E", "E", "A"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000088", "seed": 123, "sequence_seed": 3129322678355042115}
+{"split": "ood_length", "symbols": ["E", "A", "C", "B", "E", "A", "B", "E", "A", "B", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000089", "seed": 123, "sequence_seed": 5509705911975708936}
+{"split": "ood_length", "symbols": ["B", "B", "D", "B", "B", "B", "A", "A", "C"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000090", "seed": 123, "sequence_seed": 7638658423067252203}
+{"split": "ood_length", "symbols": ["E", "E", "D", "E", "E", "A", "D", "A", "C", "C"], "length": 10, "difficulty_tag": "ood_length", "example_id": "ood_length-000091", "seed": 123, "sequence_seed": 8313777212813737579}
+{"split": "ood_length", "symbols": ["B", "B", "B", "A", "B", "C", "B", "B", "E", "D", "E", "A"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000092", "seed": 123, "sequence_seed": 5934294190199004695}
+{"split": "ood_length", "symbols": ["C", "A", "E", "E", "B", "C", "A", "B", "E", "E", "E", "C"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000093", "seed": 123, "sequence_seed": 7272969738150008950}
+{"split": "ood_length", "symbols": ["C", "D", "B", "A", "C", "C", "D", "A", "A", "B", "E", "B"], "length": 12, "difficulty_tag": "ood_length", "example_id": "ood_length-000094", "seed": 123, "sequence_seed": 9052085896435930594}
+{"split": "ood_length", "symbols": ["A", "B", "E", "C", "E", "D", "B", "A", "A", "A", "D"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000095", "seed": 123, "sequence_seed": 1375103055415076128}
+{"split": "ood_length", "symbols": ["D", "C", "B", "A", "E", "C", "B", "C", "A", "E", "B"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000096", "seed": 123, "sequence_seed": 3998075050205518005}
+{"split": "ood_length", "symbols": ["A", "D", "B", "E", "E", "E", "D", "A", "C", "A", "E"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000097", "seed": 123, "sequence_seed": 8312216061708175163}
+{"split": "ood_length", "symbols": ["C", "B", "E", "C", "C", "E", "C", "B", "A"], "length": 9, "difficulty_tag": "ood_length", "example_id": "ood_length-000098", "seed": 123, "sequence_seed": 9052647659637463074}
+{"split": "ood_length", "symbols": ["D", "B", "A", "D", "E", "A", "C", "C", "C", "A", "D"], "length": 11, "difficulty_tag": "ood_length", "example_id": "ood_length-000099", "seed": 123, "sequence_seed": 4934462915618109831}
+{"split": "ood_symbol", "symbols": ["F", "A", "D", "E", "B"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000000", "seed": 123, "sequence_seed": 6008878346433370239}
+{"split": "ood_symbol", "symbols": ["F", "B"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000001", "seed": 123, "sequence_seed": 3271050775099056546}
+{"split": "ood_symbol", "symbols": ["F", "C", "C", "A", "F", "F"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000002", "seed": 123, "sequence_seed": 6499082939187635261}
+{"split": "ood_symbol", "symbols": ["E", "F", "F"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000003", "seed": 123, "sequence_seed": 5691915520063263354}
+{"split": "ood_symbol", "symbols": ["F"], "length": 1, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000004", "seed": 123, "sequence_seed": 6136430706017908847}
+{"split": "ood_symbol", "symbols": ["C", "D", "B", "F", "B", "D", "B"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000005", "seed": 123, "sequence_seed": 986482760239547356}
+{"split": "ood_symbol", "symbols": ["C", "B", "F", "D", "B", "E"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000006", "seed": 123, "sequence_seed": 2858675337797133153}
+{"split": "ood_symbol", "symbols": ["A", "C", "F", "F", "C"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000007", "seed": 123, "sequence_seed": 4230571203666481567}
+{"split": "ood_symbol", "symbols": ["A", "A", "F", "B", "C", "F"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000008", "seed": 123, "sequence_seed": 5025917820779780775}
+{"split": "ood_symbol", "symbols": ["A", "B", "E", "D", "B", "E", "C", "F"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000009", "seed": 123, "sequence_seed": 36174731613780006}
+{"split": "ood_symbol", "symbols": ["F", "A", "A", "A", "E", "C"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000010", "seed": 123, "sequence_seed": 7947698707945844083}
+{"split": "ood_symbol", "symbols": ["F", "D", "C", "A", "A", "A", "A", "E"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000011", "seed": 123, "sequence_seed": 4702540654097134633}
+{"split": "ood_symbol", "symbols": ["E", "F", "A", "B", "D", "B", "F", "E"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000012", "seed": 123, "sequence_seed": 7847979123652852161}
+{"split": "ood_symbol", "symbols": ["E", "C", "A", "E", "F"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000013", "seed": 123, "sequence_seed": 5958587761840734181}
+{"split": "ood_symbol", "symbols": ["F", "A", "E", "D"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000014", "seed": 123, "sequence_seed": 3707508623432396800}
+{"split": "ood_symbol", "symbols": ["B", "F", "A"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000015", "seed": 123, "sequence_seed": 626138288729258452}
+{"split": "ood_symbol", "symbols": ["C", "C", "B", "E", "F", "D", "B"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000016", "seed": 123, "sequence_seed": 7634022548339434126}
+{"split": "ood_symbol", "symbols": ["C", "B", "D", "F", "A"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000017", "seed": 123, "sequence_seed": 1918503430562232307}
+{"split": "ood_symbol", "symbols": ["B", "A", "F", "C", "D", "E", "D"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000018", "seed": 123, "sequence_seed": 2347750145753556150}
+{"split": "ood_symbol", "symbols": ["D", "B", "F", "D", "B"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000019", "seed": 123, "sequence_seed": 5380042857966218997}
+{"split": "ood_symbol", "symbols": ["F", "C", "C", "D", "E", "F", "B"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000020", "seed": 123, "sequence_seed": 3393761059575569034}
+{"split": "ood_symbol", "symbols": ["B", "E", "B", "D", "B", "F", "F", "F"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000021", "seed": 123, "sequence_seed": 4628435358536388571}
+{"split": "ood_symbol", "symbols": ["F", "A", "C"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000022", "seed": 123, "sequence_seed": 256956505350810123}
+{"split": "ood_symbol", "symbols": ["E", "F", "F", "E", "F"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000023", "seed": 123, "sequence_seed": 1564001390019045670}
+{"split": "ood_symbol", "symbols": ["A", "B", "F", "B", "E", "D", "C", "E"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000024", "seed": 123, "sequence_seed": 4526314234363309404}
+{"split": "ood_symbol", "symbols": ["F", "C", "F", "D", "B"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000025", "seed": 123, "sequence_seed": 8660716895152941588}
+{"split": "ood_symbol", "symbols": ["E", "F", "E", "D", "D", "B", "A"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000026", "seed": 123, "sequence_seed": 3305468213263712410}
+{"split": "ood_symbol", "symbols": ["F", "A", "F", "A", "D"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000027", "seed": 123, "sequence_seed": 4062368607282985487}
+{"split": "ood_symbol", "symbols": ["A", "F", "A", "D"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000028", "seed": 123, "sequence_seed": 1611340733368090571}
+{"split": "ood_symbol", "symbols": ["D", "D", "F", "A", "B", "A", "A"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000029", "seed": 123, "sequence_seed": 4168748702470127950}
+{"split": "ood_symbol", "symbols": ["F", "E", "E", "A", "E", "E"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000030", "seed": 123, "sequence_seed": 7357467943320474967}
+{"split": "ood_symbol", "symbols": ["F", "F", "D", "F", "C", "F", "A"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000031", "seed": 123, "sequence_seed": 406367870380147740}
+{"split": "ood_symbol", "symbols": ["B", "F", "B", "E", "E", "D", "A"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000032", "seed": 123, "sequence_seed": 4188524793530796689}
+{"split": "ood_symbol", "symbols": ["F", "D", "A", "E"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000033", "seed": 123, "sequence_seed": 4760280463897680828}
+{"split": "ood_symbol", "symbols": ["F", "F", "D", "C", "B"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000034", "seed": 123, "sequence_seed": 5878262560803426524}
+{"split": "ood_symbol", "symbols": ["C", "A", "A", "C", "C", "F"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000035", "seed": 123, "sequence_seed": 7212435459567882889}
+{"split": "ood_symbol", "symbols": ["B", "F"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000036", "seed": 123, "sequence_seed": 8448999679467061892}
+{"split": "ood_symbol", "symbols": ["E", "E", "C", "F", "D", "A", "B"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000037", "seed": 123, "sequence_seed": 8179777305559616261}
+{"split": "ood_symbol", "symbols": ["F", "D", "C", "A", "B", "B"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000038", "seed": 123, "sequence_seed": 6582715780609652722}
+{"split": "ood_symbol", "symbols": ["E", "E", "A", "B", "B", "E", "F"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000039", "seed": 123, "sequence_seed": 835917472218792904}
+{"split": "ood_symbol", "symbols": ["B", "C", "B", "F"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000040", "seed": 123, "sequence_seed": 1745620341169106153}
+{"split": "ood_symbol", "symbols": ["E", "E", "B", "F", "D", "C"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000041", "seed": 123, "sequence_seed": 4939765608189293027}
+{"split": "ood_symbol", "symbols": ["F", "D"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000042", "seed": 123, "sequence_seed": 1351078897591752141}
+{"split": "ood_symbol", "symbols": ["F", "C", "F", "D", "D"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000043", "seed": 123, "sequence_seed": 985637645672608928}
+{"split": "ood_symbol", "symbols": ["E", "F", "B"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000044", "seed": 123, "sequence_seed": 2703525113685118843}
+{"split": "ood_symbol", "symbols": ["F", "B", "A", "A", "D", "E"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000045", "seed": 123, "sequence_seed": 5551601793054354840}
+{"split": "ood_symbol", "symbols": ["F", "D", "A", "F", "C"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000046", "seed": 123, "sequence_seed": 9025855367602958116}
+{"split": "ood_symbol", "symbols": ["D", "F", "B", "C", "D"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000047", "seed": 123, "sequence_seed": 2645318509090839724}
+{"split": "ood_symbol", "symbols": ["D", "F"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000048", "seed": 123, "sequence_seed": 7461701055857719851}
+{"split": "ood_symbol", "symbols": ["E", "E", "C", "E", "A", "F", "D"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000049", "seed": 123, "sequence_seed": 6217080653304750319}
+{"split": "ood_symbol", "symbols": ["B", "A", "D", "E", "A", "F"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000050", "seed": 123, "sequence_seed": 1486409899835896314}
+{"split": "ood_symbol", "symbols": ["E", "F", "A", "F"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000051", "seed": 123, "sequence_seed": 525944954729079286}
+{"split": "ood_symbol", "symbols": ["A", "B", "E", "F", "A", "D"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000052", "seed": 123, "sequence_seed": 2875073962264678323}
+{"split": "ood_symbol", "symbols": ["C", "B", "A", "F", "D"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000053", "seed": 123, "sequence_seed": 2808483634668465292}
+{"split": "ood_symbol", "symbols": ["C", "B", "C", "B", "F", "D"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000054", "seed": 123, "sequence_seed": 2704787328446073842}
+{"split": "ood_symbol", "symbols": ["F", "D", "A", "B", "D"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000055", "seed": 123, "sequence_seed": 4519049170487935291}
+{"split": "ood_symbol", "symbols": ["A", "A", "E", "F"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000056", "seed": 123, "sequence_seed": 4329796111043645148}
+{"split": "ood_symbol", "symbols": ["E", "E", "D", "F", "C"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000057", "seed": 123, "sequence_seed": 19289613677709540}
+{"split": "ood_symbol", "symbols": ["F", "C", "B", "F", "A", "E"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000058", "seed": 123, "sequence_seed": 2359149999080000104}
+{"split": "ood_symbol", "symbols": ["C", "E", "F", "B", "C", "C"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000059", "seed": 123, "sequence_seed": 7121770541126277223}
+{"split": "ood_symbol", "symbols": ["F", "E", "E", "A"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000060", "seed": 123, "sequence_seed": 5395212536913083692}
+{"split": "ood_symbol", "symbols": ["F", "C"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000061", "seed": 123, "sequence_seed": 2329951304625740402}
+{"split": "ood_symbol", "symbols": ["C", "F"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000062", "seed": 123, "sequence_seed": 6400448646462105015}
+{"split": "ood_symbol", "symbols": ["F", "A"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000063", "seed": 123, "sequence_seed": 6734572027626809498}
+{"split": "ood_symbol", "symbols": ["B", "C", "C", "F"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000064", "seed": 123, "sequence_seed": 39928351881286296}
+{"split": "ood_symbol", "symbols": ["B", "A", "F", "A", "A", "E"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000065", "seed": 123, "sequence_seed": 4053999961712741331}
+{"split": "ood_symbol", "symbols": ["F", "B", "C"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000066", "seed": 123, "sequence_seed": 3874746504618924709}
+{"split": "ood_symbol", "symbols": ["F", "D", "F", "E", "D", "B"], "length": 6, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000067", "seed": 123, "sequence_seed": 1959075685912312718}
+{"split": "ood_symbol", "symbols": ["D", "F", "D"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000068", "seed": 123, "sequence_seed": 8376191926651551608}
+{"split": "ood_symbol", "symbols": ["B", "C", "D", "B", "A", "F", "E"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000069", "seed": 123, "sequence_seed": 2134831733535306268}
+{"split": "ood_symbol", "symbols": ["C", "E", "F", "E"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000070", "seed": 123, "sequence_seed": 248241649081939923}
+{"split": "ood_symbol", "symbols": ["F", "A", "B", "B"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000071", "seed": 123, "sequence_seed": 7174336579845219983}
+{"split": "ood_symbol", "symbols": ["F", "D", "C", "A", "E", "E", "B", "B"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000072", "seed": 123, "sequence_seed": 1559007372860441205}
+{"split": "ood_symbol", "symbols": ["F", "B", "E", "A"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000073", "seed": 123, "sequence_seed": 1959315799070285451}
+{"split": "ood_symbol", "symbols": ["F", "F", "E", "B", "D"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000074", "seed": 123, "sequence_seed": 855780512369213984}
+{"split": "ood_symbol", "symbols": ["B", "B", "A", "E", "F", "F", "F"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000075", "seed": 123, "sequence_seed": 5169196531738999292}
+{"split": "ood_symbol", "symbols": ["B", "F", "A", "F"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000076", "seed": 123, "sequence_seed": 2500317984048412637}
+{"split": "ood_symbol", "symbols": ["A", "F"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000077", "seed": 123, "sequence_seed": 5310199805924044763}
+{"split": "ood_symbol", "symbols": ["F", "F"], "length": 2, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000078", "seed": 123, "sequence_seed": 6211668979806919990}
+{"split": "ood_symbol", "symbols": ["F", "C", "C"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000079", "seed": 123, "sequence_seed": 7075417700962401351}
+{"split": "ood_symbol", "symbols": ["B", "F", "E", "A", "A", "C", "D"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000080", "seed": 123, "sequence_seed": 1408263497919943068}
+{"split": "ood_symbol", "symbols": ["B", "F", "D", "D", "A"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000081", "seed": 123, "sequence_seed": 226744955904115236}
+{"split": "ood_symbol", "symbols": ["C", "B", "C", "F", "C"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000082", "seed": 123, "sequence_seed": 5688589068633950944}
+{"split": "ood_symbol", "symbols": ["E", "B", "D", "A", "F", "B", "A", "E"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000083", "seed": 123, "sequence_seed": 7069475426360322853}
+{"split": "ood_symbol", "symbols": ["F", "C", "D", "F", "B", "B", "E"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000084", "seed": 123, "sequence_seed": 30361330558906981}
+{"split": "ood_symbol", "symbols": ["D", "F", "C"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000085", "seed": 123, "sequence_seed": 3283057888848594286}
+{"split": "ood_symbol", "symbols": ["C", "D", "A", "F", "A", "F", "F", "B"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000086", "seed": 123, "sequence_seed": 7486191436008428648}
+{"split": "ood_symbol", "symbols": ["D", "C", "E", "F", "B", "C", "A"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000087", "seed": 123, "sequence_seed": 3288173249239765354}
+{"split": "ood_symbol", "symbols": ["D", "B", "C", "D", "F"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000088", "seed": 123, "sequence_seed": 4182329056608965009}
+{"split": "ood_symbol", "symbols": ["B", "F", "D", "B"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000089", "seed": 123, "sequence_seed": 7803704980863193870}
+{"split": "ood_symbol", "symbols": ["B", "D", "C", "A", "E", "F", "B", "C"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000090", "seed": 123, "sequence_seed": 6340372660073453983}
+{"split": "ood_symbol", "symbols": ["C", "F", "A"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000091", "seed": 123, "sequence_seed": 7765547301656327941}
+{"split": "ood_symbol", "symbols": ["E", "F", "E", "D", "E"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000092", "seed": 123, "sequence_seed": 5965307147558805748}
+{"split": "ood_symbol", "symbols": ["B", "F", "E"], "length": 3, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000093", "seed": 123, "sequence_seed": 6231538366022470185}
+{"split": "ood_symbol", "symbols": ["D", "F", "D", "B"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000094", "seed": 123, "sequence_seed": 6063263702476861017}
+{"split": "ood_symbol", "symbols": ["E", "F", "F", "C"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000095", "seed": 123, "sequence_seed": 1053444933454092978}
+{"split": "ood_symbol", "symbols": ["B", "B", "F", "C"], "length": 4, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000096", "seed": 123, "sequence_seed": 8694287895786096942}
+{"split": "ood_symbol", "symbols": ["D", "C", "F", "E", "E"], "length": 5, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000097", "seed": 123, "sequence_seed": 5476300033188115385}
+{"split": "ood_symbol", "symbols": ["F", "E", "B", "A", "F", "E", "D", "D"], "length": 8, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000098", "seed": 123, "sequence_seed": 3281766060172227810}
+{"split": "ood_symbol", "symbols": ["A", "A", "F", "F", "C", "C", "B"], "length": 7, "difficulty_tag": "ood_symbol", "example_id": "ood_symbol-000099", "seed": 123, "sequence_seed": 416384027827446041}

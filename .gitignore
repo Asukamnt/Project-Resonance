@@ -1,0 +1,77 @@
+# ===================
+# Python 缓存和构建产物
+# ===================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===================
+# 虚拟环境
+# ===================
+.venv/
+venv/
+ENV/
+env/
+
+# ===================
+# IDE
+# ===================
+.idea/
+.vscode/
+.cursor/
+.cursorrules
+*.swp
+*.swo
+*.sublime-*
+
+# ===================
+# Jupyter
+# ===================
+.ipynb_checkpoints/
+
+# ===================
+# 项目敏感文件 - 不上传
+# ===================
+# 实验结果（包含最佳超参数）
+runs/
+
+# 开发日志（包含实验细节）
+docs/iteration_log.md
+
+# 原始计划文档
+docs/plan.pdf
+docs/plan_text.txt
+
+# PDF 原始内容
+_pdf_content.txt
+
+# ===================
+# 操作系统
+# ===================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===================
+# 日志和临时文件
+# ===================
+*.log
+*.tmp
+*.temp

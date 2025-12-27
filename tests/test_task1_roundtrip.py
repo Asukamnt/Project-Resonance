@@ -28,3 +28,11 @@ def test_encode_reproducible_with_seed():
     assert decode_wave_to_symbols(wave_ref) == sequence
     assert decode_wave_to_symbols(wave_repeat) == sequence
 
+
+def test_encode_supports_fixed_phase_override():
+    sequence = ["A", "C", "E"]
+    wave_a = encode_symbols_to_wave(sequence, rng=np.random.default_rng(1), fixed_phase=0.0)
+    wave_b = encode_symbols_to_wave(sequence, rng=np.random.default_rng(2024), fixed_phase=0.0)
+
+    assert np.array_equal(wave_a, wave_b)
+    assert decode_wave_to_symbols(wave_a) == sequence

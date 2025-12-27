@@ -11,7 +11,7 @@ import numpy as np
 from ..symbols import SYMBOLS
 from .manifest import ManifestEntry, write_manifest
 
-IID_SYMBOLS: Sequence[str] = SYMBOLS
+IID_SYMBOLS: tuple[str, ...] = tuple(SYMBOLS)
 OOD_EXTRA_SYMBOL: str = "F"
 
 DEFAULT_SPLIT_SIZES: Dict[str, int] = {
@@ -152,7 +152,7 @@ def build_manifest(
             rng,
             existing_sequences=seen,
             length_range=IID_LENGTH_RANGE,
-            alphabet=tuple(IID_SYMBOLS) + (OOD_EXTRA_SYMBOL,),
+            alphabet=IID_SYMBOLS + (OOD_EXTRA_SYMBOL,),
             difficulty_tag="ood_symbol",
             seed=seed,
             must_include=OOD_EXTRA_SYMBOL,
@@ -162,9 +162,23 @@ def build_manifest(
     return entries
 
 
+def _resolve_output_path(path: Path) -> Path:
+    """Return a JSONL output path, treating directories as manifest roots."""
+    if path.suffix.lower() == ".jsonl":
+        return path
+    if path.suffix:
+        raise ValueError(f"Unsupported manifest extension for '{path}'. Use '.jsonl'.")
+    return path / "task1.jsonl"
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate Task1 manifest JSONL.")
-    parser.add_argument("--out", type=Path, default=Path("manifests/task1.jsonl"))
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=Path("manifests"),
+        help="Output file or directory. If directory, 'task1.jsonl' is used.",
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--train-size", type=int, default=DEFAULT_SPLIT_SIZES["train"])
     parser.add_argument("--val-size", type=int, default=DEFAULT_SPLIT_SIZES["val"])
@@ -190,8 +204,9 @@ def main() -> None:
         "ood_symbol": args.ood_symbol_size,
     }
     entries = build_manifest(seed=args.seed, split_sizes=split_sizes)
-    write_manifest(entries, args.out)
-    print(f"Wrote {len(entries)} entries to {args.out}")
+    output_path = _resolve_output_path(args.out)
+    write_manifest(entries, output_path)
+    print(f"Wrote {len(entries)} entries to {output_path}")
 
 
 if __name__ == "__main__":

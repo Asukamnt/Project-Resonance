@@ -1,0 +1,400 @@
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000000", "seed": 42, "sequence_seed": 230683484220305791}
+{"split": "train", "symbols": ["(", "(", "(", ")", "(", ")", "("], "length": 7, "difficulty_tag": "iid", "example_id": "train-000001", "seed": 42, "sequence_seed": 2258728696626565719}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000002", "seed": 42, "sequence_seed": 801869163849917492}
+{"split": "train", "symbols": [")", "(", ")", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000003", "seed": 42, "sequence_seed": 293143515607798169}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000004", "seed": 42, "sequence_seed": 2016579388887034202}
+{"split": "train", "symbols": ["(", "(", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000005", "seed": 42, "sequence_seed": 3869387381345962230}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000006", "seed": 42, "sequence_seed": 59940494302148427}
+{"split": "train", "symbols": [")", "(", ")", "(", ")", ")", ")", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000007", "seed": 42, "sequence_seed": 1472597238169086909}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000008", "seed": 42, "sequence_seed": 3138257129542022417}
+{"split": "train", "symbols": [")", ")", ")", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000009", "seed": 42, "sequence_seed": 1985918923296309552}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000010", "seed": 42, "sequence_seed": 942723427174387577}
+{"split": "train", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000011", "seed": 42, "sequence_seed": 892051149799221885}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000012", "seed": 42, "sequence_seed": 3172431589140685843}
+{"split": "train", "symbols": ["(", "(", "(", "(", ")", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000013", "seed": 42, "sequence_seed": 3491363426932591777}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000014", "seed": 42, "sequence_seed": 2704092307918063857}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", "(", ")", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000015", "seed": 42, "sequence_seed": 422655345212415442}
+{"split": "train", "symbols": ["(", "(", "(", "(", ")", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000016", "seed": 42, "sequence_seed": 3506045623077649104}
+{"split": "train", "symbols": ["(", "(", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000017", "seed": 42, "sequence_seed": 3364982910062445278}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000018", "seed": 42, "sequence_seed": 3276793867839745544}
+{"split": "train", "symbols": [")", "(", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000019", "seed": 42, "sequence_seed": 2462435741587773860}
+{"split": "train", "symbols": ["(", ")", "(", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000020", "seed": 42, "sequence_seed": 658571918376805803}
+{"split": "train", "symbols": [")", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000021", "seed": 42, "sequence_seed": 1578475388236853219}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000022", "seed": 42, "sequence_seed": 2257982254735691220}
+{"split": "train", "symbols": [")", "(", "("], "length": 3, "difficulty_tag": "iid", "example_id": "train-000023", "seed": 42, "sequence_seed": 3499858741419224946}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000024", "seed": 42, "sequence_seed": 2025592422697026105}
+{"split": "train", "symbols": ["(", "(", ")", "(", "(", "(", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000025", "seed": 42, "sequence_seed": 2112595577355236109}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000026", "seed": 42, "sequence_seed": 3700092117582972924}
+{"split": "train", "symbols": ["(", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000027", "seed": 42, "sequence_seed": 1945973223094074497}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000028", "seed": 42, "sequence_seed": 1961133707096931031}
+{"split": "train", "symbols": ["(", ")", ")", "(", ")", ")", "("], "length": 7, "difficulty_tag": "iid", "example_id": "train-000029", "seed": 42, "sequence_seed": 3649060188839583409}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000030", "seed": 42, "sequence_seed": 1317757820207583401}
+{"split": "train", "symbols": [")", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000031", "seed": 42, "sequence_seed": 2274737258927935517}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000032", "seed": 42, "sequence_seed": 3951604536009256313}
+{"split": "train", "symbols": [")", "(", "(", ")", ")", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000033", "seed": 42, "sequence_seed": 3338827910277438615}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000034", "seed": 42, "sequence_seed": 838491331852963295}
+{"split": "train", "symbols": [")", "(", "(", "(", ")", "(", "(", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000035", "seed": 42, "sequence_seed": 1409712372730427189}
+{"split": "train", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000036", "seed": 42, "sequence_seed": 3893738411977344084}
+{"split": "train", "symbols": [")", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000037", "seed": 42, "sequence_seed": 3548852045832477200}
+{"split": "train", "symbols": ["(", ")", "(", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000038", "seed": 42, "sequence_seed": 105893728400647727}
+{"split": "train", "symbols": [")", "(", "(", "(", ")", ")", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000039", "seed": 42, "sequence_seed": 1056553320732244409}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000040", "seed": 42, "sequence_seed": 2461027963323909904}
+{"split": "train", "symbols": [")", "(", "(", "(", ")", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000041", "seed": 42, "sequence_seed": 3137564970730263187}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000042", "seed": 42, "sequence_seed": 4010001701844210440}
+{"split": "train", "symbols": [")", "(", "("], "length": 3, "difficulty_tag": "iid", "example_id": "train-000043", "seed": 42, "sequence_seed": 29932745726049443}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000044", "seed": 42, "sequence_seed": 981466611638729327}
+{"split": "train", "symbols": [")", "(", ")", "(", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000045", "seed": 42, "sequence_seed": 2752667306018712686}
+{"split": "train", "symbols": ["(", "(", "(", ")", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000046", "seed": 42, "sequence_seed": 1834631103129155783}
+{"split": "train", "symbols": ["(", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000047", "seed": 42, "sequence_seed": 5274807899939805}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000048", "seed": 42, "sequence_seed": 4506592233125569595}
+{"split": "train", "symbols": ["(", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000049", "seed": 42, "sequence_seed": 2836317236611304237}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000050", "seed": 42, "sequence_seed": 2221648267342786330}
+{"split": "train", "symbols": ["(", "(", "(", ")", "(", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000051", "seed": 42, "sequence_seed": 726405567981766518}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000052", "seed": 42, "sequence_seed": 4482470796599380943}
+{"split": "train", "symbols": [")", "(", "(", "(", ")", "(", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000053", "seed": 42, "sequence_seed": 1159936014124169652}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000054", "seed": 42, "sequence_seed": 4383706197956849164}
+{"split": "train", "symbols": [")", ")", "(", "(", "(", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000055", "seed": 42, "sequence_seed": 2444715868291449515}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000056", "seed": 42, "sequence_seed": 3680054411503903642}
+{"split": "train", "symbols": [")", ")", ")", ")", ")", ")", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000057", "seed": 42, "sequence_seed": 3444196228061882510}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000058", "seed": 42, "sequence_seed": 1116066748661274767}
+{"split": "train", "symbols": [")", "(", "("], "length": 3, "difficulty_tag": "iid", "example_id": "train-000059", "seed": 42, "sequence_seed": 590534699672519631}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000060", "seed": 42, "sequence_seed": 2122433790496066819}
+{"split": "train", "symbols": [")", "(", ")", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000061", "seed": 42, "sequence_seed": 66323826528496310}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000062", "seed": 42, "sequence_seed": 2111615285442271712}
+{"split": "train", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000063", "seed": 42, "sequence_seed": 289733399550728998}
+{"split": "train", "symbols": ["(", ")", "(", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000064", "seed": 42, "sequence_seed": 653543704309986876}
+{"split": "train", "symbols": [")", "(", "(", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000065", "seed": 42, "sequence_seed": 2568499420235423533}
+{"split": "train", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000066", "seed": 42, "sequence_seed": 1975985799229087719}
+{"split": "train", "symbols": ["(", "(", "(", "(", ")", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000067", "seed": 42, "sequence_seed": 2241253935836887033}
+{"split": "train", "symbols": ["(", "(", "(", "(", ")", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000068", "seed": 42, "sequence_seed": 1756221539356054770}
+{"split": "train", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000069", "seed": 42, "sequence_seed": 3267818305575542483}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000070", "seed": 42, "sequence_seed": 4307542244748820412}
+{"split": "train", "symbols": [")", "(", "(", "(", ")", ")", "(", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000071", "seed": 42, "sequence_seed": 499640983263426330}
+{"split": "train", "symbols": ["(", ")", "(", ")", "(", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000072", "seed": 42, "sequence_seed": 907744669384575297}
+{"split": "train", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000073", "seed": 42, "sequence_seed": 1007828935999132254}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000074", "seed": 42, "sequence_seed": 1754367521308019712}
+{"split": "train", "symbols": ["(", ")", "(", ")", "(", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000075", "seed": 42, "sequence_seed": 1292953494970979965}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000076", "seed": 42, "sequence_seed": 2569125518858850934}
+{"split": "train", "symbols": ["(", ")", "(", ")", "("], "length": 5, "difficulty_tag": "iid", "example_id": "train-000077", "seed": 42, "sequence_seed": 695302883601228412}
+{"split": "train", "symbols": ["(", ")", "(", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000078", "seed": 42, "sequence_seed": 466594991076051941}
+{"split": "train", "symbols": [")", ")", "(", ")", ")", ")", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000079", "seed": 42, "sequence_seed": 136117155107563376}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000080", "seed": 42, "sequence_seed": 2180215975365058469}
+{"split": "train", "symbols": ["(", ")", "("], "length": 3, "difficulty_tag": "iid", "example_id": "train-000081", "seed": 42, "sequence_seed": 4479248792340316282}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000082", "seed": 42, "sequence_seed": 1518509413151980240}
+{"split": "train", "symbols": ["(", ")", ")", ")", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000083", "seed": 42, "sequence_seed": 2446066468969950756}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000084", "seed": 42, "sequence_seed": 4196711491455302861}
+{"split": "train", "symbols": ["(", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000085", "seed": 42, "sequence_seed": 4488751533376772810}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000086", "seed": 42, "sequence_seed": 2736646685292569996}
+{"split": "train", "symbols": ["(", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000087", "seed": 42, "sequence_seed": 539413171727586886}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000088", "seed": 42, "sequence_seed": 527256598990055354}
+{"split": "train", "symbols": ["(", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000089", "seed": 42, "sequence_seed": 4397597865624250810}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000090", "seed": 42, "sequence_seed": 1452060627525165563}
+{"split": "train", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000091", "seed": 42, "sequence_seed": 631997721075661206}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000092", "seed": 42, "sequence_seed": 2169373051309797100}
+{"split": "train", "symbols": ["(", ")", "(", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "train-000093", "seed": 42, "sequence_seed": 366552161069459542}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000094", "seed": 42, "sequence_seed": 3866667320734440788}
+{"split": "train", "symbols": [")", ")", "(", "(", ")", ")", "("], "length": 7, "difficulty_tag": "iid", "example_id": "train-000095", "seed": 42, "sequence_seed": 2917996793123116693}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000096", "seed": 42, "sequence_seed": 2897834697047955597}
+{"split": "train", "symbols": [")", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000097", "seed": 42, "sequence_seed": 3650480116909166609}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000098", "seed": 42, "sequence_seed": 4217152359719803842}
+{"split": "train", "symbols": [")", "(", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000099", "seed": 42, "sequence_seed": 669092141356304475}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000100", "seed": 42, "sequence_seed": 922164297734303053}
+{"split": "train", "symbols": ["(", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000101", "seed": 42, "sequence_seed": 1966001512318658699}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000102", "seed": 42, "sequence_seed": 1221696181401562287}
+{"split": "train", "symbols": ["(", "(", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000103", "seed": 42, "sequence_seed": 634487830134935681}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000104", "seed": 42, "sequence_seed": 2628544764405437394}
+{"split": "train", "symbols": [")", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000105", "seed": 42, "sequence_seed": 72155418484844623}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000106", "seed": 42, "sequence_seed": 955416839349065671}
+{"split": "train", "symbols": ["(", "(", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000107", "seed": 42, "sequence_seed": 1064641536759957999}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000108", "seed": 42, "sequence_seed": 2511968918596972330}
+{"split": "train", "symbols": ["(", ")", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000109", "seed": 42, "sequence_seed": 1942715647332327595}
+{"split": "train", "symbols": ["(", "(", "(", "(", ")", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000110", "seed": 42, "sequence_seed": 1877853733002870954}
+{"split": "train", "symbols": [")", "(", "(", ")", ")", ")", "("], "length": 7, "difficulty_tag": "iid", "example_id": "train-000111", "seed": 42, "sequence_seed": 2316184708445138016}
+{"split": "train", "symbols": ["(", "(", "(", ")", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000112", "seed": 42, "sequence_seed": 851303079956523023}
+{"split": "train", "symbols": ["(", ")", ")", ")", ")", "(", "("], "length": 7, "difficulty_tag": "iid", "example_id": "train-000113", "seed": 42, "sequence_seed": 406628632687313907}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000114", "seed": 42, "sequence_seed": 2416110895677835746}
+{"split": "train", "symbols": [")", ")", "("], "length": 3, "difficulty_tag": "iid", "example_id": "train-000115", "seed": 42, "sequence_seed": 4075213287439027999}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000116", "seed": 42, "sequence_seed": 3944715550720433980}
+{"split": "train", "symbols": [")", ")", ")", ")", ")", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000117", "seed": 42, "sequence_seed": 1031854433932785318}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000118", "seed": 42, "sequence_seed": 1365924100718086370}
+{"split": "train", "symbols": ["(", ")", "(", ")", "("], "length": 5, "difficulty_tag": "iid", "example_id": "train-000119", "seed": 42, "sequence_seed": 385803164556739842}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000120", "seed": 42, "sequence_seed": 1937614049757455046}
+{"split": "train", "symbols": ["(", "(", "(", ")", "(", "(", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000121", "seed": 42, "sequence_seed": 3262109596844601027}
+{"split": "train", "symbols": ["(", ")", "(", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000122", "seed": 42, "sequence_seed": 3748169855047380035}
+{"split": "train", "symbols": [")", "(", "(", ")", "(", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000123", "seed": 42, "sequence_seed": 1425502938706330585}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000124", "seed": 42, "sequence_seed": 1498814234192432276}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")", ")", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000125", "seed": 42, "sequence_seed": 1633019858743376986}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000126", "seed": 42, "sequence_seed": 1654310115628049978}
+{"split": "train", "symbols": ["(", ")", "(", "(", "(", "(", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000127", "seed": 42, "sequence_seed": 3063870119196963585}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000128", "seed": 42, "sequence_seed": 3797383677920015145}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", "(", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000129", "seed": 42, "sequence_seed": 2460848332747563874}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000130", "seed": 42, "sequence_seed": 3528324623494817703}
+{"split": "train", "symbols": ["(", ")", "(", "(", "(", ")", "(", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000131", "seed": 42, "sequence_seed": 2051588918771393573}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000132", "seed": 42, "sequence_seed": 3225029719784582868}
+{"split": "train", "symbols": ["(", "(", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000133", "seed": 42, "sequence_seed": 2099197898528851659}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000134", "seed": 42, "sequence_seed": 3675199976963634231}
+{"split": "train", "symbols": [")", ")", ")", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000135", "seed": 42, "sequence_seed": 2574473683388644374}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000136", "seed": 42, "sequence_seed": 3054318423795658535}
+{"split": "train", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000137", "seed": 42, "sequence_seed": 2409284955653549218}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000138", "seed": 42, "sequence_seed": 2448495035005139066}
+{"split": "train", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000139", "seed": 42, "sequence_seed": 3188400799759700492}
+{"split": "train", "symbols": ["(", "(", "(", ")", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000140", "seed": 42, "sequence_seed": 2893162606155225955}
+{"split": "train", "symbols": [")", "(", ")", ")", "("], "length": 5, "difficulty_tag": "iid", "example_id": "train-000141", "seed": 42, "sequence_seed": 1066644117861998381}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000142", "seed": 42, "sequence_seed": 2349400463812133037}
+{"split": "train", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000143", "seed": 42, "sequence_seed": 4021920740385420240}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000144", "seed": 42, "sequence_seed": 3359350156501771514}
+{"split": "train", "symbols": [")", ")", ")", ")", "("], "length": 5, "difficulty_tag": "iid", "example_id": "train-000145", "seed": 42, "sequence_seed": 1149465653008631699}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000146", "seed": 42, "sequence_seed": 2769984014040791091}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", "("], "length": 6, "difficulty_tag": "iid", "example_id": "train-000147", "seed": 42, "sequence_seed": 3008506266253029397}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000148", "seed": 42, "sequence_seed": 2726937892424007718}
+{"split": "train", "symbols": ["(", ")", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000149", "seed": 42, "sequence_seed": 1769412568131432182}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000150", "seed": 42, "sequence_seed": 2775772687936578009}
+{"split": "train", "symbols": [")", "(", "(", ")", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000151", "seed": 42, "sequence_seed": 2802751737312221835}
+{"split": "train", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000152", "seed": 42, "sequence_seed": 3965018305677133889}
+{"split": "train", "symbols": [")", "(", ")", ")", "(", "(", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000153", "seed": 42, "sequence_seed": 2972224561142745514}
+{"split": "train", "symbols": ["(", ")", "(", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000154", "seed": 42, "sequence_seed": 4078204301377856356}
+{"split": "train", "symbols": ["(", "(", ")", "(", "(", "(", "("], "length": 7, "difficulty_tag": "iid", "example_id": "train-000155", "seed": 42, "sequence_seed": 2617467591554574600}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000156", "seed": 42, "sequence_seed": 3091566034105655372}
+{"split": "train", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000157", "seed": 42, "sequence_seed": 2166280451043006148}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000158", "seed": 42, "sequence_seed": 2071944447430993509}
+{"split": "train", "symbols": ["(", "(", "(", ")", "(", "(", "(", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000159", "seed": 42, "sequence_seed": 1359100435549007336}
+{"split": "train", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "train-000160", "seed": 42, "sequence_seed": 2258273845722261904}
+{"split": "train", "symbols": ["(", "(", "(", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "train-000161", "seed": 42, "sequence_seed": 671721858919020457}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000162", "seed": 42, "sequence_seed": 3541576275166774695}
+{"split": "train", "symbols": ["(", ")", "(", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "train-000163", "seed": 42, "sequence_seed": 2250359291960600163}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000164", "seed": 42, "sequence_seed": 2018453224412307859}
+{"split": "train", "symbols": [")", "(", "("], "length": 3, "difficulty_tag": "iid", "example_id": "train-000165", "seed": 42, "sequence_seed": 463182821522718166}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000166", "seed": 42, "sequence_seed": 1119335529715634727}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000167", "seed": 42, "sequence_seed": 4378098917154942512}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000168", "seed": 42, "sequence_seed": 2557745734375819183}
+{"split": "train", "symbols": [")", ")", ")", "(", ")", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000169", "seed": 42, "sequence_seed": 2532714414155446169}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000170", "seed": 42, "sequence_seed": 2162821535786957553}
+{"split": "train", "symbols": ["(", "(", ")", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000171", "seed": 42, "sequence_seed": 2948800241932573368}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000172", "seed": 42, "sequence_seed": 1276275452480109771}
+{"split": "train", "symbols": [")", "(", "("], "length": 3, "difficulty_tag": "iid", "example_id": "train-000173", "seed": 42, "sequence_seed": 3532876997299794904}
+{"split": "train", "symbols": ["(", "(", "(", "(", ")", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000174", "seed": 42, "sequence_seed": 592406592402857388}
+{"split": "train", "symbols": ["(", "(", "(", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "train-000175", "seed": 42, "sequence_seed": 3051842138373910202}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000176", "seed": 42, "sequence_seed": 3834840472258793658}
+{"split": "train", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000177", "seed": 42, "sequence_seed": 3592289504054904479}
+{"split": "train", "symbols": ["(", ")", "(", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000178", "seed": 42, "sequence_seed": 180150460597783406}
+{"split": "train", "symbols": [")", ")", ")", ")", "(", "(", ")", "("], "length": 8, "difficulty_tag": "iid", "example_id": "train-000179", "seed": 42, "sequence_seed": 3508395758206349663}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000180", "seed": 42, "sequence_seed": 2754215601899363708}
+{"split": "train", "symbols": [")", ")", "(", "(", ")", "(", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000181", "seed": 42, "sequence_seed": 3864789173427916915}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000182", "seed": 42, "sequence_seed": 4503122148213471564}
+{"split": "train", "symbols": [")", "(", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000183", "seed": 42, "sequence_seed": 4019877386347550390}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000184", "seed": 42, "sequence_seed": 3586574657545710522}
+{"split": "train", "symbols": [")", "(", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000185", "seed": 42, "sequence_seed": 3729163078245486134}
+{"split": "train", "symbols": ["(", "(", ")", ")", "(", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000186", "seed": 42, "sequence_seed": 774278631016900863}
+{"split": "train", "symbols": [")", "(", ")", ")", "(", "(", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "train-000187", "seed": 42, "sequence_seed": 1251606815389094146}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000188", "seed": 42, "sequence_seed": 1676154419956276893}
+{"split": "train", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "train-000189", "seed": 42, "sequence_seed": 3496615997293042340}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000190", "seed": 42, "sequence_seed": 4193861069521772124}
+{"split": "train", "symbols": ["(", "(", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000191", "seed": 42, "sequence_seed": 3496822128319141399}
+{"split": "train", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000192", "seed": 42, "sequence_seed": 3888249255444938098}
+{"split": "train", "symbols": ["(", "(", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "train-000193", "seed": 42, "sequence_seed": 755451653934332112}
+{"split": "train", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000194", "seed": 42, "sequence_seed": 480404876197060094}
+{"split": "train", "symbols": [")", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "train-000195", "seed": 42, "sequence_seed": 1838777729291253089}
+{"split": "train", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000196", "seed": 42, "sequence_seed": 2200188742826887051}
+{"split": "train", "symbols": ["(", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "train-000197", "seed": 42, "sequence_seed": 2010368079571203161}
+{"split": "train", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "train-000198", "seed": 42, "sequence_seed": 2363430960219824880}
+{"split": "train", "symbols": [")", ")", "(", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "train-000199", "seed": 42, "sequence_seed": 1547581700218808839}
+{"split": "val", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000000", "seed": 42, "sequence_seed": 1510472948492646592}
+{"split": "val", "symbols": [")", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "val-000001", "seed": 42, "sequence_seed": 3461595708837777570}
+{"split": "val", "symbols": ["(", ")", "(", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000002", "seed": 42, "sequence_seed": 700943761685200265}
+{"split": "val", "symbols": [")", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000003", "seed": 42, "sequence_seed": 2239890215664809258}
+{"split": "val", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "val-000004", "seed": 42, "sequence_seed": 1116535867984778415}
+{"split": "val", "symbols": ["(", ")", ")", ")", "(", ")", ")", "("], "length": 8, "difficulty_tag": "iid", "example_id": "val-000005", "seed": 42, "sequence_seed": 378795911047465542}
+{"split": "val", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000006", "seed": 42, "sequence_seed": 3951089762481339928}
+{"split": "val", "symbols": [")", "(", "(", ")", "(", "(", "("], "length": 7, "difficulty_tag": "iid", "example_id": "val-000007", "seed": 42, "sequence_seed": 636013619370113983}
+{"split": "val", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000008", "seed": 42, "sequence_seed": 3147302104000193804}
+{"split": "val", "symbols": ["(", "("], "length": 2, "difficulty_tag": "iid", "example_id": "val-000009", "seed": 42, "sequence_seed": 3874358051385231821}
+{"split": "val", "symbols": ["(", "(", "(", "(", ")", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000010", "seed": 42, "sequence_seed": 973424244907957229}
+{"split": "val", "symbols": [")", "(", "(", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "val-000011", "seed": 42, "sequence_seed": 3340595012558007447}
+{"split": "val", "symbols": ["(", ")", "(", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000012", "seed": 42, "sequence_seed": 4016659965701418382}
+{"split": "val", "symbols": [")", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000013", "seed": 42, "sequence_seed": 4287703773939662367}
+{"split": "val", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000014", "seed": 42, "sequence_seed": 2475511928100514472}
+{"split": "val", "symbols": [")", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "val-000015", "seed": 42, "sequence_seed": 2264293250142166944}
+{"split": "val", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000016", "seed": 42, "sequence_seed": 799324143995806012}
+{"split": "val", "symbols": ["(", "(", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "val-000017", "seed": 42, "sequence_seed": 4157914575543637214}
+{"split": "val", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000018", "seed": 42, "sequence_seed": 4286179083171083967}
+{"split": "val", "symbols": ["(", ")", ")", "(", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000019", "seed": 42, "sequence_seed": 3102711211213812075}
+{"split": "val", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "val-000020", "seed": 42, "sequence_seed": 1677176634470572262}
+{"split": "val", "symbols": ["(", ")", "(", ")", "("], "length": 5, "difficulty_tag": "iid", "example_id": "val-000021", "seed": 42, "sequence_seed": 3272682629975866503}
+{"split": "val", "symbols": ["(", ")", "(", "(", ")", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000022", "seed": 42, "sequence_seed": 3139071763873489467}
+{"split": "val", "symbols": ["(", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "val-000023", "seed": 42, "sequence_seed": 1762184511064652479}
+{"split": "val", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "val-000024", "seed": 42, "sequence_seed": 4506335265585605731}
+{"split": "val", "symbols": [")", ")", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000025", "seed": 42, "sequence_seed": 2216597045212812329}
+{"split": "val", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000026", "seed": 42, "sequence_seed": 4527027757904514499}
+{"split": "val", "symbols": ["(", "(", "(", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "val-000027", "seed": 42, "sequence_seed": 159041036058732051}
+{"split": "val", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "val-000028", "seed": 42, "sequence_seed": 2043866077189047781}
+{"split": "val", "symbols": ["(", "(", "(", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "val-000029", "seed": 42, "sequence_seed": 2244094031147103885}
+{"split": "val", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000030", "seed": 42, "sequence_seed": 4365057560378089431}
+{"split": "val", "symbols": [")", "(", ")", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000031", "seed": 42, "sequence_seed": 3170602313965010933}
+{"split": "val", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000032", "seed": 42, "sequence_seed": 3051011234614100557}
+{"split": "val", "symbols": [")", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "val-000033", "seed": 42, "sequence_seed": 4185061400901471547}
+{"split": "val", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000034", "seed": 42, "sequence_seed": 2318789639688607783}
+{"split": "val", "symbols": [")", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000035", "seed": 42, "sequence_seed": 2910416088528139329}
+{"split": "val", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "val-000036", "seed": 42, "sequence_seed": 1707705925003808520}
+{"split": "val", "symbols": [")", "(", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000037", "seed": 42, "sequence_seed": 2550258944294809666}
+{"split": "val", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000038", "seed": 42, "sequence_seed": 2610202287205205802}
+{"split": "val", "symbols": ["(", "("], "length": 2, "difficulty_tag": "iid", "example_id": "val-000039", "seed": 42, "sequence_seed": 1790418676384997863}
+{"split": "val", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000040", "seed": 42, "sequence_seed": 3328540354763576894}
+{"split": "val", "symbols": ["(", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000041", "seed": 42, "sequence_seed": 130495616150235325}
+{"split": "val", "symbols": ["(", "(", "(", ")", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000042", "seed": 42, "sequence_seed": 1167521741417550801}
+{"split": "val", "symbols": ["(", ")", ")", "("], "length": 4, "difficulty_tag": "iid", "example_id": "val-000043", "seed": 42, "sequence_seed": 1164722708696521573}
+{"split": "val", "symbols": ["(", "(", "(", "(", ")", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000044", "seed": 42, "sequence_seed": 946203996319267312}
+{"split": "val", "symbols": [")", "(", ")", ")", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000045", "seed": 42, "sequence_seed": 4329422624381367889}
+{"split": "val", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "val-000046", "seed": 42, "sequence_seed": 3142457620519096383}
+{"split": "val", "symbols": [")", ")", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "val-000047", "seed": 42, "sequence_seed": 473866614952614555}
+{"split": "val", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "val-000048", "seed": 42, "sequence_seed": 1052268119148230100}
+{"split": "val", "symbols": ["(", "(", ")", "(", ")", "(", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "val-000049", "seed": 42, "sequence_seed": 3695873788609190115}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000000", "seed": 42, "sequence_seed": 1399434661779297025}
+{"split": "iid_test", "symbols": ["(", "(", "("], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000001", "seed": 42, "sequence_seed": 2802388026376447482}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000002", "seed": 42, "sequence_seed": 2289157516509145876}
+{"split": "iid_test", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000003", "seed": 42, "sequence_seed": 2081596399909120578}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000004", "seed": 42, "sequence_seed": 3508368072619020363}
+{"split": "iid_test", "symbols": [")", ")", "(", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000005", "seed": 42, "sequence_seed": 4083380542132960829}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000006", "seed": 42, "sequence_seed": 3955257115378102352}
+{"split": "iid_test", "symbols": [")", ")", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000007", "seed": 42, "sequence_seed": 1916505146230226219}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000008", "seed": 42, "sequence_seed": 2440929661543628628}
+{"split": "iid_test", "symbols": [")", ")", ")", "(", ")", ")", "("], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000009", "seed": 42, "sequence_seed": 1448595987144160180}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000010", "seed": 42, "sequence_seed": 1443758604107084702}
+{"split": "iid_test", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000011", "seed": 42, "sequence_seed": 4155163247526583181}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")", "(", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000012", "seed": 42, "sequence_seed": 4334177618363679394}
+{"split": "iid_test", "symbols": [")", ")", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000013", "seed": 42, "sequence_seed": 2134991417932191227}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000014", "seed": 42, "sequence_seed": 2607616730251071161}
+{"split": "iid_test", "symbols": [")", ")", ")", "(", ")", ")", "("], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000015", "seed": 42, "sequence_seed": 4187699842934321103}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000016", "seed": 42, "sequence_seed": 2152954558819104077}
+{"split": "iid_test", "symbols": ["(", "(", ")", "("], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000017", "seed": 42, "sequence_seed": 1824560217963423101}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000018", "seed": 42, "sequence_seed": 658639518989654248}
+{"split": "iid_test", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000019", "seed": 42, "sequence_seed": 4050475678324384317}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000020", "seed": 42, "sequence_seed": 4554457016046467934}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000021", "seed": 42, "sequence_seed": 238561554349956206}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000022", "seed": 42, "sequence_seed": 2485800454521924007}
+{"split": "iid_test", "symbols": [")", ")", ")", "(", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000023", "seed": 42, "sequence_seed": 1615849287929484684}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000024", "seed": 42, "sequence_seed": 1673941879650338041}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000025", "seed": 42, "sequence_seed": 4535370015057271644}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000026", "seed": 42, "sequence_seed": 3209374289154447860}
+{"split": "iid_test", "symbols": [")", "(", ")", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000027", "seed": 42, "sequence_seed": 2961239755701072638}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000028", "seed": 42, "sequence_seed": 3041901916543766870}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000029", "seed": 42, "sequence_seed": 4569895143508056331}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000030", "seed": 42, "sequence_seed": 4195028595500186559}
+{"split": "iid_test", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000031", "seed": 42, "sequence_seed": 2327968487345238594}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000032", "seed": 42, "sequence_seed": 3727856918451303290}
+{"split": "iid_test", "symbols": [")", "(", ")", ")", ")", "(", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000033", "seed": 42, "sequence_seed": 10616703838151048}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000034", "seed": 42, "sequence_seed": 3811536125722629373}
+{"split": "iid_test", "symbols": ["(", "("], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000035", "seed": 42, "sequence_seed": 4597787309937934907}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000036", "seed": 42, "sequence_seed": 1877493388290715132}
+{"split": "iid_test", "symbols": ["(", "(", ")", "("], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000037", "seed": 42, "sequence_seed": 1208383738213935252}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000038", "seed": 42, "sequence_seed": 4470677254346670996}
+{"split": "iid_test", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000039", "seed": 42, "sequence_seed": 2207129537309823796}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000040", "seed": 42, "sequence_seed": 2866164151272306869}
+{"split": "iid_test", "symbols": [")", ")", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000041", "seed": 42, "sequence_seed": 859703191413068793}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000042", "seed": 42, "sequence_seed": 1046494134488384975}
+{"split": "iid_test", "symbols": ["(", ")", ")", ")", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000043", "seed": 42, "sequence_seed": 1083433958641930934}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000044", "seed": 42, "sequence_seed": 1420132962926024153}
+{"split": "iid_test", "symbols": [")", ")", "(", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000045", "seed": 42, "sequence_seed": 2521899525297527630}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000046", "seed": 42, "sequence_seed": 4450273097965139936}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000047", "seed": 42, "sequence_seed": 4213111551166850563}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000048", "seed": 42, "sequence_seed": 3537956551669531009}
+{"split": "iid_test", "symbols": [")", "(", ")"], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000049", "seed": 42, "sequence_seed": 1259067231352620685}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")", "(", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000050", "seed": 42, "sequence_seed": 2547932569184178903}
+{"split": "iid_test", "symbols": ["(", ")", ")", "(", ")", "(", ")", "("], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000051", "seed": 42, "sequence_seed": 3134795768120584870}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000052", "seed": 42, "sequence_seed": 2464232836811135155}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000053", "seed": 42, "sequence_seed": 2608729171000040937}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000054", "seed": 42, "sequence_seed": 4118672753291843938}
+{"split": "iid_test", "symbols": [")", "(", "(", "(", ")", "("], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000055", "seed": 42, "sequence_seed": 3183206548130090002}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000056", "seed": 42, "sequence_seed": 3479148684344441757}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000057", "seed": 42, "sequence_seed": 2967872222868236242}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", ")", "(", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000058", "seed": 42, "sequence_seed": 2202592376370708958}
+{"split": "iid_test", "symbols": [")", "(", "(", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000059", "seed": 42, "sequence_seed": 2154233285239791788}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")", "(", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000060", "seed": 42, "sequence_seed": 3788731568714552623}
+{"split": "iid_test", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000061", "seed": 42, "sequence_seed": 3560947942117891412}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000062", "seed": 42, "sequence_seed": 4568600380340985807}
+{"split": "iid_test", "symbols": ["(", "("], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000063", "seed": 42, "sequence_seed": 4061107996809527536}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000064", "seed": 42, "sequence_seed": 141556609300643095}
+{"split": "iid_test", "symbols": [")", "(", "(", ")", "(", "(", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000065", "seed": 42, "sequence_seed": 3781385307910790798}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000066", "seed": 42, "sequence_seed": 690168800947222415}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000067", "seed": 42, "sequence_seed": 3122676211580962928}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000068", "seed": 42, "sequence_seed": 3666136575912515260}
+{"split": "iid_test", "symbols": [")", ")", "(", "(", ")", "(", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000069", "seed": 42, "sequence_seed": 3504968026231109845}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000070", "seed": 42, "sequence_seed": 331110760727971469}
+{"split": "iid_test", "symbols": ["(", ")", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000071", "seed": 42, "sequence_seed": 2165373312363136429}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000072", "seed": 42, "sequence_seed": 4002680289265654173}
+{"split": "iid_test", "symbols": [")", "("], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000073", "seed": 42, "sequence_seed": 4092212340042946478}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000074", "seed": 42, "sequence_seed": 2762087024292401002}
+{"split": "iid_test", "symbols": [")", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000075", "seed": 42, "sequence_seed": 2991828240966226022}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000076", "seed": 42, "sequence_seed": 2705840172793975906}
+{"split": "iid_test", "symbols": [")", "(", "(", "("], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000077", "seed": 42, "sequence_seed": 3972384480239654378}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000078", "seed": 42, "sequence_seed": 1567822437164791124}
+{"split": "iid_test", "symbols": [")", "(", "("], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000079", "seed": 42, "sequence_seed": 3528348403709728783}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000080", "seed": 42, "sequence_seed": 2221262783828322411}
+{"split": "iid_test", "symbols": [")", "(", ")", "(", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000081", "seed": 42, "sequence_seed": 2141560373317426418}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000082", "seed": 42, "sequence_seed": 2342527504449648581}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000083", "seed": 42, "sequence_seed": 4291203851542621920}
+{"split": "iid_test", "symbols": ["(", "(", ")", ")"], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000084", "seed": 42, "sequence_seed": 681255790340806451}
+{"split": "iid_test", "symbols": ["(", ")", ")", ")", ")"], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000085", "seed": 42, "sequence_seed": 3187280270755296869}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000086", "seed": 42, "sequence_seed": 3913559206221285766}
+{"split": "iid_test", "symbols": [")", "(", "(", "(", ")", "(", ")"], "length": 7, "difficulty_tag": "iid", "example_id": "iid_test-000087", "seed": 42, "sequence_seed": 4213566607274176498}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", ")", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000088", "seed": 42, "sequence_seed": 1837452474417928320}
+{"split": "iid_test", "symbols": ["(", "(", ")", "(", "("], "length": 5, "difficulty_tag": "iid", "example_id": "iid_test-000089", "seed": 42, "sequence_seed": 4456807723282215250}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000090", "seed": 42, "sequence_seed": 3517464777766568784}
+{"split": "iid_test", "symbols": ["(", "(", "(", "(", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000091", "seed": 42, "sequence_seed": 2723023115641943096}
+{"split": "iid_test", "symbols": ["(", ")"], "length": 2, "difficulty_tag": "iid", "example_id": "iid_test-000092", "seed": 42, "sequence_seed": 3650663646842961875}
+{"split": "iid_test", "symbols": [")", "(", ")", "("], "length": 4, "difficulty_tag": "iid", "example_id": "iid_test-000093", "seed": 42, "sequence_seed": 452353317075290325}
+{"split": "iid_test", "symbols": ["(", ")", "(", "(", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000094", "seed": 42, "sequence_seed": 4581500553384925751}
+{"split": "iid_test", "symbols": [")", ")", "(", "(", "(", ")", "(", "("], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000095", "seed": 42, "sequence_seed": 2122467558580951258}
+{"split": "iid_test", "symbols": ["(", ")", "(", ")", "(", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000096", "seed": 42, "sequence_seed": 3249587266213603753}
+{"split": "iid_test", "symbols": [")", ")", "("], "length": 3, "difficulty_tag": "iid", "example_id": "iid_test-000097", "seed": 42, "sequence_seed": 1753658089111380899}
+{"split": "iid_test", "symbols": ["(", "(", "(", ")", ")", ")"], "length": 6, "difficulty_tag": "iid", "example_id": "iid_test-000098", "seed": 42, "sequence_seed": 2849402869090064670}
+{"split": "iid_test", "symbols": [")", ")", ")", "(", "(", ")", "(", ")"], "length": 8, "difficulty_tag": "iid", "example_id": "iid_test-000099", "seed": 42, "sequence_seed": 307733472348850680}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", ")", "(", ")", ")", ")", ")", "(", ")", "(", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000000", "seed": 42, "sequence_seed": 831333642744902735}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", ")", ")", ")", "(", "(", "(", "(", "("], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000001", "seed": 42, "sequence_seed": 1619993745222953248}
+{"split": "ood_length", "symbols": ["(", "(", "(", ")", "(", ")", "(", ")", "(", ")", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000002", "seed": 42, "sequence_seed": 3374440123695598219}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", "(", ")", "(", ")", "(", ")", ")", "(", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000003", "seed": 42, "sequence_seed": 2370130655932552538}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", ")", ")", ")", "(", ")", "(", "(", ")", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000004", "seed": 42, "sequence_seed": 3124096808973915600}
+{"split": "ood_length", "symbols": ["(", ")", ")", "(", "(", "(", ")", ")", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000005", "seed": 42, "sequence_seed": 1298254324824461737}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", "(", "(", "(", ")", ")", ")", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000006", "seed": 42, "sequence_seed": 3665474048376012451}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", "(", "(", "(", "(", ")", "(", ")", ")", ")", "("], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000007", "seed": 42, "sequence_seed": 832896990372392731}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", "(", ")", ")", ")", "(", ")", "(", "(", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000008", "seed": 42, "sequence_seed": 2439199862618598493}
+{"split": "ood_length", "symbols": ["(", ")", ")", ")", ")", ")", ")", ")", "(", "(", ")", "(", ")", "("], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000009", "seed": 42, "sequence_seed": 4194660753399317224}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", "(", "(", ")", "(", ")", ")", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000010", "seed": 42, "sequence_seed": 2418012229134616280}
+{"split": "ood_length", "symbols": ["(", ")", ")", "(", "(", "(", "(", ")", ")", ")", ")", "(", "(", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000011", "seed": 42, "sequence_seed": 999316411792287107}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", "(", "(", ")", "(", ")", ")", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000012", "seed": 42, "sequence_seed": 230811643296265545}
+{"split": "ood_length", "symbols": ["(", ")", "(", ")", "(", ")", ")", ")", ")", "(", ")", "(", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000013", "seed": 42, "sequence_seed": 3025323928617247972}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", ")", ")", "(", ")", "(", ")", "(", ")", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000014", "seed": 42, "sequence_seed": 4282112153183858488}
+{"split": "ood_length", "symbols": ["(", "(", ")", ")", "(", ")", ")", "(", ")", "(", "(", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000015", "seed": 42, "sequence_seed": 3765864629712227960}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", ")", "(", ")", "(", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000016", "seed": 42, "sequence_seed": 418250487184780592}
+{"split": "ood_length", "symbols": [")", "(", ")", ")", "(", "(", "(", ")", ")", "("], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000017", "seed": 42, "sequence_seed": 1071022403147834785}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", ")", "(", ")", ")", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000018", "seed": 42, "sequence_seed": 1251279998910506882}
+{"split": "ood_length", "symbols": [")", ")", ")", ")", ")", "(", "(", "(", "(", ")", ")", "(", ")"], "length": 13, "difficulty_tag": "ood", "example_id": "ood_length-000019", "seed": 42, "sequence_seed": 3421977249000324934}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", ")", "(", ")", "(", ")", "(", "(", ")", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000020", "seed": 42, "sequence_seed": 2580147443326183991}
+{"split": "ood_length", "symbols": [")", ")", ")", ")", "(", ")", ")", ")", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000021", "seed": 42, "sequence_seed": 3417535708371762127}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", "(", ")", ")", "(", ")", ")", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000022", "seed": 42, "sequence_seed": 4101595303164087759}
+{"split": "ood_length", "symbols": [")", ")", "(", "(", "(", "(", "(", "(", "(", ")", "("], "length": 11, "difficulty_tag": "ood", "example_id": "ood_length-000023", "seed": 42, "sequence_seed": 3345188320714868905}
+{"split": "ood_length", "symbols": ["(", "(", ")", ")", "(", "(", "(", ")", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000024", "seed": 42, "sequence_seed": 3308182327537131168}
+{"split": "ood_length", "symbols": [")", "(", ")", "(", "(", ")", "(", "(", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000025", "seed": 42, "sequence_seed": 2544557211630992077}
+{"split": "ood_length", "symbols": ["(", ")", "(", ")", "(", "(", "(", ")", ")", "(", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000026", "seed": 42, "sequence_seed": 1126724536131938272}
+{"split": "ood_length", "symbols": [")", "(", ")", ")", "(", "(", "(", ")", ")", ")", ")", ")", ")"], "length": 13, "difficulty_tag": "ood", "example_id": "ood_length-000027", "seed": 42, "sequence_seed": 196987768668787270}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", ")", "(", ")", "(", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000028", "seed": 42, "sequence_seed": 3076079018410991323}
+{"split": "ood_length", "symbols": [")", ")", ")", "(", "(", ")", "(", "(", ")", "(", "("], "length": 11, "difficulty_tag": "ood", "example_id": "ood_length-000029", "seed": 42, "sequence_seed": 1161442801278475759}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", ")", ")", "(", "(", ")", "(", "(", ")", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000030", "seed": 42, "sequence_seed": 632816943220939334}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", ")", ")", "(", ")", ")", "(", ")", ")", ")", "("], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000031", "seed": 42, "sequence_seed": 2149033512158911513}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", "(", "(", ")", "(", ")", ")", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000032", "seed": 42, "sequence_seed": 1360947054913586414}
+{"split": "ood_length", "symbols": [")", "(", ")", ")", ")", ")", ")", "(", "(", "(", "(", ")", ")", "("], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000033", "seed": 42, "sequence_seed": 2557409040572994723}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", "(", ")", "(", ")", ")", "(", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000034", "seed": 42, "sequence_seed": 1198965800234292982}
+{"split": "ood_length", "symbols": [")", "(", "(", ")", "(", "(", ")", ")", "(", ")", ")", ")", "(", "("], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000035", "seed": 42, "sequence_seed": 1013891588623685607}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", ")", "(", "(", ")", ")", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000036", "seed": 42, "sequence_seed": 137062306881067841}
+{"split": "ood_length", "symbols": [")", ")", "(", ")", "(", ")", ")", ")", "(", ")", "(", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000037", "seed": 42, "sequence_seed": 145554823849357273}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", "(", "(", ")", "(", ")", ")", ")", ")"], "length": 12, "difficulty_tag": "ood", "example_id": "ood_length-000038", "seed": 42, "sequence_seed": 483295667183099926}
+{"split": "ood_length", "symbols": ["(", ")", ")", "(", "(", ")", "(", ")", ")", "(", "("], "length": 11, "difficulty_tag": "ood", "example_id": "ood_length-000039", "seed": 42, "sequence_seed": 3882675860681079835}
+{"split": "ood_length", "symbols": ["(", "(", ")", ")", "(", "(", "(", "(", ")", ")", ")", "(", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000040", "seed": 42, "sequence_seed": 4392593706797324005}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", "(", "(", ")", ")", ")", ")", "(", ")", ")"], "length": 13, "difficulty_tag": "ood", "example_id": "ood_length-000041", "seed": 42, "sequence_seed": 3339220149791891427}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", ")", ")", "(", "(", ")", ")", ")", "(", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000042", "seed": 42, "sequence_seed": 1005845703634353924}
+{"split": "ood_length", "symbols": [")", "(", ")", "(", ")", ")", ")", ")", ")", ")", ")", "(", ")"], "length": 13, "difficulty_tag": "ood", "example_id": "ood_length-000043", "seed": 42, "sequence_seed": 2043435778200801942}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", "(", "(", "(", ")", ")", "(", ")", ")", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000044", "seed": 42, "sequence_seed": 2782048764527760307}
+{"split": "ood_length", "symbols": [")", "(", "(", ")", ")", "(", "(", ")", "(", ")", "(", ")", "("], "length": 13, "difficulty_tag": "ood", "example_id": "ood_length-000045", "seed": 42, "sequence_seed": 561015294126554373}
+{"split": "ood_length", "symbols": ["(", "(", ")", "(", "(", ")", "(", "(", ")", "(", ")", ")", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000046", "seed": 42, "sequence_seed": 3704265363495095995}
+{"split": "ood_length", "symbols": ["(", "(", "(", "(", ")", "(", ")", ")", "(", ")", "(", "(", ")"], "length": 13, "difficulty_tag": "ood", "example_id": "ood_length-000047", "seed": 42, "sequence_seed": 995772103051711973}
+{"split": "ood_length", "symbols": ["(", "(", "(", ")", "(", ")", "(", ")", "(", ")", "(", ")", ")", ")"], "length": 14, "difficulty_tag": "ood", "example_id": "ood_length-000048", "seed": 42, "sequence_seed": 677832178646469893}
+{"split": "ood_length", "symbols": ["(", ")", "(", "(", "(", ")", "(", ")", "(", ")"], "length": 10, "difficulty_tag": "ood", "example_id": "ood_length-000049", "seed": 42, "sequence_seed": 605811700447917247}

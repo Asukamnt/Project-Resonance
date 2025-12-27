@@ -1,0 +1,45 @@
+# Task3(Mod) 基础训练配置
+#
+# 用法示例：
+#   python train.py --config configs/task3_mod_stable.yaml --manifest manifests/task3_tiny.jsonl --split iid_test --limit 200
+#
+# 说明：
+# - 这是一个可复现的基础配置，可以验证系统能正常运行
+# - 更优的参数组合请联系作者获取
+# - CLI 仍可覆盖任意字段（例如 --limit/--epochs/--seed/--device 等）
+
+# 任务/模型
+task: mod
+model: mini_jmamba
+
+# 训练超参
+epochs: 50
+batch_size: 32
+lr: 0.001
+
+# Task3: mirror 预训练 + thinking gap（表达式后再答题）
+pretrain_mirror_epochs: 15
+thinking_gap_s: 0.5
+thinking_gap_align: 160
+
+# 反遗忘：mod 阶段表达式保持 + 进入 mod 时降速
+mod_expr_ctc_weight_start: 1.0
+mod_expr_ctc_weight_end: 0.1
+mod_lr_factor: 0.1
+
+# remainder 头与 remainder-only 预训练
+remainder_head: attn_hidden
+remainder_gru_hidden: 256
+pretrain_remainder_epochs: 20
+pretrain_remainder_lr: 0.001
+pretrain_remainder_freeze_backbone: false
+
+# 答案窗写入稳定
+remainder_guidance_weight: 0.5
+remainder_guidance_blank_floor: 0.0
+blank_penalty_weight: 1.0
+answer_digit_mass_floor: 0.3
+answer_blank_margin: 1.0
+answer_blank_margin_weight: 1.0
+
+
