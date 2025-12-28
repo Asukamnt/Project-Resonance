@@ -48,12 +48,23 @@ Jericho 的流程是：`音频 → 神经网络 → 音频`
 
 ## 当前状态
 
-- ✅ Task 1 (Mirror)：符号→音频编码器与 scorer 解码器已实现
-- ✅ Task 2 (Bracket)：括号匹配推理
-- ✅ Task 3 (Mod)：取模运算推理
-- ✅ Mini-JMamba 模型集成
+- ✅ Task 1 (Mirror)：EM = 1.00 (IID)
+- ✅ Task 2 (Bracket)：audio_acc = 0.96 (IID), 0.84 (OOD-length), 0.97 (OOD-noise)
+- ✅ Task 3 (Mod)：EM = 0.315 (超过 baseline +0.19)
+- ✅ Mini-JMamba 模型集成（RoPE 位置编码）
 - ✅ 完整的训练/评估流水线
-- ✅ IID / OOD 评测拆分
+- ✅ 多轴 OOD 评测（length, noise）
+- ✅ 88 个测试用例全部通过
+
+---
+
+## 实验结果
+
+| 任务 | IID | OOD-length | OOD-noise | Baseline |
+|------|-----|------------|-----------|----------|
+| Task 1 (Mirror) | 1.00 | 1.00 | - | - |
+| Task 2 (Bracket) | 0.96 | 0.84 | 0.97 | 0.50 |
+| Task 3 (Mod) | 0.315 | - | - | 0.125 |
 
 ---
 

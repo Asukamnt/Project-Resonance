@@ -62,6 +62,11 @@ class Task2TrainingConfig:
     binary_ce_weight: float = 1.0  # 二分类辅助损失
     symbol_guidance_weight: float = 1.0
 
+    # Whether to compute audio reconstruction losses only on the answer window.
+    # This avoids length-dilution on OOD-length splits where the answer occupies
+    # a small fraction of the full waveform.
+    answer_window_only: bool = True
+
     # STFT config
     stft_fft_sizes: Tuple[int, ...] = (512, 1024, 2048)
     stft_hop_scale: float = 0.25
@@ -76,6 +81,7 @@ class Task2TrainingConfig:
 
     # Warmup
     symbol_warmup_epochs: int = 10
+    audio_ramp_epochs: int = 10
 
     # Blank handling
     ctc_blank_id: int = 0
@@ -168,6 +174,7 @@ def prepare_task2_samples(
     *,
     blank_id: int,
     config: Task2TrainingConfig,
+    noise_snr_db: float | None = None,
 ) -> List[Task2Sample]:
     """Prepare Task2 samples from manifest entries."""
     samples: List[Task2Sample] = []
@@ -196,6 +203,13 @@ def prepare_task2_samples(
         # Build full input wave (input + thinking gap silence)
         full_input = np.zeros(total_samples, dtype=np.float32)
         full_input[:input_len_samples] = input_wave
+
+        # Add noise if specified (for OOD noise testing)
+        if noise_snr_db is not None:
+            signal_power = np.mean(input_wave ** 2) + 1e-10
+            noise_power = signal_power / (10 ** (noise_snr_db / 10))
+            noise = np.random.randn(total_samples).astype(np.float32) * np.sqrt(noise_power)
+            full_input = full_input + noise
 
         # Build target wave (silence + answer)
         target_wave = synthesise_task2_target_wave(
@@ -281,6 +295,62 @@ def frames_to_wave(
     return waves, lengths
 
 
+def extract_answer_window(
+    wave: torch.Tensor,
+    answer_start_samples: torch.Tensor,
+    answer_len_samples: torch.Tensor,
+    *,
+    wave_lengths: torch.Tensor | None = None,
+) -> Tuple[torch.Tensor, torch.Tensor]:
+    """Extract answer-window slices from waveforms.
+
+    Parameters
+    ----------
+    wave:
+        Waveform tensor of shape (B, T).
+    answer_start_samples:
+        Start index (in samples) of the answer window for each sample. Shape (B,).
+    answer_len_samples:
+        Answer window length (in samples) for each sample. Shape (B,).
+    wave_lengths:
+        Optional per-sample valid lengths (in samples). Used to clamp windows.
+
+    Returns
+    -------
+    windowed_wave:
+        Padded answer-window waveform tensor of shape (B, max_answer_len).
+    effective_lengths:
+        Per-sample effective window lengths after clamping. Shape (B,).
+    """
+    if wave.dim() != 2:
+        raise ValueError(f"extract_answer_window expects (B, T), got shape={tuple(wave.shape)}")
+    batch_size, max_time = wave.shape
+    if batch_size == 0:
+        return wave[:, :0], torch.zeros(0, device=wave.device, dtype=torch.long)
+
+    starts = answer_start_samples.to(device=wave.device).clamp(min=0, max=max_time)
+    lengths = answer_len_samples.to(device=wave.device).clamp(min=0, max=max_time)
+    max_len = int(lengths.max().item()) if lengths.numel() else 0
+    windowed = torch.zeros(batch_size, max_len, device=wave.device, dtype=wave.dtype)
+    effective_lengths = torch.zeros(batch_size, device=wave.device, dtype=torch.long)
+
+    for b in range(batch_size):
+        start = int(starts[b].item())
+        req_len = int(lengths[b].item())
+        if req_len <= 0:
+            continue
+        valid_end = max_time
+        if wave_lengths is not None:
+            valid_end = min(valid_end, int(wave_lengths[b].to(device=wave.device).item()))
+        end = min(start + req_len, valid_end)
+        win_len = max(0, end - start)
+        if win_len > 0:
+            windowed[b, :win_len] = wave[b, start:end]
+            effective_lengths[b] = win_len
+
+    return windowed, effective_lengths
+
+
 def masked_l1_wave(
     pred: torch.Tensor,
     target: torch.Tensor,
@@ -330,6 +400,140 @@ def apply_symbol_guidance(
         templates = templates.to(frame_outputs.device)
     guided = torch.einsum("bth,hf->btf", symbol_probs, templates)
     return frame_outputs + weight * guided
+
+
+def apply_cls_guidance_to_answer_window(
+    symbol_probs: torch.Tensor,
+    cls_logits: torch.Tensor,
+    answer_start_frames: torch.Tensor,
+    answer_len_frames: torch.Tensor,
+    *,
+    valid_symbol_id: int,
+    invalid_symbol_id: int,
+    mix_weight: float = 1.0,
+) -> torch.Tensor:
+    """Inject classification probability into answer window symbol probs.
+    
+    This bridges the gap between the classification head (which correctly
+    predicts V/X) and the audio output (which uses symbol_probs for rendering).
+    
+    Parameters
+    ----------
+    symbol_probs:
+        Per-frame symbol probabilities, shape (B, T, vocab_size).
+    cls_logits:
+        Classification logits, shape (B, 2) where [:, 0]=valid, [:, 1]=invalid.
+    answer_start_frames:
+        Start frame index of answer window, shape (B,).
+    answer_len_frames:
+        Length of answer window in frames, shape (B,).
+    valid_symbol_id:
+        Vocabulary index for the "V" (valid) symbol.
+    invalid_symbol_id:
+        Vocabulary index for the "X" (invalid) symbol.
+    mix_weight:
+        How much to mix cls_probs into symbol_probs (0=none, 1=full replacement).
+    
+    Returns
+    -------
+    Modified symbol_probs with cls guidance in the answer window.
+    """
+    if mix_weight <= 0:
+        return symbol_probs
+    
+    batch_size, seq_len, vocab_size = symbol_probs.shape
+    device = symbol_probs.device
+    
+    # Convert cls_logits to probabilities
+    cls_probs = cls_logits.softmax(dim=-1)  # (B, 2)
+    valid_prob = cls_probs[:, 0]  # P(valid)
+    invalid_prob = cls_probs[:, 1]  # P(invalid)
+    
+    # Create modified symbol_probs
+    result = symbol_probs.clone()
+    
+    for b in range(batch_size):
+        start = int(answer_start_frames[b].item())
+        length = int(answer_len_frames[b].item())
+        if length <= 0 or start >= seq_len:
+            continue
+        end = min(start + length, seq_len)
+        
+        # For answer window frames, mix in cls guidance
+        # Create a probability distribution focused on V or X based on cls_probs
+        cls_symbol_probs = torch.zeros(vocab_size, device=device)
+        cls_symbol_probs[valid_symbol_id] = valid_prob[b]
+        cls_symbol_probs[invalid_symbol_id] = invalid_prob[b]
+        
+        # Mix: (1 - mix_weight) * original + mix_weight * cls_guided
+        for t in range(start, end):
+            result[b, t] = (1 - mix_weight) * symbol_probs[b, t] + mix_weight * cls_symbol_probs
+    
+    return result
+
+
+def apply_cls_guidance_to_frames(
+    frame_outputs: torch.Tensor,
+    cls_logits: torch.Tensor,
+    answer_start_frames: torch.Tensor,
+    answer_len_frames: torch.Tensor,
+    templates: torch.Tensor,
+    *,
+    valid_symbol_id: int,
+    invalid_symbol_id: int,
+    sr: int = 16000,
+) -> torch.Tensor:
+    """Directly replace answer window frames with cls-guided continuous waveforms.
+    
+    CRITICAL: We cannot simply tile the same 160-sample template because:
+    - V (1900 Hz) has ~19.0 cycles in 160 samples (OK, phase-continuous)
+    - X (1950 Hz) has ~19.5 cycles in 160 samples (NOT OK, phase discontinuity)
+    When X template is repeated, the phase discontinuity causes FFT to 
+    incorrectly decode it as V (1900 Hz).
+    
+    Solution: Generate continuous waveforms for the full answer window length,
+    then weight them by cls_probs.
+    """
+    batch_size, seq_len, frame_size = frame_outputs.shape
+    device = frame_outputs.device
+    dtype = frame_outputs.dtype
+    
+    # Convert cls_logits to probabilities
+    cls_probs = cls_logits.softmax(dim=-1)  # (B, 2)
+    valid_prob = cls_probs[:, 0]
+    invalid_prob = cls_probs[:, 1]
+    
+    result = frame_outputs.clone()
+    
+    # Frequencies for V and X
+    V_FREQ = 1900.0
+    X_FREQ = 1950.0
+    AMPLITUDE = 0.8
+    
+    for b in range(batch_size):
+        start = int(answer_start_frames[b].item())
+        length = int(answer_len_frames[b].item())
+        if length <= 0 or start >= seq_len:
+            continue
+        end = min(start + length, seq_len)
+        num_frames = end - start
+        total_samples = num_frames * frame_size
+        
+        # Generate continuous waveforms for full answer window
+        t = torch.arange(total_samples, device=device, dtype=dtype) / sr
+        v_wave = AMPLITUDE * torch.sin(2 * 3.141592653589793 * V_FREQ * t)
+        x_wave = AMPLITUDE * torch.sin(2 * 3.141592653589793 * X_FREQ * t)
+        
+        # Weight by classification probability
+        weighted_wave = valid_prob[b] * v_wave + invalid_prob[b] * x_wave
+        
+        # Split into frames and assign
+        for i, t_idx in enumerate(range(start, end)):
+            frame_start = i * frame_size
+            frame_end = frame_start + frame_size
+            result[b, t_idx] = weighted_wave[frame_start:frame_end]
+    
+    return result
 
 
 class BinaryClassificationHead(nn.Module):
@@ -396,6 +600,9 @@ def evaluate_task2_model(
     symbol_templates: torch.Tensor,
     hop_size: int,
     frame_size: int,
+    valid_symbol_id: int,
+    invalid_symbol_id: int,
+    answer_window_only: bool = True,
     collect_predictions: bool = False,
 ) -> Tuple[float, float, float, List[dict]]:
     """Evaluate Task2 model.
@@ -443,20 +650,59 @@ def evaluate_task2_model(
             cls_logits = classification_head(hidden_states, mask)
             cls_preds = cls_logits.argmax(dim=-1)
 
+            # Inject cls_probs into answer window symbol_probs
+            answer_start_frames = answer_start_samples // hop_size
+            answer_len_frames = (answer_len_samples + hop_size - 1) // hop_size
+            symbol_probs_guided = apply_cls_guidance_to_answer_window(
+                symbol_probs,
+                cls_logits,  # no detach needed in eval (no_grad context)
+                answer_start_frames,
+                answer_len_frames,
+                valid_symbol_id=valid_symbol_id,
+                invalid_symbol_id=invalid_symbol_id,
+                mix_weight=1.0,  # full replacement in answer window
+            )
+
             # Audio rendering
             guided_frames = apply_symbol_guidance(
-                frame_outputs, symbol_probs, symbol_templates,
+                frame_outputs, symbol_probs_guided, symbol_templates,
                 weight=symbol_guidance_weight,
+            )
+            
+            # Directly replace answer window frames with cls-guided templates
+            guided_frames = apply_cls_guidance_to_frames(
+                guided_frames,
+                cls_logits,
+                answer_start_frames,
+                answer_len_frames,
+                symbol_templates,
+                valid_symbol_id=valid_symbol_id,
+                invalid_symbol_id=invalid_symbol_id,
             )
 
             # Compute loss
             wave_lengths = mask.sum(dim=1) * hop_size
-            pred_wave, _ = frames_to_wave(guided_frames, wave_lengths, frame_size)
-            target_wave, _ = frames_to_wave(target_frames, wave_lengths, frame_size)
+            pred_wave_full, _ = frames_to_wave(guided_frames, wave_lengths, frame_size)
+            target_wave_full, _ = frames_to_wave(target_frames, wave_lengths, frame_size)
+            if answer_window_only:
+                pred_wave, effective_lengths = extract_answer_window(
+                    pred_wave_full,
+                    answer_start_samples,
+                    answer_len_samples,
+                    wave_lengths=wave_lengths,
+                )
+                target_wave, _ = extract_answer_window(
+                    target_wave_full,
+                    answer_start_samples,
+                    answer_len_samples,
+                    wave_lengths=wave_lengths,
+                )
+            else:
+                pred_wave, target_wave, effective_lengths = pred_wave_full, target_wave_full, wave_lengths
             stft_loss, _ = multi_resolution_stft_loss(
-                pred_wave, target_wave, lengths=wave_lengths, config=stft_config
+                pred_wave, target_wave, lengths=effective_lengths, config=stft_config
             )
-            l1_loss = masked_l1_wave(pred_wave, target_wave, wave_lengths)
+            l1_loss = masked_l1_wave(pred_wave, target_wave, effective_lengths)
             audio_loss = l1_weight * l1_loss + stft_loss
             total_loss += audio_loss.item() * batch_size
             total_weight += batch_size
@@ -471,10 +717,12 @@ def evaluate_task2_model(
                 sample = dataset.samples[base_idx] if base_idx < len(dataset.samples) else None
 
                 # Decode audio
-                pred_audio = pred_wave[b].cpu().numpy()
+                pred_audio = pred_wave_full[b].cpu().numpy()
                 answer_start = int(answer_start_samples[b].item())
                 answer_len = int(answer_len_samples[b].item())
                 answer_audio = pred_audio[answer_start:answer_start + answer_len]
+                answer_rms = float(np.sqrt(np.mean(answer_audio ** 2))) if answer_audio.size else 0.0
+                answer_peak = float(np.max(np.abs(answer_audio))) if answer_audio.size else 0.0
 
                 try:
                     decoded = decode_wave_to_symbols(answer_audio)
@@ -487,6 +735,7 @@ def evaluate_task2_model(
                 correct_audio += int(audio_correct)
 
                 if collect_predictions and sample is not None:
+                    cls_symbol = "V" if cls_preds[b].item() == 0 else "X"
                     predictions.append({
                         "example_id": sample.entry.example_id,
                         "split": sample.entry.split,
@@ -495,9 +744,14 @@ def evaluate_task2_model(
                         "exact_match": 1.0 if audio_correct else 0.0,
                         "gold_symbol": gold_symbol,
                         "pred_symbol": pred_symbol,
-                        "cls_pred": "V" if cls_preds[b].item() == 0 else "X",
+                        "cls_pred": cls_symbol,
                         "audio_correct": audio_correct,
                         "cls_correct": cls_preds[b].item() == labels[b].item(),
+                        "cls_audio_disagree": bool(cls_symbol != pred_symbol),
+                        "audio_decoded_len": int(len(decoded)),
+                        "answer_rms": answer_rms,
+                        "answer_peak": answer_peak,
+                        "input_len_samples": int(sample.input_len_samples),
                     })
 
     avg_loss = total_loss / max(1.0, total_weight)
@@ -538,8 +792,16 @@ def mini_jmamba_task2_pipeline(
     lr: float,
     device: torch.device,
     config: Task2TrainingConfig | None = None,
+    eval_noise_snr_db: float | None = None,
 ) -> Tuple[List[dict], dict]:
-    """Train and evaluate Mini-JMamba on Task2 (bracket validity)."""
+    """Train and evaluate Mini-JMamba on Task2 (bracket validity).
+    
+    Parameters
+    ----------
+    eval_noise_snr_db:
+        If set, add Gaussian noise to evaluation inputs at this SNR (dB).
+        Used for OOD noise testing.
+    """
 
     if config is None:
         config = Task2TrainingConfig()
@@ -551,14 +813,20 @@ def mini_jmamba_task2_pipeline(
     symbol_templates = build_symbol_frame_templates(
         vocab, config.frame_size, blank_id=config.ctc_blank_id
     ).to(device)
+    
+    # Get symbol IDs for cls_guidance
+    valid_symbol_id = vocab[VALID_SYMBOL]
+    invalid_symbol_id = vocab[INVALID_SYMBOL]
 
     train_samples = prepare_task2_samples(
         train_entries, vocab, config.frame_size, config.hop_size,
         blank_id=config.ctc_blank_id, config=config,
+        noise_snr_db=None,  # No noise on training
     )
     eval_samples = prepare_task2_samples(
         eval_entries, vocab, config.frame_size, config.hop_size,
         blank_id=config.ctc_blank_id, config=config,
+        noise_snr_db=eval_noise_snr_db,  # Apply noise if OOD noise test
     )
     train_dataset = Task2Dataset(train_samples)
     eval_dataset = Task2Dataset(eval_samples)
@@ -616,6 +884,9 @@ def mini_jmamba_task2_pipeline(
         symbol_guidance_weight=config.symbol_guidance_weight,
         symbol_templates=symbol_templates,
         hop_size=config.hop_size, frame_size=config.frame_size,
+        valid_symbol_id=valid_symbol_id,
+        invalid_symbol_id=invalid_symbol_id,
+        answer_window_only=config.answer_window_only,
     )
     print(
         f"[mini_jmamba][task2] pre-training loss={loss_pre:.6f} "
@@ -629,7 +900,7 @@ def mini_jmamba_task2_pipeline(
         classification_head.train()
 
         audio_weight_factor = 0.0 if epoch < config.symbol_warmup_epochs else min(
-            1.0, (epoch - config.symbol_warmup_epochs + 1) / 10
+            1.0, (epoch - config.symbol_warmup_epochs + 1) / max(1, config.audio_ramp_epochs)
         )
 
         for (
@@ -656,20 +927,65 @@ def mini_jmamba_task2_pipeline(
             cls_logits = classification_head(hidden_states, mask)
             cls_loss = F.cross_entropy(cls_logits, labels)
 
+            # Inject cls_probs into answer window symbol_probs
+            # This bridges the gap between cls_head (which predicts correctly)
+            # and audio output (which uses symbol_probs for rendering)
+            answer_start_frames = answer_start_samples // config.hop_size
+            answer_len_frames = (answer_len_samples + config.hop_size - 1) // config.hop_size
+            symbol_probs_guided = apply_cls_guidance_to_answer_window(
+                symbol_probs,
+                cls_logits.detach(),  # detach to prevent gradient interference
+                answer_start_frames,
+                answer_len_frames,
+                valid_symbol_id=valid_symbol_id,
+                invalid_symbol_id=invalid_symbol_id,
+                mix_weight=1.0,  # full replacement in answer window
+            )
+
             # Audio reconstruction with symbol guidance
             guided_frames = apply_symbol_guidance(
-                frame_outputs, symbol_probs, symbol_templates,
+                frame_outputs, symbol_probs_guided, symbol_templates,
                 weight=config.symbol_guidance_weight,
+            )
+            
+            # Directly replace answer window frames with cls-guided templates
+            guided_frames = apply_cls_guidance_to_frames(
+                guided_frames,
+                cls_logits.detach(),
+                answer_start_frames,
+                answer_len_frames,
+                symbol_templates,
+                valid_symbol_id=valid_symbol_id,
+                invalid_symbol_id=invalid_symbol_id,
             )
 
             # Audio loss
             wave_lengths = mask.sum(dim=1) * config.hop_size
-            pred_wave, _ = frames_to_wave(guided_frames, wave_lengths, config.frame_size)
-            target_wave, _ = frames_to_wave(target_frames, wave_lengths, config.frame_size)
+            pred_wave_full, _ = frames_to_wave(guided_frames, wave_lengths, config.frame_size)
+            target_wave_full, _ = frames_to_wave(target_frames, wave_lengths, config.frame_size)
+            if config.answer_window_only:
+                pred_wave, effective_lengths = extract_answer_window(
+                    pred_wave_full,
+                    answer_start_samples,
+                    answer_len_samples,
+                    wave_lengths=wave_lengths,
+                )
+                target_wave, _ = extract_answer_window(
+                    target_wave_full,
+                    answer_start_samples,
+                    answer_len_samples,
+                    wave_lengths=wave_lengths,
+                )
+            else:
+                pred_wave, target_wave, effective_lengths = (
+                    pred_wave_full,
+                    target_wave_full,
+                    wave_lengths,
+                )
             stft_loss, _ = multi_resolution_stft_loss(
-                pred_wave, target_wave, lengths=wave_lengths, config=stft_config
+                pred_wave, target_wave, lengths=effective_lengths, config=stft_config
             )
-            l1_loss = masked_l1_wave(pred_wave, target_wave, wave_lengths)
+            l1_loss = masked_l1_wave(pred_wave, target_wave, effective_lengths)
             audio_loss = audio_weight_factor * config.audio_weight * (
                 config.l1_weight * l1_loss + stft_loss
             )
@@ -703,6 +1019,9 @@ def mini_jmamba_task2_pipeline(
         symbol_guidance_weight=config.symbol_guidance_weight,
         symbol_templates=symbol_templates,
         hop_size=config.hop_size, frame_size=config.frame_size,
+        valid_symbol_id=valid_symbol_id,
+        invalid_symbol_id=invalid_symbol_id,
+        answer_window_only=config.answer_window_only,
         collect_predictions=True,
     )
     margin = audio_acc_post - baseline_stats["baseline_accuracy"]
@@ -729,6 +1048,16 @@ def mini_jmamba_task2_pipeline(
         "baseline_accuracy": baseline_stats["baseline_accuracy"],
         "baseline_type": baseline_stats["baseline_type"],
         "margin": margin,
+        "pred_symbol_counts": dict(Counter([p.get("pred_symbol", "") or "<EMPTY>" for p in predictions])),
+        "pred_empty_rate": (
+            sum(1 for p in predictions if not p.get("pred_symbol")) / max(1, len(predictions))
+        ),
+        "cls_audio_disagree_rate": (
+            sum(1 for p in predictions if p.get("cls_audio_disagree")) / max(1, len(predictions))
+        ),
+        "avg_answer_rms": (
+            float(np.mean([p.get("answer_rms", 0.0) for p in predictions])) if predictions else 0.0
+        ),
         "model_config": asdict(model_config),
         "training_config": asdict(config),
     }

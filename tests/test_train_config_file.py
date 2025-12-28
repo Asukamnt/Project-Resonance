@@ -66,3 +66,34 @@ def test_task3_mod_stable_config_file_loads() -> None:
     assert args.epochs == 50
 
 
+def test_task2_bracket_stable_config_file_loads() -> None:
+    """Ensure the repo-shipped Task2 config stays in sync with train.py argparse."""
+    cfg = Path("configs/task2_bracket_stable.yaml")
+    assert cfg.exists(), "Expected configs/task2_bracket_stable.yaml to exist"
+
+    args = train.parse_args(
+        [
+            "--config",
+            str(cfg),
+            "--task",
+            "bracket",
+            "--model",
+            "mini_jmamba",
+            "--manifest",
+            "manifests/task2_tiny.jsonl",
+        ]
+    )
+    assert args.task == "bracket"
+    assert args.model == "mini_jmamba"
+    assert args.epochs == 50
+    assert args.lr == pytest.approx(0.001)
+    assert args.batch_size == 16
+    assert args.seed == 123
+    assert args.task2_binary_ce_weight == pytest.approx(1.0)
+    assert args.task2_symbol_guidance_weight == pytest.approx(1.0)
+    assert args.task2_thinking_gap_s == pytest.approx(0.3)
+    assert args.task2_answer_window_only is True
+    assert args.task2_audio_ramp_epochs == 10
+    assert args.symbol_warmup_epochs == 5
+
+
