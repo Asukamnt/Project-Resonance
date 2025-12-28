@@ -110,6 +110,9 @@ class MiniJMambaConfig:
     max_frames: int = 256
     dropout: float = 0.1
     attn_dropout: float = 0.1
+    # Ablation options
+    use_rope: bool = True  # If False, use learnable absolute positional embedding
+    use_learnable_pos: bool = False  # If True (and use_rope=False), add learnable pos emb
 
 
 class SSMLikeBlock(nn.Module):
@@ -164,17 +167,27 @@ class SSMLikeBlock(nn.Module):
 
 
 class AttentionBlock(nn.Module):
-    """Multi-head self-attention block with RoPE and feed-forward network.
+    """Multi-head self-attention block with optional RoPE and feed-forward network.
     
-    Uses Rotary Position Embedding (RoPE) for relative position encoding,
+    By default uses Rotary Position Embedding (RoPE) for relative position encoding,
     enabling generalization to arbitrary sequence lengths.
+    
+    For ablation studies, can disable RoPE (use_rope=False).
     """
 
-    def __init__(self, d_model: int, num_heads: int, dropout: float, attn_dropout: float):
+    def __init__(
+        self, 
+        d_model: int, 
+        num_heads: int, 
+        dropout: float, 
+        attn_dropout: float,
+        use_rope: bool = True,
+    ):
         super().__init__()
         self.d_model = d_model
         self.num_heads = num_heads
         self.head_dim = d_model // num_heads
+        self.use_rope = use_rope
         if self.head_dim * num_heads != d_model:
             raise ValueError(f"d_model ({d_model}) must be divisible by num_heads ({num_heads})")
         
@@ -186,8 +199,11 @@ class AttentionBlock(nn.Module):
         self.v_proj = nn.Linear(d_model, d_model)
         self.out_proj = nn.Linear(d_model, d_model)
         
-        # RoPE for relative position encoding
-        self.rope = RotaryPositionEmbedding(self.head_dim)
+        # RoPE for relative position encoding (optional for ablation)
+        if use_rope:
+            self.rope = RotaryPositionEmbedding(self.head_dim)
+        else:
+            self.rope = None
         
         self.attn_dropout = nn.Dropout(attn_dropout)
         self.dropout = nn.Dropout(dropout)
@@ -212,9 +228,10 @@ class AttentionBlock(nn.Module):
         k = self.k_proj(y).view(batch_size, seq_len, self.num_heads, self.head_dim)
         v = self.v_proj(y).view(batch_size, seq_len, self.num_heads, self.head_dim)
         
-        # Apply RoPE to Q and K
-        cos, sin = self.rope(seq_len, x.device)
-        q, k = apply_rotary_pos_emb(q, k, cos, sin)
+        # Apply RoPE to Q and K (if enabled)
+        if self.rope is not None:
+            cos, sin = self.rope(seq_len, x.device)
+            q, k = apply_rotary_pos_emb(q, k, cos, sin)
         
         # Transpose for attention: (batch, num_heads, seq_len, head_dim)
         q = q.transpose(1, 2)
@@ -255,9 +272,14 @@ class MiniJMamba(nn.Module):
         super().__init__()
         self.config = config
         self.input_proj = nn.Linear(config.frame_size, config.d_model)
-        # NOTE: 移除绝对位置编码以支持 OOD 长度泛化
-        # SSM 层通过状态递归/卷积隐式编码顺序信息
-        # Attention 层依赖 SSM 输出的有序 hidden states
+        
+        # Optional learnable positional embedding (for ablation: no_rope)
+        # Only used when use_rope=False and use_learnable_pos=True
+        if not config.use_rope and config.use_learnable_pos:
+            self.pos_emb = nn.Embedding(config.max_frames, config.d_model)
+        else:
+            self.pos_emb = None
+        
         self.dropout = nn.Dropout(config.dropout)
 
         total_layers = config.num_ssm_layers + config.num_attn_layers
@@ -284,6 +306,7 @@ class MiniJMamba(nn.Module):
                         config.num_heads,
                         dropout=config.dropout,
                         attn_dropout=config.attn_dropout,
+                        use_rope=config.use_rope,  # Pass RoPE config for ablation
                     )
                 )
                 attn_remaining -= 1
@@ -297,6 +320,7 @@ class MiniJMamba(nn.Module):
                         config.num_heads,
                         dropout=config.dropout,
                         attn_dropout=config.attn_dropout,
+                        use_rope=config.use_rope,
                     )
                 )
 
@@ -328,7 +352,14 @@ class MiniJMamba(nn.Module):
         # (max_frames 仅作为配置参考，不再强制检查)
 
         x = self.input_proj(frames)
-        # NOTE: 不再添加绝对位置编码，依赖 SSM 隐式顺序编码
+        
+        # Optional learnable positional embedding (for ablation)
+        if self.pos_emb is not None:
+            # Clamp position indices to max_frames for OOD lengths
+            positions = torch.arange(seq_len, device=frames.device)
+            positions = positions.clamp(max=self.config.max_frames - 1)
+            x = x + self.pos_emb(positions).unsqueeze(0)
+        
         x = self.dropout(x)
 
         for layer in self.layers:

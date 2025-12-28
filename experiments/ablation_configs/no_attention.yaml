@@ -1,0 +1,14 @@
+# S22 消融套件 - 无 Attention
+# 删除 2 层 Attention，仅用 SSM
+
+model: mini_jmamba
+task: mirror
+epochs: 30
+batch_size: 32
+lr: 0.001
+seed: 42
+
+# 消融设置
+ablation_type: no_attention
+# 需要修改：num_attn_layers: 0
+

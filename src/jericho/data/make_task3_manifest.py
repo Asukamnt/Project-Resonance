@@ -18,6 +18,8 @@ DEFAULT_SPLIT_SIZES: Dict[str, int] = {
     "val": 200,
     "iid_test": 200,
     "ood_digits": 200,
+    "ood_compose": 200,  # Multi-step mod expressions (A%B%C)
+    "ood_length": 200,   # Longer expressions
 }
 
 BALANCE_BUCKET_MOD = 10
@@ -70,7 +72,25 @@ def _int_to_tokens(value: int) -> List[str]:
 
 
 def _expression_tokens(dividend: int, divisor: int) -> List[str]:
+    """Generate single-step expression: A % B"""
     tokens = _int_to_tokens(dividend) + [MOD_OPERATOR] + _int_to_tokens(divisor)
+    return tokens
+
+
+def _multi_step_expression_tokens(operands: List[int]) -> List[str]:
+    """Generate multi-step expression: A % B % C % ...
+    
+    Example: [17, 5, 3] -> ['1', '7', '%', '5', '%', '3']
+    """
+    if len(operands) < 2:
+        raise ValueError("Need at least 2 operands for multi-step expression")
+    
+    tokens: List[str] = []
+    for i, op in enumerate(operands):
+        if i > 0:
+            tokens.append(MOD_OPERATOR)
+        tokens.extend(_int_to_tokens(op))
+    
     return tokens
 
 
@@ -188,6 +208,74 @@ def build_task3_manifest(
         difficulty = "iid" if split_name != "ood_digits" else "ood_digits"
         _add_samples(split_name, count, dividend_range, divisor_range, difficulty)
 
+    # Generate multi-step (compose) samples: A % B % C
+    def _add_compose_samples(
+        split: str,
+        count: int,
+        num_steps: int,
+        operand_range: Tuple[int, int],
+        difficulty: str,
+    ) -> None:
+        """Generate multi-step mod expressions with left-to-right evaluation."""
+        local_rng = np.random.default_rng(rng.integers(0, 2**63))
+        split_seen = seen_per_split.setdefault(split, set())
+        added = 0
+        attempts = 0
+        max_attempts = count * 200
+        
+        while added < count:
+            attempts += 1
+            if attempts > max_attempts:
+                raise RuntimeError(f"Unable to generate enough compose samples for '{split}'")
+            
+            # Generate num_steps + 1 operands
+            operands = [
+                int(local_rng.integers(operand_range[0], operand_range[1] + 1))
+                for _ in range(num_steps + 1)
+            ]
+            
+            # Ensure no zero divisors
+            for i in range(1, len(operands)):
+                if operands[i] == 0:
+                    operands[i] = 1
+            
+            tokens = tuple(_multi_step_expression_tokens(operands))
+            if tokens in split_seen:
+                continue
+            
+            split_seen.add(tokens)
+            example_id = f"{split}-{added:06d}"
+            entry = ManifestEntry(
+                split=split,
+                symbols=list(tokens),
+                length=len(tokens),
+                difficulty_tag=difficulty,
+                example_id=example_id,
+                seed=seed,
+                sequence_seed=int(local_rng.integers(0, 2**63)),
+            )
+            entries.append(entry)
+            added += 1
+
+    # ood_compose: 2-step expressions (A % B % C)
+    compose_count = sizes.get("ood_compose", 0)
+    if compose_count > 0:
+        # Use small numbers for compose to focus on multi-step logic
+        _add_compose_samples(
+            "ood_compose",
+            compose_count,
+            num_steps=2,  # 2 '%' operators -> 3 operands
+            operand_range=(1, 99),
+            difficulty="ood_compose",
+        )
+
+    # ood_length: longer single-step expressions (larger numbers)
+    ood_length_count = sizes.get("ood_length", 0)
+    if ood_length_count > 0:
+        dividend_range = (1000, 9999)  # 4-digit dividends
+        divisor_range = (10, 99)
+        _add_samples("ood_length", ood_length_count, dividend_range, divisor_range, "ood_length")
+
     return entries
 
 
@@ -204,6 +292,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--val-size", type=int, default=DEFAULT_SPLIT_SIZES["val"])
     parser.add_argument("--iid-test-size", type=int, default=DEFAULT_SPLIT_SIZES["iid_test"])
     parser.add_argument("--ood-digits-size", type=int, default=DEFAULT_SPLIT_SIZES["ood_digits"])
+    parser.add_argument("--ood-compose-size", type=int, default=DEFAULT_SPLIT_SIZES["ood_compose"],
+                       help="Size of ood_compose split (multi-step A%%B%%C expressions).")
+    parser.add_argument("--ood-length-size", type=int, default=DEFAULT_SPLIT_SIZES["ood_length"],
+                       help="Size of ood_length split (longer expressions with larger numbers).")
     parser.add_argument(
         "--preset",
         type=str,
@@ -226,6 +318,8 @@ def main() -> None:
         "val": args.val_size,
         "iid_test": args.iid_test_size,
         "ood_digits": args.ood_digits_size,
+        "ood_compose": args.ood_compose_size,
+        "ood_length": args.ood_length_size,
     }
     entries = build_task3_manifest(
         seed=args.seed,
@@ -234,7 +328,13 @@ def main() -> None:
         balance_remainder=args.balance_remainder,
     )
     write_manifest(entries, args.out)
+    
+    # Print split statistics
+    from collections import Counter
+    split_counts = Counter(e.split for e in entries)
     print(f"Wrote {len(entries)} Task3 entries to {args.out}")
+    for split, count in sorted(split_counts.items()):
+        print(f"  {split}: {count}")
 
 
 if __name__ == "__main__":

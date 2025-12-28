@@ -1,0 +1,13 @@
+# S22 消融套件 - 无 CTC 辅助损失
+
+model: mini_jmamba
+task: mirror
+epochs: 30
+batch_size: 32
+lr: 0.001
+seed: 42
+
+# 消融设置
+ablation_type: no_ctc
+# 注意：需要在训练代码中设置 ctc_weight: 0.0
+

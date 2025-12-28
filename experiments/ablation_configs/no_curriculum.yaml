@@ -1,0 +1,15 @@
+# S22 消融套件 - 无课程学习
+# 直接混合训练，不使用预训练阶段
+
+model: mini_jmamba
+task: mod
+epochs: 30
+batch_size: 32
+lr: 0.001
+seed: 42
+
+# 消融设置
+ablation_type: no_curriculum
+pretrain_mirror_epochs: 0
+pretrain_remainder_epochs: 0
+

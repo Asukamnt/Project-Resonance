@@ -1,0 +1,18 @@
+# S22 消融套件 - 基线配置
+# 完整模型，所有组件启用
+
+model: mini_jmamba
+task: mirror
+epochs: 30
+batch_size: 32
+lr: 0.001
+seed: 42
+
+# 模型架构 (默认值)
+# num_ssm_layers: 10
+# num_attn_layers: 2
+# 使用 RoPE
+
+# 训练配置 (默认值)
+# ctc_weight: 0.3
+
