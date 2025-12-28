@@ -24,6 +24,7 @@ DEFAULT_SPLIT_SIZES: Dict[str, int] = {
     "val": 200,
     "iid_test": 200,
     "ood_length": 200,
+    "ood_noise": 200,
 }
 
 
@@ -110,9 +111,12 @@ def build_task2_manifest(
         if count <= 0:
             continue
 
-        is_ood = split.startswith("ood")
-        length_range = config.ood_length_range if is_ood else config.iid_length_range
-        difficulty_tag = "ood" if is_ood else "iid"
+        # ood_noise uses IID length range (only noise differs)
+        is_ood_length = split == "ood_length"
+        is_ood_noise = split == "ood_noise"
+        is_ood = is_ood_length or is_ood_noise
+        length_range = config.ood_length_range if is_ood_length else config.iid_length_range
+        difficulty_tag = "ood_noise" if is_ood_noise else ("ood" if is_ood_length else "iid")
 
         for idx in range(count):
             # Determine validity
@@ -180,6 +184,12 @@ def main() -> None:
         help="OOD length test split size",
     )
     parser.add_argument(
+        "--ood-noise",
+        type=int,
+        default=DEFAULT_SPLIT_SIZES["ood_noise"],
+        help="OOD noise test split size (same length as IID, noise added at runtime)",
+    )
+    parser.add_argument(
         "--balance-valid",
         action="store_true",
         default=True,
@@ -193,6 +203,7 @@ def main() -> None:
         "val": args.val,
         "iid_test": args.iid_test,
         "ood_length": args.ood_length,
+        "ood_noise": args.ood_noise,
     }
 
     entries = build_task2_manifest(

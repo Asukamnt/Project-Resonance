@@ -14,6 +14,8 @@ seed: 123
 task2_binary_ce_weight: 1.0
 task2_symbol_guidance_weight: 1.0
 task2_thinking_gap_s: 0.3
+task2_answer_window_only: true
+task2_audio_ramp_epochs: 10
 
 # Training warmup
 symbol_warmup_epochs: 5

@@ -51,8 +51,21 @@ def test_task2_mini_jmamba_pipeline_smoke(tmp_path: Path):
     assert "audio_accuracy_post" in metrics
     assert "cls_accuracy_post" in metrics
     assert "baseline_accuracy" in metrics
+    # Diagnostics should be present for OOD debugging.
+    assert "pred_symbol_counts" in metrics
+    assert "pred_empty_rate" in metrics
+    assert "cls_audio_disagree_rate" in metrics
+    assert "avg_answer_rms" in metrics
     assert 0.0 <= metrics["audio_accuracy_post"] <= 1.0
     assert 0.0 <= metrics["cls_accuracy_post"] <= 1.0
+    assert 0.0 <= metrics["pred_empty_rate"] <= 1.0
+    assert 0.0 <= metrics["cls_audio_disagree_rate"] <= 1.0
+
+    for p in predictions[: min(3, len(predictions))]:
+        assert "answer_rms" in p
+        assert "answer_peak" in p
+        assert "audio_decoded_len" in p
+        assert "cls_audio_disagree" in p
 
 
 def test_task2_pipeline_improves_over_epochs(tmp_path: Path):
@@ -95,4 +108,6 @@ def test_task2_pipeline_improves_over_epochs(tmp_path: Path):
         assert "gold_symbol" in p
         assert "pred_symbol" in p
         assert p["gold_symbol"] in ("V", "X")
+        assert "answer_rms" in p
+        assert "cls_pred" in p
 

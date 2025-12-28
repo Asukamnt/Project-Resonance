@@ -185,7 +185,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--split",
         type=str,
         default="train",
-        choices=["train", "val", "iid_test", "ood_length", "ood_symbol", "ood_digits"],
+        choices=["train", "val", "iid_test", "ood_length", "ood_symbol", "ood_digits", "ood_noise"],
         help="Evaluation split (训练始终使用 train split)。",
     )
     parser.add_argument(
@@ -371,6 +371,24 @@ def _build_parser() -> argparse.ArgumentParser:
         default=Task2TrainingConfig().thinking_gap_s,
         help="Thinking gap duration in seconds for Task2 bracket.",
     )
+    parser.add_argument(
+        "--task2-answer-window-only",
+        action=argparse.BooleanOptionalAction,
+        default=Task2TrainingConfig().answer_window_only,
+        help="If set, compute Task2 audio reconstruction losses only on the answer window.",
+    )
+    parser.add_argument(
+        "--task2-noise-snr",
+        type=float,
+        default=None,
+        help="If set, add Gaussian noise at this SNR (dB) to eval inputs. Use for OOD noise testing.",
+    )
+    parser.add_argument(
+        "--task2-audio-ramp-epochs",
+        type=int,
+        default=Task2TrainingConfig().audio_ramp_epochs,
+        help="Number of epochs to ramp Task2 audio loss after warmup.",
+    )
     return parser
 
 
@@ -544,6 +562,11 @@ def main() -> None:
             raise SystemExit("Train split is empty; cannot train mini_jmamba on bracket.")
         if args.limit is not None:
             train_entries = train_entries[: args.limit]
+        # Auto-detect noise SNR for ood_noise split
+        eval_noise_snr = args.task2_noise_snr
+        if eval_noise_snr is None and args.split == "ood_noise":
+            eval_noise_snr = 10.0  # Default 10 dB SNR for OOD noise
+
         predictions, model_metrics = mini_jmamba_task2_pipeline(
             train_entries,
             eval_entries,
@@ -556,7 +579,11 @@ def main() -> None:
                 binary_ce_weight=args.task2_binary_ce_weight,
                 symbol_guidance_weight=args.task2_symbol_guidance_weight,
                 thinking_gap_s=args.task2_thinking_gap_s,
+                symbol_warmup_epochs=args.symbol_warmup_epochs,
+                audio_ramp_epochs=args.task2_audio_ramp_epochs,
+                answer_window_only=args.task2_answer_window_only,
             ),
+            eval_noise_snr_db=eval_noise_snr,
         )
     else:  # Task3 mod
         if args.model not in {"oracle_mod", "mini_jmamba"}:

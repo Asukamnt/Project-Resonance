@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, Tuple
 
 import torch
+import torch.nn.functional as F
 from torch import nn
 
 try:
@@ -15,6 +17,85 @@ try:
 except Exception:  # pragma: no cover - optional dependency
     Mamba = None
     _MAMBA_AVAILABLE = False
+
+
+# =============================================================================
+# RoPE (Rotary Position Embedding) - 支持任意长度的相对位置编码
+# =============================================================================
+
+
+class RotaryPositionEmbedding(nn.Module):
+    """Rotary Position Embedding for relative position encoding.
+    
+    RoPE encodes position by rotating query/key vectors, enabling:
+    - Relative position awareness (not absolute)
+    - Extrapolation to arbitrary sequence lengths
+    - No learnable parameters (pure geometric transformation)
+    """
+
+    def __init__(self, dim: int, base: float = 10000.0):
+        """
+        Parameters
+        ----------
+        dim:
+            Head dimension (must be even).
+        base:
+            Base for the exponential frequency computation.
+        """
+        super().__init__()
+        if dim % 2 != 0:
+            raise ValueError(f"RoPE requires even dimension, got {dim}")
+        self.dim = dim
+        self.base = base
+        # Precompute inverse frequencies: 1 / (base^(2i/dim))
+        inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float() / dim))
+        self.register_buffer("inv_freq", inv_freq, persistent=False)
+
+    def forward(self, seq_len: int, device: torch.device) -> Tuple[torch.Tensor, torch.Tensor]:
+        """Compute cos/sin embeddings for a given sequence length.
+        
+        Returns
+        -------
+        cos, sin:
+            Both of shape (1, seq_len, 1, dim).
+        """
+        t = torch.arange(seq_len, device=device, dtype=self.inv_freq.dtype)
+        freqs = torch.outer(t, self.inv_freq)  # (seq_len, dim/2)
+        emb = torch.cat([freqs, freqs], dim=-1)  # (seq_len, dim)
+        cos = emb.cos().unsqueeze(0).unsqueeze(2)  # (1, seq_len, 1, dim)
+        sin = emb.sin().unsqueeze(0).unsqueeze(2)  # (1, seq_len, 1, dim)
+        return cos, sin
+
+
+def rotate_half(x: torch.Tensor) -> torch.Tensor:
+    """Rotate half the hidden dims of the input."""
+    x1, x2 = x.chunk(2, dim=-1)
+    return torch.cat([-x2, x1], dim=-1)
+
+
+def apply_rotary_pos_emb(
+    q: torch.Tensor, 
+    k: torch.Tensor, 
+    cos: torch.Tensor, 
+    sin: torch.Tensor
+) -> Tuple[torch.Tensor, torch.Tensor]:
+    """Apply RoPE to query and key tensors.
+    
+    Parameters
+    ----------
+    q, k:
+        Shape (batch, seq_len, num_heads, head_dim).
+    cos, sin:
+        Shape (1, seq_len, 1, head_dim).
+    
+    Returns
+    -------
+    q_embed, k_embed:
+        Rotated query and key tensors.
+    """
+    q_embed = (q * cos) + (rotate_half(q) * sin)
+    k_embed = (k * cos) + (rotate_half(k) * sin)
+    return q_embed, k_embed
 
 
 @dataclass
@@ -83,14 +164,32 @@ class SSMLikeBlock(nn.Module):
 
 
 class AttentionBlock(nn.Module):
-    """Multi-head self-attention block with feed-forward network."""
+    """Multi-head self-attention block with RoPE and feed-forward network.
+    
+    Uses Rotary Position Embedding (RoPE) for relative position encoding,
+    enabling generalization to arbitrary sequence lengths.
+    """
 
     def __init__(self, d_model: int, num_heads: int, dropout: float, attn_dropout: float):
         super().__init__()
+        self.d_model = d_model
+        self.num_heads = num_heads
+        self.head_dim = d_model // num_heads
+        if self.head_dim * num_heads != d_model:
+            raise ValueError(f"d_model ({d_model}) must be divisible by num_heads ({num_heads})")
+        
         self.norm1 = nn.LayerNorm(d_model)
-        self.attn = nn.MultiheadAttention(
-            d_model, num_heads, dropout=attn_dropout, batch_first=True
-        )
+        
+        # Q/K/V projections (separate for RoPE application)
+        self.q_proj = nn.Linear(d_model, d_model)
+        self.k_proj = nn.Linear(d_model, d_model)
+        self.v_proj = nn.Linear(d_model, d_model)
+        self.out_proj = nn.Linear(d_model, d_model)
+        
+        # RoPE for relative position encoding
+        self.rope = RotaryPositionEmbedding(self.head_dim)
+        
+        self.attn_dropout = nn.Dropout(attn_dropout)
         self.dropout = nn.Dropout(dropout)
         self.norm2 = nn.LayerNorm(d_model)
         self.ff = nn.Sequential(
@@ -100,14 +199,46 @@ class AttentionBlock(nn.Module):
             nn.Linear(4 * d_model, d_model),
             nn.Dropout(dropout),
         )
+        
+        self.scale = math.sqrt(self.head_dim)
 
     def forward(self, x: torch.Tensor, mask: Optional[torch.Tensor]) -> torch.Tensor:
+        batch_size, seq_len, _ = x.shape
         residual = x
         y = self.norm1(x)
-        key_padding = None
+        
+        # Compute Q, K, V
+        q = self.q_proj(y).view(batch_size, seq_len, self.num_heads, self.head_dim)
+        k = self.k_proj(y).view(batch_size, seq_len, self.num_heads, self.head_dim)
+        v = self.v_proj(y).view(batch_size, seq_len, self.num_heads, self.head_dim)
+        
+        # Apply RoPE to Q and K
+        cos, sin = self.rope(seq_len, x.device)
+        q, k = apply_rotary_pos_emb(q, k, cos, sin)
+        
+        # Transpose for attention: (batch, num_heads, seq_len, head_dim)
+        q = q.transpose(1, 2)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+        
+        # Compute attention scores
+        attn_weights = torch.matmul(q, k.transpose(-2, -1)) / self.scale  # (B, H, T, T)
+        
+        # Apply key padding mask
         if mask is not None:
-            key_padding = ~mask
-        attn_out, _ = self.attn(y, y, y, key_padding_mask=key_padding, need_weights=False)
+            # mask: (B, T) where True = valid, False = padding
+            # Need to create attention mask: (B, 1, 1, T)
+            attn_mask = ~mask.unsqueeze(1).unsqueeze(2)  # True = masked
+            attn_weights = attn_weights.masked_fill(attn_mask, float('-inf'))
+        
+        attn_weights = F.softmax(attn_weights, dim=-1)
+        attn_weights = self.attn_dropout(attn_weights)
+        
+        # Apply attention to values
+        attn_out = torch.matmul(attn_weights, v)  # (B, H, T, D)
+        attn_out = attn_out.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
+        attn_out = self.out_proj(attn_out)
+        
         y = residual + self.dropout(attn_out)
         residual = y
         y = self.ff(self.norm2(y))
@@ -124,7 +255,9 @@ class MiniJMamba(nn.Module):
         super().__init__()
         self.config = config
         self.input_proj = nn.Linear(config.frame_size, config.d_model)
-        self.pos_emb = nn.Parameter(torch.randn(1, config.max_frames, config.d_model))
+        # NOTE: 移除绝对位置编码以支持 OOD 长度泛化
+        # SSM 层通过状态递归/卷积隐式编码顺序信息
+        # Attention 层依赖 SSM 输出的有序 hidden states
         self.dropout = nn.Dropout(config.dropout)
 
         total_layers = config.num_ssm_layers + config.num_attn_layers
@@ -191,13 +324,11 @@ class MiniJMamba(nn.Module):
             raise ValueError(
                 f"Expected frame_size={self.config.frame_size}, received {feat_dim}"
             )
-        if seq_len > self.config.max_frames:
-            raise ValueError(
-                f"Sequence length {seq_len} exceeds configured max_frames {self.config.max_frames}"
-            )
+        # NOTE: 移除 max_frames 硬限制，现在支持任意长度
+        # (max_frames 仅作为配置参考，不再强制检查)
 
         x = self.input_proj(frames)
-        x = x + self.pos_emb[:, :seq_len, :]
+        # NOTE: 不再添加绝对位置编码，依赖 SSM 隐式顺序编码
         x = self.dropout(x)
 
         for layer in self.layers:
@@ -214,5 +345,12 @@ class MiniJMamba(nn.Module):
         return frame_outputs, symbol_logits
 
 
-__all__ = ["MiniJMamba", "MiniJMambaConfig", "SSMLikeBlock", "AttentionBlock"]
+__all__ = [
+    "MiniJMamba",
+    "MiniJMambaConfig",
+    "SSMLikeBlock",
+    "AttentionBlock",
+    "RotaryPositionEmbedding",
+    "apply_rotary_pos_emb",
+]
 
