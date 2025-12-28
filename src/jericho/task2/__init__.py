@@ -9,6 +9,7 @@ from .utils import (
     target_symbol_for_task2,
     generate_balanced_brackets,
     generate_unbalanced_brackets,
+    synthesise_task2_target_wave,
 )
 
 __all__ = [
@@ -20,5 +21,6 @@ __all__ = [
     "target_symbol_for_task2",
     "generate_balanced_brackets",
     "generate_unbalanced_brackets",
+    "synthesise_task2_target_wave",
 ]
 

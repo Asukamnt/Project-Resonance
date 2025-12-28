@@ -1,0 +1,14 @@
+# S22 消融套件 - 无 RoPE
+# 使用 learnable 绝对位置编码替代 RoPE
+
+model: mini_jmamba
+task: mirror
+epochs: 30
+batch_size: 32
+lr: 0.001
+seed: 42
+
+# 消融设置
+ablation_type: no_rope
+# 需要代码修改：使用 learnable positional embedding
+

@@ -185,7 +185,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--split",
         type=str,
         default="train",
-        choices=["train", "val", "iid_test", "ood_length", "ood_symbol", "ood_digits", "ood_noise"],
+        choices=["train", "val", "iid_test", "ood_length", "ood_symbol", "ood_digits", "ood_noise", "ood_compose"],
         help="Evaluation split (训练始终使用 train split)。",
     )
     parser.add_argument(

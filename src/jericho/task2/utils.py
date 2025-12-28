@@ -5,6 +5,10 @@ from __future__ import annotations
 import random
 from typing import Sequence
 
+import numpy as np
+
+from ..symbols import encode_symbols_to_wave, GAP_DUR, SR, TONE_DUR
+
 # Task2 symbols
 BRACKET_OPEN = "("
 BRACKET_CLOSE = ")"
@@ -159,6 +163,54 @@ def generate_unbalanced_brackets(
     return [BRACKET_OPEN] * (length // 2 + 1) + [BRACKET_CLOSE] * (length - length // 2 - 1)
 
 
+def synthesise_task2_target_wave(
+    symbols: Sequence[str],
+    *,
+    target_length_samples: int | None = None,
+    sr: int = SR,
+    tone_dur: float = TONE_DUR,
+    gap_dur: float = GAP_DUR,
+    rng: np.random.Generator | None = None,
+    fixed_phase: float | None = None,
+) -> np.ndarray:
+    """Convert Task2 target symbol (V or X) into audio, optionally padded.
+    
+    Parameters
+    ----------
+    symbols:
+        Input bracket sequence.
+    target_length_samples:
+        If provided, pad or truncate to this length.
+    sr, tone_dur, gap_dur:
+        Audio synthesis parameters.
+    rng:
+        Random generator for phase variation.
+    fixed_phase:
+        If provided, use fixed phase for reproducibility.
+    
+    Returns
+    -------
+    np.ndarray
+        Audio waveform (float32).
+    """
+    target_symbol = target_symbol_for_task2(symbols)
+    wave = encode_symbols_to_wave(
+        [target_symbol],
+        sr=sr,
+        tone_dur=tone_dur,
+        gap_dur=gap_dur,
+        rng=rng,
+        fixed_phase=fixed_phase,
+    ).astype(np.float32, copy=False)
+    
+    if target_length_samples is None:
+        return wave
+    if target_length_samples <= wave.size:
+        return wave[:target_length_samples]
+    pad = np.zeros(target_length_samples - wave.size, dtype=np.float32)
+    return np.concatenate([wave, pad])
+
+
 __all__ = [
     "BRACKET_OPEN",
     "BRACKET_CLOSE",
@@ -170,5 +222,6 @@ __all__ = [
     "target_symbol_for_task2",
     "generate_balanced_brackets",
     "generate_unbalanced_brackets",
+    "synthesise_task2_target_wave",
 ]
 

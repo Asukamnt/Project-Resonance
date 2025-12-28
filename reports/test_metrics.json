@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-12-29T02:47:12.020787",
+  "metrics": [
+    {
+      "task": "mirror",
+      "split": "iid_test",
+      "total": 50,
+      "correct": 50,
+      "em": 1.0,
+      "token_accuracy": 1.0,
+      "avg_edit_distance": 0.0
+    },
+    {
+      "task": "mirror",
+      "split": "ood_length",
+      "total": 50,
+      "correct": 50,
+      "em": 1.0,
+      "token_accuracy": 1.0,
+      "avg_edit_distance": 0.0
+    },
+    {
+      "task": "bracket",
+      "split": "iid_test",
+      "total": 50,
+      "correct": 50,
+      "em": 1.0,
+      "token_accuracy": 1.0,
+      "avg_edit_distance": 0.0
+    },
+    {
+      "task": "bracket",
+      "split": "ood_length",
+      "total": 50,
+      "correct": 50,
+      "em": 1.0,
+      "token_accuracy": 1.0,
+      "avg_edit_distance": 0.0
+    },
+    {
+      "task": "mod",
+      "split": "iid_test",
+      "total": 50,
+      "correct": 50,
+      "em": 1.0,
+      "token_accuracy": 1.0,
+      "avg_edit_distance": 0.0
+    },
+    {
+      "task": "mod",
+      "split": "ood_length",
+      "total": 50,
+      "correct": 50,
+      "em": 1.0,
+      "token_accuracy": 1.0,
+      "avg_edit_distance": 0.0
+    }
+  ]
+}

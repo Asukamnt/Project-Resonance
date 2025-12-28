@@ -32,11 +32,14 @@ def int_to_digits(value: int) -> List[str]:
 
 
 def parse_mod_expression(symbols: Sequence[str]) -> Tuple[int, int]:
-    """Parse tokens representing A % B into integer operands."""
+    """Parse tokens representing A % B into integer operands (single-step only).
+    
+    For multi-step expressions, use `evaluate_mod_expression` instead.
+    """
     if MOD_OPERATOR not in symbols:
         raise Task3ParseError("Modulo operator '%' not found")
     if symbols.count(MOD_OPERATOR) != 1:
-        raise Task3ParseError("Only single-step modulo expressions supported")
+        raise Task3ParseError("Use evaluate_mod_expression for multi-step expressions")
     op_index = symbols.index(MOD_OPERATOR)
     left_digits = symbols[:op_index]
     right_digits = symbols[op_index + 1 :]
@@ -49,10 +52,68 @@ def parse_mod_expression(symbols: Sequence[str]) -> Tuple[int, int]:
     return left, right
 
 
+def evaluate_mod_expression(symbols: Sequence[str]) -> int:
+    """Evaluate a modulo expression with left-to-right associativity.
+    
+    Supports multi-step: A % B % C = (A % B) % C
+    
+    Examples:
+        "1 2 % 5" -> 12 % 5 = 2
+        "1 7 % 5 % 3" -> (17 % 5) % 3 = 2 % 3 = 2
+        "1 0 0 % 7 % 3" -> (100 % 7) % 3 = 2 % 3 = 2
+    """
+    if MOD_OPERATOR not in symbols:
+        raise Task3ParseError("Modulo operator '%' not found")
+    
+    tokens = list(symbols)
+    
+    # Split by '%' operator
+    operands: List[List[str]] = []
+    current: List[str] = []
+    
+    for token in tokens:
+        if token == MOD_OPERATOR:
+            if not current:
+                raise Task3ParseError("Empty operand before '%'")
+            operands.append(current)
+            current = []
+        else:
+            current.append(token)
+    
+    if not current:
+        raise Task3ParseError("Empty operand after '%'")
+    operands.append(current)
+    
+    if len(operands) < 2:
+        raise Task3ParseError("Need at least two operands for modulo")
+    
+    # Convert operands to integers
+    values = []
+    for op in operands:
+        values.append(digits_to_int(op))
+    
+    # Left-to-right evaluation: A % B % C = (A % B) % C
+    result = values[0]
+    for i in range(1, len(values)):
+        divisor = values[i]
+        if divisor == 0:
+            raise Task3ParseError("Modulo divisor cannot be zero")
+        result = result % divisor
+    
+    return result
+
+
+def count_mod_steps(symbols: Sequence[str]) -> int:
+    """Count the number of modulo operations in an expression."""
+    return symbols.count(MOD_OPERATOR) if MOD_OPERATOR in symbols else 0
+
+
 def target_symbols_for_task3(symbols: Sequence[str]) -> List[str]:
-    """Return digit tokens representing the remainder for an expression."""
-    dividend, divisor = parse_mod_expression(symbols)
-    remainder = dividend % divisor
+    """Return digit tokens representing the remainder for an expression.
+    
+    Supports both single-step (A%B) and multi-step (A%B%C) expressions.
+    """
+    remainder = evaluate_mod_expression(symbols)
     return int_to_digits(remainder)
 
 
@@ -93,6 +154,8 @@ __all__ = [
     "digits_to_int",
     "int_to_digits",
     "parse_mod_expression",
+    "evaluate_mod_expression",
+    "count_mod_steps",
     "target_symbols_for_task3",
     "synthesise_task3_target_wave",
 ]
