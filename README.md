@@ -54,7 +54,7 @@ Jericho 的流程是：`音频 → 神经网络 → 音频`
 - ✅ Mini-JMamba 模型集成（RoPE 位置编码）
 - ✅ 完整的训练/评估流水线
 - ✅ 多轴 OOD 评测（length, noise）
-- ✅ 88 个测试用例全部通过
+- ✅ 119 个测试用例全部通过
 
 ---
 
@@ -88,8 +88,11 @@ python -m jericho.data.make_task3_manifest --out manifests/task3_tiny.jsonl --se
 # 训练 Mini-JMamba
 python .\train.py --config configs\task3_mod_stable.yaml --manifest manifests\task3_tiny.jsonl --split iid_test --limit 200
 
-# 评估
-python .\evaluate.py --preds runs\<your_run>\preds.jsonl
+# Oracle/Protocol 闭环验证（不是模型能力；详见 docs/metrics_protocol.md）
+python .\evaluate.py --stage final --tasks mirror bracket mod
+
+# 训练模型能力（Model EM）：用 checkpoint 输出 Oracle vs Model 对比总表
+python .\evaluate_model.py --checkpoint artifacts\checkpoints\mirror_demo_seed42_epoch15.pt --tasks mirror bracket mod --splits iid_test ood_length --limit 50 --device cpu
 ```
 
 ---
@@ -105,7 +108,9 @@ python .\evaluate.py --preds runs\<your_run>\preds.jsonl
 - `src/jericho/pipelines/`：各任务的训练/推理流水线
 - `src/jericho/data/`：Manifest 生成工具
 - `train.py`：统一训练 CLI
-- `evaluate.py`：评估脚本
+- `evaluate.py`：Oracle/Protocol 闭环评估（系统验收）
+- `evaluate_model.py`：Oracle vs Model 对比总表（模型能力验收）
+- `docs/metrics_protocol.md`：评测口径协议（Oracle EM vs Model EM）
 - `tests/`：完整测试套件
 
 </details>
