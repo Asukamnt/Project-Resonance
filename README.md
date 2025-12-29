@@ -165,6 +165,18 @@ python .\train.py --task mod --model oracle_mod --manifest manifests\task3.jsonl
 
 ---
 
+## 发布 Artifacts
+
+| 文件 | 说明 |
+|------|------|
+| `artifacts/checkpoints/mirror_demo_seed42_epoch15.pt` | Mirror 任务 demo checkpoint，**Model EM = 1.0** (IID & OOD-length) |
+| `artifacts/checkpoints/mod_demo_seed42_epoch20.pt` | Mod 任务 demo checkpoint（概念示例，训练不充分） |
+| `artifacts/audio_examples/` | 60 个 WAV 示例（input/target/output 三元组） |
+
+> **注意**：`mirror_demo` 是完整训练的能力证明；`mod_demo` 仅作为训练流程示例，需更长训练时间才能达到论文级 Model EM。如需完整训练结果，请参考"复现与最优配置"节。
+
+---
+
 ## 复现与最优配置
 
 本仓库提供的配置文件是**基础配置**，可以验证系统正常运行并获得合理结果。
