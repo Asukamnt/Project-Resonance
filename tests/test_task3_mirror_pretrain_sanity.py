@@ -11,7 +11,7 @@ def test_task3_mirror_pretrain_sanity_tiny():
     entries = build_task3_manifest(seed=2025, split_sizes=split_sizes, preset="tiny", balance_remainder=True)
     train_entries = [e for e in entries if e.split == "train"]
 
-    _preds, metrics = mini_jmamba_task3_pipeline(
+    _preds, metrics, _ = mini_jmamba_task3_pipeline(
         train_entries,
         train_entries,
         seed=7,

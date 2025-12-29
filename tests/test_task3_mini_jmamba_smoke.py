@@ -23,7 +23,7 @@ def test_task3_mini_jmamba_pipeline_improves_metrics(tmp_path: Path):
     train_entries = read_manifest(manifest_path, split="train")
     eval_entries = read_manifest(manifest_path, split="iid_test")
 
-    predictions, metrics = mini_jmamba_task3_pipeline(
+    predictions, metrics, _ = mini_jmamba_task3_pipeline(
         train_entries,
         eval_entries,
         seed=7,

@@ -146,6 +146,7 @@ def eval_model(
     split: str,
     device: str = "cpu",
     limit: int | None = None,
+    checkpoint: dict | None = None,
 ) -> EvalResult:
     """训练模型评测"""
     entries = [e for e in read_manifest(manifest_path) if e.split == split]
@@ -187,12 +188,27 @@ def eval_model(
             mask = torch.ones(1, frames.size(1), dtype=torch.bool, device=device)
             
             # 模型推理
-            frame_out, _ = model(frames, mask)
+            frame_out, symbol_logits = model(frames, mask)
             
-            # 解码
-            pred_wave = frame_out.squeeze(0).cpu().numpy().flatten()
-            pred_wave = np.clip(pred_wave, -1.0, 1.0).astype(np.float32)
-            decoded = decode_wave_to_symbols(pred_wave)
+            # 解码：mod 任务用 CTC 解码（因为音频输出包含表达式）
+            if task == "mod" and symbol_logits is not None:
+                # CTC 解码
+                probs = symbol_logits.softmax(dim=-1).squeeze(0)
+                pred_ids = probs.argmax(dim=-1).cpu().tolist()
+                # 简单 CTC 解码：去重 + 去 blank(0)
+                decoded = []
+                prev_id = None
+                id_to_symbol = checkpoint.get("id_to_symbol", {})
+                for idx in pred_ids:
+                    if idx != 0 and idx != prev_id:  # 0 是 blank
+                        symbol = id_to_symbol.get(idx, str(idx))
+                        decoded.append(symbol)
+                    prev_id = idx
+            else:
+                # 音频解码
+                pred_wave = frame_out.squeeze(0).cpu().numpy().flatten()
+                pred_wave = np.clip(pred_wave, -1.0, 1.0).astype(np.float32)
+                decoded = decode_wave_to_symbols(pred_wave)
             
             if decoded == target:
                 correct += 1
@@ -312,7 +328,7 @@ def run_ablation_ood(
         # 评测各 split
         ablation_results = []
         for split in splits:
-            result = eval_model(model, manifest_path, task, split, device, limit)
+            result = eval_model(model, manifest_path, task, split, device, limit, None)
             result = EvalResult(
                 task=result.task,
                 split=result.split,
@@ -619,7 +635,7 @@ def main():
         
         if manifest_path and manifest_path.exists():
             for split in args.splits:
-                result = eval_model(model, manifest_path, task, split, args.device, args.limit)
+                result = eval_model(model, manifest_path, task, split, args.device, args.limit, checkpoint)
                 model_results.append(result)
                 print(f"  {task}/{split}: Model EM={result.em:.4f}")
     elif not args.oracle_only:

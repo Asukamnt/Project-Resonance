@@ -12,7 +12,7 @@ def test_task3_metrics_fields_exist_and_in_range():
     train_entries = [e for e in entries if e.split == "train"]
     eval_entries = [e for e in entries if e.split == "iid_test"]
 
-    _, metrics = mini_jmamba_task3_pipeline(
+    _, metrics, _ = mini_jmamba_task3_pipeline(
         train_entries,
         eval_entries,
         seed=0,

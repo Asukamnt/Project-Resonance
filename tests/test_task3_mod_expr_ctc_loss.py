@@ -13,7 +13,7 @@ def test_mod_expr_ctc_loss_changes_total_loss():
     eval_entries = [e for e in entries if e.split == "iid_test"]
 
     # Run with zero mod expr ctc weight
-    _preds0, metrics0 = mini_jmamba_task3_pipeline(
+    _preds0, metrics0, _ = mini_jmamba_task3_pipeline(
         train_entries,
         eval_entries,
         seed=1,
@@ -33,7 +33,7 @@ def test_mod_expr_ctc_loss_changes_total_loss():
         mod_lr_factor=1.0,
     )
 
-    _preds1, metrics1 = mini_jmamba_task3_pipeline(
+    _preds1, metrics1, _ = mini_jmamba_task3_pipeline(
         train_entries,
         eval_entries,
         seed=1,

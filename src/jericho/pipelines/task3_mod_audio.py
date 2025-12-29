@@ -500,6 +500,9 @@ def apply_answer_guidance_mix(
 
     if mix_weight <= 0.0 or remainder_probs is None or remainder_probs.numel() == 0:
         return symbol_probs
+    # 如果 remainder_probs 维度不匹配 digit_ids（如 100 vs 10），跳过混合
+    if remainder_probs.size(-1) != len(digit_ids):
+        return symbol_probs
     mixed = symbol_probs.clone()
     vocab = symbol_probs.size(-1)
     floor = max(0.0, float(blank_floor))
@@ -1654,9 +1657,10 @@ def mini_jmamba_task3_pipeline(
 
     if remainder_head_type == "attn_hidden":
         # 新的 attention-based head，使用 backbone hidden states
+        # 使用 100 类支持两位数结果 (0-99)
         remainder_head_module = RemainderHead(
             d_model=config.d_model,
-            num_digits=len(digit_ids),
+            num_digits=100,
             hidden_dim=config.remainder_gru_hidden,
             num_attn_heads=config.remainder_attn_heads,
             dropout=config.remainder_attn_dropout,
@@ -2679,7 +2683,14 @@ def mini_jmamba_task3_pipeline(
         "remainder_acc_eval_mid2": remainder_acc_eval_mid2,
         "remainder_ce_loss_mid2": remainder_ce_loss_mid2,
     }
-    return predictions, metrics
+    # 返回 model 和配置用于保存 checkpoint
+    model_info = {
+        "model": model,
+        "model_config": model_config,
+        "symbol_to_id": vocab,  # vocab 是 symbol -> id 的映射
+        "id_to_symbol": id_to_symbol,
+    }
+    return predictions, metrics, model_info
 
 
 __all__ = ["Task3TrainingConfig", "mini_jmamba_task3_pipeline", "render_tone_bank"]

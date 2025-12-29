@@ -602,7 +602,7 @@ def main() -> None:
                 raise SystemExit("Train split is empty; cannot train mini_jmamba on mod.")
             if args.limit is not None:
                 train_entries = train_entries[: args.limit]
-            predictions, model_metrics = mini_jmamba_task3_pipeline(
+            predictions, model_metrics, model_info = mini_jmamba_task3_pipeline(
                 train_entries,
                 eval_entries,
                 seed=args.seed,
@@ -636,6 +636,28 @@ def main() -> None:
                 ),
                 mod_lr_factor=args.mod_lr_factor,
             )
+            # 保存 checkpoint
+            checkpoint_path = outdir / f"mod_seed{args.seed}_epoch{args.epochs}.pt"
+            torch.save({
+                "model_state_dict": model_info["model"].state_dict(),
+                "config": {
+                    "frame_size": model_info["model_config"].frame_size,
+                    "hop_size": model_info["model_config"].hop_size,
+                    "symbol_vocab_size": model_info["model_config"].symbol_vocab_size,
+                    "d_model": model_info["model_config"].d_model,
+                    "num_ssm_layers": model_info["model_config"].num_ssm_layers,
+                    "num_attn_layers": model_info["model_config"].num_attn_layers,
+                    "num_heads": model_info["model_config"].num_heads,
+                    "max_frames": model_info["model_config"].max_frames,
+                    "use_rope": model_info["model_config"].use_rope,
+                },
+                "symbol_to_id": model_info["symbol_to_id"],
+                "id_to_symbol": model_info["id_to_symbol"],
+                "task": "mod",
+                "epochs": args.epochs,
+                "seed": args.seed,
+            }, checkpoint_path)
+            print(f"Saved checkpoint: {checkpoint_path}")
 
     preds_path = outdir / "preds.jsonl"
     with preds_path.open("w", encoding="utf-8") as f:

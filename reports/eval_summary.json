@@ -1,18 +1,9 @@
 {
-  "timestamp": "2025-12-29T13:04:22.290062",
+  "timestamp": "2025-12-29T13:57:13.478424",
   "oracle_results": [
     {
-      "task": "mirror",
+      "task": "mod",
       "split": "iid_test",
-      "eval_type": "oracle",
-      "total": 50,
-      "correct": 50,
-      "em": 1.0,
-      "token_accuracy": 1.0
-    },
-    {
-      "task": "mirror",
-      "split": "ood_length",
       "eval_type": "oracle",
       "total": 50,
       "correct": 50,
@@ -22,22 +13,13 @@
   ],
   "model_results": [
     {
-      "task": "mirror",
+      "task": "mod",
       "split": "iid_test",
       "eval_type": "model",
       "total": 50,
-      "correct": 50,
-      "em": 1.0,
-      "token_accuracy": 1.0
-    },
-    {
-      "task": "mirror",
-      "split": "ood_length",
-      "eval_type": "model",
-      "total": 50,
-      "correct": 50,
-      "em": 1.0,
-      "token_accuracy": 1.0
+      "correct": 0,
+      "em": 0.0,
+      "token_accuracy": 0.21052631578947367
     }
   ]
 }

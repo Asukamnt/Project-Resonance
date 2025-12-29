@@ -29,7 +29,10 @@ artifacts/
 当前仓库内的 demo 示例（用于外部快速复现，不代表"最优模型"）：
 - `mirror_demo_seed42_epoch15.pt` — **Model EM = 1.0** (IID & OOD-length)
 
-> **注意**：Mod 任务需要更长训练时间（课程学习 + 预训练），demo 脚本尚未达标。如需完整 Task3 训练，请参考 `docs/` 中的配置。
+> **注意**：
+> - **Mirror** checkpoint 可直接用 `evaluate_model.py` 验证 Model EM
+> - **Mod/Bracket** 任务需要完整 pipeline（含答案窗口定位）才能正确评估
+> - 如需完整 Task3 训练和评估，请使用 `train.py --config configs/task3_mod_stable.yaml`
 
 ### 加载方式
 

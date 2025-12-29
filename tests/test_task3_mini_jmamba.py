@@ -21,7 +21,7 @@ def test_mini_jmamba_task3_smoke(tmp_path: Path):
     train_entries = [e for e in manifest_entries if e.split == "train"]
     eval_entries = [e for e in manifest_entries if e.split == "iid_test"]
 
-    predictions, metrics = mini_jmamba_task3_pipeline(
+    predictions, metrics, _ = mini_jmamba_task3_pipeline(
         train_entries,
         eval_entries,
         seed=0,
