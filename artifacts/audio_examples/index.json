@@ -1,302 +1,390 @@
 {
-  "task": "mod",
-  "timestamp": "2025-12-29T02:03:13.537481",
+  "task": "mirror",
+  "timestamp": "2025-12-29T13:04:07.261572",
   "examples": [
     {
       "example_id": "iid_test-000000",
       "split": "iid_test",
       "input_symbols": [
-        "3",
-        "1",
-        "%",
-        "8",
-        "0"
+        "B",
+        "B",
+        "E",
+        "B"
       ],
       "target_symbols": [
-        "3",
-        "1"
+        "B",
+        "B",
+        "E",
+        "B"
       ],
       "predicted_symbols": [
-        "3",
-        "1",
-        "%",
-        "8",
-        "0"
+        "B",
+        "B",
+        "E",
+        "B"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_iid_test_000_input.wav",
-        "target": "mod_iid_test_000_target.wav",
-        "output": "mod_iid_test_000_output.wav"
+        "input": "mirror_iid_test_000_input.wav",
+        "target": "mirror_iid_test_000_target.wav",
+        "output": "mirror_iid_test_000_output.wav"
       }
     },
     {
       "example_id": "iid_test-000001",
       "split": "iid_test",
       "input_symbols": [
-        "9",
-        "6",
-        "%",
-        "5",
-        "0"
+        "B",
+        "D",
+        "D",
+        "A"
       ],
       "target_symbols": [
-        "4",
-        "6"
+        "B",
+        "D",
+        "D",
+        "A"
       ],
       "predicted_symbols": [
-        "9",
-        "6",
-        "%",
-        "5",
-        "0"
+        "B",
+        "D",
+        "D",
+        "A"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_iid_test_001_input.wav",
-        "target": "mod_iid_test_001_target.wav",
-        "output": "mod_iid_test_001_output.wav"
+        "input": "mirror_iid_test_001_input.wav",
+        "target": "mirror_iid_test_001_target.wav",
+        "output": "mirror_iid_test_001_output.wav"
       }
     },
     {
       "example_id": "iid_test-000002",
       "split": "iid_test",
       "input_symbols": [
-        "4",
-        "9",
-        "%",
-        "2",
-        "0"
+        "B",
+        "E",
+        "A",
+        "C",
+        "A"
       ],
       "target_symbols": [
-        "9"
+        "B",
+        "E",
+        "A",
+        "C",
+        "A"
       ],
       "predicted_symbols": [
-        "4",
-        "9",
-        "%",
-        "2",
-        "0"
+        "B",
+        "E",
+        "A",
+        "C",
+        "A"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_iid_test_002_input.wav",
-        "target": "mod_iid_test_002_target.wav",
-        "output": "mod_iid_test_002_output.wav"
+        "input": "mirror_iid_test_002_input.wav",
+        "target": "mirror_iid_test_002_target.wav",
+        "output": "mirror_iid_test_002_output.wav"
       }
     },
     {
       "example_id": "iid_test-000003",
       "split": "iid_test",
       "input_symbols": [
-        "3",
-        "1",
-        "%",
-        "9",
-        "3"
+        "C",
+        "B",
+        "A",
+        "B",
+        "E",
+        "E",
+        "C",
+        "A"
       ],
       "target_symbols": [
-        "3",
-        "1"
+        "C",
+        "B",
+        "A",
+        "B",
+        "E",
+        "E",
+        "C",
+        "A"
       ],
       "predicted_symbols": [
-        "3",
-        "1",
-        "%",
-        "9",
-        "3"
+        "C",
+        "B",
+        "A",
+        "B",
+        "E",
+        "E",
+        "C",
+        "A"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_iid_test_003_input.wav",
-        "target": "mod_iid_test_003_target.wav",
-        "output": "mod_iid_test_003_output.wav"
+        "input": "mirror_iid_test_003_input.wav",
+        "target": "mirror_iid_test_003_target.wav",
+        "output": "mirror_iid_test_003_output.wav"
       }
     },
     {
       "example_id": "iid_test-000004",
       "split": "iid_test",
       "input_symbols": [
-        "3",
-        "5",
-        "%",
-        "3",
-        "5"
+        "D",
+        "B",
+        "A",
+        "C",
+        "D"
       ],
       "target_symbols": [
-        "0"
+        "D",
+        "B",
+        "A",
+        "C",
+        "D"
       ],
       "predicted_symbols": [
-        "3",
-        "5",
-        "%",
-        "3",
-        "5"
+        "D",
+        "B",
+        "A",
+        "C",
+        "D"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_iid_test_004_input.wav",
-        "target": "mod_iid_test_004_target.wav",
-        "output": "mod_iid_test_004_output.wav"
+        "input": "mirror_iid_test_004_input.wav",
+        "target": "mirror_iid_test_004_target.wav",
+        "output": "mirror_iid_test_004_output.wav"
       }
     },
     {
       "example_id": "ood_length-000000",
       "split": "ood_length",
       "input_symbols": [
-        "1",
-        "6",
-        "2",
-        "1",
-        "%",
-        "1",
-        "9"
+        "A",
+        "E",
+        "B",
+        "A",
+        "D",
+        "C",
+        "A",
+        "B",
+        "E"
       ],
       "target_symbols": [
-        "6"
+        "A",
+        "E",
+        "B",
+        "A",
+        "D",
+        "C",
+        "A",
+        "B",
+        "E"
       ],
       "predicted_symbols": [
-        "1",
-        "6",
-        "2",
-        "1",
-        "%",
-        "1",
-        "9"
+        "A",
+        "E",
+        "B",
+        "A",
+        "D",
+        "C",
+        "A",
+        "B",
+        "E"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_ood_length_005_input.wav",
-        "target": "mod_ood_length_005_target.wav",
-        "output": "mod_ood_length_005_output.wav"
+        "input": "mirror_ood_length_005_input.wav",
+        "target": "mirror_ood_length_005_target.wav",
+        "output": "mirror_ood_length_005_output.wav"
       }
     },
     {
       "example_id": "ood_length-000001",
       "split": "ood_length",
       "input_symbols": [
-        "3",
-        "3",
-        "2",
-        "5",
-        "%",
-        "5",
-        "4"
+        "D",
+        "D",
+        "C",
+        "D",
+        "E",
+        "D",
+        "B",
+        "C",
+        "D"
       ],
       "target_symbols": [
-        "3",
-        "1"
+        "D",
+        "D",
+        "C",
+        "D",
+        "E",
+        "D",
+        "B",
+        "C",
+        "D"
       ],
       "predicted_symbols": [
-        "3",
-        "3",
-        "2",
-        "5",
-        "%",
-        "5",
-        "4"
+        "D",
+        "D",
+        "C",
+        "D",
+        "E",
+        "D",
+        "B",
+        "C",
+        "D"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_ood_length_006_input.wav",
-        "target": "mod_ood_length_006_target.wav",
-        "output": "mod_ood_length_006_output.wav"
+        "input": "mirror_ood_length_006_input.wav",
+        "target": "mirror_ood_length_006_target.wav",
+        "output": "mirror_ood_length_006_output.wav"
       }
     },
     {
       "example_id": "ood_length-000002",
       "split": "ood_length",
       "input_symbols": [
-        "5",
-        "2",
-        "2",
-        "4",
-        "%",
-        "6",
-        "8"
+        "E",
+        "E",
+        "E",
+        "C",
+        "D",
+        "A",
+        "B",
+        "B",
+        "D",
+        "E",
+        "D"
       ],
       "target_symbols": [
-        "5",
-        "6"
+        "E",
+        "E",
+        "E",
+        "C",
+        "D",
+        "A",
+        "B",
+        "B",
+        "D",
+        "E",
+        "D"
       ],
       "predicted_symbols": [
-        "5",
-        "2",
-        "2",
-        "4",
-        "%",
-        "6",
-        "8"
+        "E",
+        "E",
+        "E",
+        "C",
+        "D",
+        "A",
+        "B",
+        "B",
+        "D",
+        "E",
+        "D"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_ood_length_007_input.wav",
-        "target": "mod_ood_length_007_target.wav",
-        "output": "mod_ood_length_007_output.wav"
+        "input": "mirror_ood_length_007_input.wav",
+        "target": "mirror_ood_length_007_target.wav",
+        "output": "mirror_ood_length_007_output.wav"
       }
     },
     {
       "example_id": "ood_length-000003",
       "split": "ood_length",
       "input_symbols": [
-        "3",
-        "2",
-        "8",
-        "1",
-        "%",
-        "1",
-        "5"
+        "A",
+        "E",
+        "D",
+        "A",
+        "C",
+        "A",
+        "D",
+        "E",
+        "B",
+        "B",
+        "E"
       ],
       "target_symbols": [
-        "1",
-        "1"
+        "A",
+        "E",
+        "D",
+        "A",
+        "C",
+        "A",
+        "D",
+        "E",
+        "B",
+        "B",
+        "E"
       ],
       "predicted_symbols": [
-        "3",
-        "2",
-        "8",
-        "1",
-        "%",
-        "1",
-        "5"
+        "A",
+        "E",
+        "D",
+        "A",
+        "C",
+        "A",
+        "D",
+        "E",
+        "B",
+        "B",
+        "E"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_ood_length_008_input.wav",
-        "target": "mod_ood_length_008_target.wav",
-        "output": "mod_ood_length_008_output.wav"
+        "input": "mirror_ood_length_008_input.wav",
+        "target": "mirror_ood_length_008_target.wav",
+        "output": "mirror_ood_length_008_output.wav"
       }
     },
     {
       "example_id": "ood_length-000004",
       "split": "ood_length",
       "input_symbols": [
-        "9",
-        "2",
-        "1",
-        "5",
-        "%",
-        "2",
-        "6"
+        "A",
+        "B",
+        "E",
+        "B",
+        "A",
+        "A",
+        "D",
+        "E",
+        "A"
       ],
       "target_symbols": [
-        "1",
-        "1"
+        "A",
+        "B",
+        "E",
+        "B",
+        "A",
+        "A",
+        "D",
+        "E",
+        "A"
       ],
       "predicted_symbols": [
-        "9",
-        "2",
-        "1",
-        "5",
-        "%",
-        "2",
-        "6"
+        "A",
+        "B",
+        "E",
+        "B",
+        "A",
+        "A",
+        "D",
+        "E",
+        "A"
       ],
-      "correct": false,
+      "correct": true,
       "files": {
-        "input": "mod_ood_length_009_input.wav",
-        "target": "mod_ood_length_009_target.wav",
-        "output": "mod_ood_length_009_output.wav"
+        "input": "mirror_ood_length_009_input.wav",
+        "target": "mirror_ood_length_009_target.wav",
+        "output": "mirror_ood_length_009_output.wav"
       }
     }
   ]

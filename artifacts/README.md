@@ -26,9 +26,10 @@ artifacts/
 - `bracket_final_123_epoch50.pt`
 - `mod_final_123_epoch100.pt`
 
-当前仓库内的 demo 示例（用于外部快速复现，不代表“最优模型”）：
-- `mirror_demo_seed42_epoch15.pt`
-- `mod_demo_seed42_epoch20.pt`
+当前仓库内的 demo 示例（用于外部快速复现，不代表"最优模型"）：
+- `mirror_demo_seed42_epoch15.pt` — **Model EM = 1.0** (IID & OOD-length)
+
+> **注意**：Mod 任务需要更长训练时间（课程学习 + 预训练），demo 脚本尚未达标。如需完整 Task3 训练，请参考 `docs/` 中的配置。
 
 ### 加载方式
 

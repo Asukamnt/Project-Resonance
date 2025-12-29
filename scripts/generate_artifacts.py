@@ -80,26 +80,49 @@ def train_and_save_checkpoint(
     for epoch in range(epochs):
         total_loss = 0.0
         for entry in train_entries:
-            wave = synthesise_entry_wave(entry)
-            wave_tensor = torch.from_numpy(wave).float()
+            input_wave = synthesise_entry_wave(entry)
+            input_tensor = torch.from_numpy(input_wave).float()
             
-            frames = wave_tensor.unfold(0, 160, 160)
-            if frames.size(0) == 0:
+            input_frames = input_tensor.unfold(0, 160, 160)
+            if input_frames.size(0) == 0:
                 continue
             
-            frames = frames.unsqueeze(0).to(device)
-            mask = torch.ones(1, frames.size(1), dtype=torch.bool, device=device)
+            # 根据任务获取正确的目标
+            if task == "mirror":
+                target_symbols = list(entry.symbols)
+                target_wave = encode_symbols_to_wave(target_symbols)
+            elif task == "bracket":
+                target_symbols = [target_symbol_for_task2(entry.symbols)]
+                target_wave = synthesise_task2_target_wave(entry.symbols)
+            elif task == "mod":
+                target_symbols = target_symbols_for_task3(entry.symbols)
+                target_wave = synthesise_task3_target_wave(entry.symbols)
+            else:
+                target_symbols = list(entry.symbols)
+                target_wave = input_wave
             
-            frame_out, symbol_logits = model(frames, mask)
+            target_tensor = torch.from_numpy(target_wave).float()
+            target_frames = target_tensor.unfold(0, 160, 160)
             
-            # 音频损失
-            audio_loss = ((frame_out - frames) ** 2).mean()
+            # 对齐长度（取较短的）
+            min_len = min(input_frames.size(0), target_frames.size(0))
+            if min_len == 0:
+                continue
             
-            # CTC 损失
-            target_ids = [symbol_to_id.get(s, 0) for s in entry.symbols]
+            input_frames = input_frames[:min_len].unsqueeze(0).to(device)
+            target_frames = target_frames[:min_len].unsqueeze(0).to(device)
+            mask = torch.ones(1, min_len, dtype=torch.bool, device=device)
+            
+            frame_out, symbol_logits = model(input_frames, mask)
+            
+            # 音频损失：对齐目标波形
+            audio_loss = ((frame_out - target_frames) ** 2).mean()
+            
+            # CTC 损失：对齐目标符号
+            target_ids = [symbol_to_id.get(s, 0) for s in target_symbols]
             if target_ids:
                 log_probs = symbol_logits.log_softmax(dim=-1).permute(1, 0, 2)
-                input_lengths = torch.tensor([frames.size(1)], device=device)
+                input_lengths = torch.tensor([min_len], device=device)
                 target_lengths = torch.tensor([len(target_ids)], device=device)
                 targets = torch.tensor(target_ids, device=device)
                 ctc_loss = ctc_loss_fn(log_probs, targets, input_lengths, target_lengths)
