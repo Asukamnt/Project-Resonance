@@ -20,8 +20,15 @@ from jericho.models import (
     MiniJMambaConfig,
     MultiResolutionSTFTConfig,
     multi_resolution_stft_loss,
+    BaselineConfig,
+    TransformerBaseline,
+    LSTMBaseline,
+    count_parameters,
 )
 from jericho.scorer import decode_wave_to_symbols, exact_match
+
+# Type alias for models with compatible forward interface
+BackboneModel = MiniJMamba | TransformerBaseline | LSTMBaseline
 from jericho.task3 import MOD_OPERATOR, parse_mod_expression, target_symbols_for_task3, synthesise_task3_target_wave
 from jericho.symbols import GAP_DUR, SR, SYMBOL2FREQ, TONE_DUR, encode_symbols_to_wave
 
@@ -499,9 +506,6 @@ def apply_answer_guidance_mix(
     """Convexly mix remainder guidance distribution into answer window."""
 
     if mix_weight <= 0.0 or remainder_probs is None or remainder_probs.numel() == 0:
-        return symbol_probs
-    # 如果 remainder_probs 维度不匹配 digit_ids（如 100 vs 10），跳过混合
-    if remainder_probs.size(-1) != len(digit_ids):
         return symbol_probs
     mixed = symbol_probs.clone()
     vocab = symbol_probs.size(-1)
@@ -984,7 +988,8 @@ def prepare_task3_samples(
                 target_tokens=target_tokens,
                 expression_frame_symbol_ids=expression_frame_symbol_ids,
                 frame_symbol_ids=frame_symbol_ids,
-                remainder_value=int("".join(target_tokens)) if target_tokens else 0,
+                # 取个位数作为分类目标（0-9）
+                remainder_value=(int("".join(target_tokens)) % 10) if target_tokens else 0,
                 answer_start_samples=answer_start_samples,
                 answer_len_samples=answer_len_samples,
                 answer_start_frame=answer_start_frame,
@@ -1128,7 +1133,7 @@ def collate_task3_eval(
 
 
 def evaluate_task3_model(
-    model: MiniJMamba,
+    model: BackboneModel,
     dataloader: DataLoader,
     dataset: Task3Dataset,
     device: torch.device,
@@ -1578,8 +1583,16 @@ def mini_jmamba_task3_pipeline(
     device: torch.device,
     config: Task3TrainingConfig | None = None,
     mod_lr_factor: float = 1.0,
+    backbone: str = "mini_jmamba",
 ) -> Tuple[List[dict], dict]:
-    """Train and evaluate Mini-JMamba on Task3 data."""
+    """Train and evaluate a backbone model on Task3 data.
+    
+    Parameters
+    ----------
+    backbone : str
+        Model backbone to use: 'mini_jmamba', 'transformer', or 'lstm'.
+        All backbones share the same training/evaluation pipeline for fair comparison.
+    """
 
     if config is None:
         config = Task3TrainingConfig()
@@ -1628,19 +1641,54 @@ def mini_jmamba_task3_pipeline(
         raise SystemExit("Evaluation split is empty.")
 
     max_frames = max(max(train_dataset.frame_counts), max(eval_dataset.frame_counts))
-    model_config = MiniJMambaConfig(
-        frame_size=config.frame_size,
-        hop_size=config.hop_size,
-        symbol_vocab_size=len(vocab) + 1,
-        d_model=config.d_model,
-        num_ssm_layers=config.num_ssm_layers,
-        num_attn_layers=config.num_attn_layers,
-        num_heads=config.num_heads,
-        max_frames=max_frames,
-        dropout=config.dropout,
-        attn_dropout=config.attn_dropout,
-    )
-    model = MiniJMamba(model_config).to(device)
+    symbol_vocab_size = len(vocab) + 1
+    
+    # Create backbone model based on selection
+    backbone_name = backbone.lower()
+    if backbone_name == "mini_jmamba":
+        model_config = MiniJMambaConfig(
+            frame_size=config.frame_size,
+            hop_size=config.hop_size,
+            symbol_vocab_size=symbol_vocab_size,
+            d_model=config.d_model,
+            num_ssm_layers=config.num_ssm_layers,
+            num_attn_layers=config.num_attn_layers,
+            num_heads=config.num_heads,
+            max_frames=max_frames,
+            dropout=config.dropout,
+            attn_dropout=config.attn_dropout,
+        )
+        model: BackboneModel = MiniJMamba(model_config).to(device)
+    elif backbone_name == "transformer":
+        # Transformer: 6 layers ≈ similar param count to Mini-JMamba
+        model_config = BaselineConfig(
+            frame_size=config.frame_size,
+            hop_size=config.hop_size,
+            symbol_vocab_size=symbol_vocab_size,
+            d_model=config.d_model,
+            num_layers=6,
+            num_heads=config.num_heads,
+            max_frames=max_frames,
+            dropout=config.dropout,
+        )
+        model = TransformerBaseline(model_config).to(device)
+    elif backbone_name == "lstm":
+        # LSTM: 4 bidirectional layers ≈ similar param count to Mini-JMamba
+        model_config = BaselineConfig(
+            frame_size=config.frame_size,
+            hop_size=config.hop_size,
+            symbol_vocab_size=symbol_vocab_size,
+            d_model=config.d_model,
+            num_layers=4,
+            num_heads=config.num_heads,  # Unused by LSTM but kept for config consistency
+            max_frames=max_frames,
+            dropout=config.dropout,
+        )
+        model = LSTMBaseline(model_config).to(device)
+    else:
+        raise ValueError(f"Unknown backbone: {backbone}. Choose from: mini_jmamba, transformer, lstm")
+    
+    param_count = count_parameters(model)
     frame_ce_class_weights = torch.ones(
         model_config.symbol_vocab_size,
         device=device,
@@ -1657,10 +1705,10 @@ def mini_jmamba_task3_pipeline(
 
     if remainder_head_type == "attn_hidden":
         # 新的 attention-based head，使用 backbone hidden states
-        # 使用 100 类支持两位数结果 (0-99)
+        # 注意：只支持 0-9 单位数结果；两位数结果会被截断到个位
         remainder_head_module = RemainderHead(
             d_model=config.d_model,
-            num_digits=100,
+            num_digits=len(digit_ids),
             hidden_dim=config.remainder_gru_hidden,
             num_attn_heads=config.remainder_attn_heads,
             dropout=config.remainder_attn_dropout,
@@ -2595,13 +2643,21 @@ def mini_jmamba_task3_pipeline(
 
     blank_post_metric = min(blank_post, blank_pre)
 
+    # Serialize model config based on type
+    if isinstance(model_config, MiniJMambaConfig):
+        model_config_dict = asdict(model_config)
+    else:
+        model_config_dict = model_config.to_dict()
+
     metrics = {
         "loss_pre": loss_pre,
         "loss_post": loss_post,
         "em_pre": em_pre,
         "em_post": em_post,
         "em_baseline_margin": baseline_margin_post,
-        "model_config": asdict(model_config),
+        "backbone_name": backbone_name,
+        "param_count": param_count,
+        "model_config": model_config_dict,
         "digits_vocab": vocab,
         "ctc_weight": config.ctc_weight,
         "ctc_weight_schedule": config.ctc_weight_schedule,

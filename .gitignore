@@ -47,20 +47,75 @@ env/
 .ipynb_checkpoints/
 
 # ===================
-# 项目敏感文件 - 不上传
+# 训练产物（太大）
 # ===================
-# 实验结果（包含最佳超参数）
 runs/
 
-# 开发日志（包含实验细节）
-docs/iteration_log.md
+# ===================
+# AI 生成未确认内容（暂不公开）
+# ===================
+docs/
+reports/
+artifacts/
 
-# 原始计划文档
-docs/plan.pdf
-docs/plan_text.txt
+# ===================
+# Phase 2-4 配置和数据（暂不公开）
+# ===================
+configs/phase2_*.yaml
+configs/phase3_*.yaml
+configs/task3_mod_overnight.yaml
+configs/task3_overnight_safe.yaml
+manifests/phase2_*.jsonl
+manifests/phase3_*.jsonl
+manifests/task3_disjoint*.jsonl
+manifests/task3_large*.jsonl
+manifests/task3_tiny_disjoint.jsonl
 
-# PDF 原始内容
-_pdf_content.txt
+# ===================
+# Phase 2-4 训练脚本（暂不公开）
+# ===================
+train_phase*.py
+train_*_transfer.py
+train_rf_domain.py
+evaluate_zero_shot.py
+
+# ===================
+# 分析脚本（暂不公开）
+# ===================
+scripts/*.ps1
+scripts/add_decay_rate.py
+scripts/analyze_*.py
+scripts/append_d8_log.py
+scripts/bootstrap_analysis.py
+scripts/check_*.py
+scripts/cka_analysis.py
+scripts/eval_ood_length_decay.py
+scripts/ood_length_decay_experiment.py
+scripts/phase2_seed_sweep*.py
+scripts/probe_analysis.py
+scripts/quick_baseline_compare.py
+scripts/random_mapping_negative_control.py
+scripts/run_baseline_comparison.py
+scripts/seed_sweep_10.py
+scripts/simple_baseline_compare.py
+scripts/stft_sdr_eval.py
+scripts/summarize_wav2vec2.py
+scripts/test_large_model.py
+scripts/train_wav2vec2_baseline*.py
+scripts/verify_disjoint.py
+scripts/verify_rule_baseline.py
+
+# ===================
+# 依赖 docs 的测试（暂不公开）
+# ===================
+tests/test_docs_*.py
+tests/test_cross_domain_oracle.py
+tests/test_optical_domain.py
+tests/test_rf_domain.py
+tests/test_phase*.py
+tests/test_baseline_task3_smoke.py
+tests/test_optical_manifest_io.py
+tests/test_task3_disjoint_splits.py
 
 # ===================
 # 操作系统
@@ -75,23 +130,4 @@ Desktop.ini
 *.log
 *.tmp
 *.temp
-
-# ===================
-# Phase 2-6 计划文档（暂不公开）
-# ===================
-docs/decision_table_phase4_5_6.md
-docs/phase5_emotion_trajectory_renderer.md
-docs/phase5b_affect_embedding_bridge.md
-
-# ===================
-# 理论框架 PDF（暂不公开）
-# ===================
-docs/Big_Wave_Model_论文式落地.pdf
-docs/TwoPhase_NI_ResearchPlan_headings.pdf
-
-# ===================
-# 相关测试（暂不公开）
-# ===================
-tests/test_docs_decision_table_phase4_5_6.py
-tests/test_docs_phase5_emotion_trajectory_renderer.py
-tests/test_docs_phase5b_affect_embedding_bridge.py
+_pdf_content.txt

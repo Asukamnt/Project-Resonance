@@ -20,10 +20,17 @@ class ManifestEntry:
     example_id: str
     seed: int
     sequence_seed: int
+    # Optional target symbols (used by Phase2 optical manifests and some tasks)
+    target_symbols: Optional[List[str]] = None
+    # Optional task name (used by Phase2 optical manifests)
+    task: Optional[str] = None
 
     def to_json(self) -> str:
         """Serialise the entry as a JSON string."""
-        return json.dumps(asdict(self), ensure_ascii=False)
+        payload = asdict(self)
+        # Keep manifest format stable: omit optional fields when not present.
+        payload = {k: v for k, v in payload.items() if v is not None}
+        return json.dumps(payload, ensure_ascii=False)
 
 
 def write_manifest(entries: Iterable[ManifestEntry], path: str | Path) -> None:

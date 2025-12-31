@@ -1,6 +1,0 @@
-ablation,task,split,em,loss,delta_em
-baseline,mirror,test,1.0000,0.0045,+0.0000
-no_attention,mirror,test,1.0000,0.0074,+0.0000
-no_rope,mirror,test,1.0000,0.0248,+0.0000
-no_ctc,mirror,test,1.0000,0.0014,+0.0000
-no_curriculum,mirror,test,1.0000,0.0045,+0.0000

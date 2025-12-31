@@ -171,8 +171,8 @@ def _build_parser() -> argparse.ArgumentParser:
         "--model",
         type=str,
         default="identity",
-        choices=["identity", "mini_jmamba", "oracle_mod"],
-        help="Model/baseline to execute.",
+        choices=["identity", "mini_jmamba", "oracle_mod", "transformer", "lstm"],
+        help="Model/baseline to execute. transformer/lstm only supported for task=mod.",
     )
     parser.add_argument(
         "--task",
@@ -203,6 +203,31 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--epochs", type=int, default=30, help="Training epochs for models.")
     parser.add_argument("--batch-size", type=int, default=32, help="Batch size for training.")
     parser.add_argument("--lr", type=float, default=1e-3, help="Learning rate.")
+    # Model architecture parameters (for scaling experiments)
+    parser.add_argument(
+        "--d-model",
+        type=int,
+        default=128,
+        help="Model hidden dimension (d_model). Larger = more capacity.",
+    )
+    parser.add_argument(
+        "--num-ssm-layers",
+        type=int,
+        default=10,
+        help="Number of SSM layers in Mini-JMamba.",
+    )
+    parser.add_argument(
+        "--num-attn-layers",
+        type=int,
+        default=2,
+        help="Number of attention layers in Mini-JMamba.",
+    )
+    parser.add_argument(
+        "--num-heads",
+        type=int,
+        default=4,
+        help="Number of attention heads.",
+    )
     parser.add_argument(
         "--device",
         type=str,
@@ -586,7 +611,7 @@ def main() -> None:
             eval_noise_snr_db=eval_noise_snr,
         )
     else:  # Task3 mod
-        if args.model not in {"oracle_mod", "mini_jmamba"}:
+        if args.model not in {"oracle_mod", "mini_jmamba", "transformer", "lstm"}:
             raise SystemExit(f"Model '{args.model}' unsupported for task mod.")
         eval_entries = read_manifest(args.manifest, split=args.split)
         if not eval_entries:
@@ -597,9 +622,12 @@ def main() -> None:
         if args.model == "oracle_mod":
             predictions, model_metrics = oracle_mod_pipeline(eval_entries)
         else:
+            # Determine backbone: mini_jmamba, transformer, or lstm
+            backbone_name = args.model if args.model in {"transformer", "lstm"} else "mini_jmamba"
+            
             train_entries = read_manifest(args.manifest, split="train")
             if not train_entries:
-                raise SystemExit("Train split is empty; cannot train mini_jmamba on mod.")
+                raise SystemExit(f"Train split is empty; cannot train {backbone_name} on mod.")
             if args.limit is not None:
                 train_entries = train_entries[: args.limit]
             predictions, model_metrics, model_info = mini_jmamba_task3_pipeline(
@@ -611,6 +639,12 @@ def main() -> None:
                 lr=args.lr,
                 device=torch.device(args.device),
                 config=Task3TrainingConfig(
+                    # Model architecture
+                    d_model=args.d_model,
+                    num_ssm_layers=args.num_ssm_layers,
+                    num_attn_layers=args.num_attn_layers,
+                    num_heads=args.num_heads,
+                    # Training config
                     pretrain_mirror_epochs=args.pretrain_mirror_epochs,
                     pretrain_mirror_ctc_weight=args.pretrain_mirror_ctc_weight,
                     pretrain_mirror_frame_ce_weight=args.pretrain_mirror_frame_ce_weight,
@@ -635,27 +669,53 @@ def main() -> None:
                     symbol_warmup_epochs=args.symbol_warmup_epochs,
                 ),
                 mod_lr_factor=args.mod_lr_factor,
+                backbone=backbone_name,
             )
-            # 保存 checkpoint
+            # 保存 checkpoint（包含完整训练参数）
             checkpoint_path = outdir / f"mod_seed{args.seed}_epoch{args.epochs}.pt"
+            
+            # Build config dict based on model type
+            model_cfg = model_info["model_config"]
+            if hasattr(model_cfg, "num_ssm_layers"):
+                # MiniJMambaConfig
+                config_dict = {
+                    "frame_size": model_cfg.frame_size,
+                    "hop_size": model_cfg.hop_size,
+                    "symbol_vocab_size": model_cfg.symbol_vocab_size,
+                    "d_model": model_cfg.d_model,
+                    "num_ssm_layers": model_cfg.num_ssm_layers,
+                    "num_attn_layers": model_cfg.num_attn_layers,
+                    "num_heads": model_cfg.num_heads,
+                    "max_frames": model_cfg.max_frames,
+                    "use_rope": model_cfg.use_rope,
+                }
+            else:
+                # BaselineConfig (Transformer/LSTM)
+                config_dict = model_cfg.to_dict()
+            
             torch.save({
                 "model_state_dict": model_info["model"].state_dict(),
-                "config": {
-                    "frame_size": model_info["model_config"].frame_size,
-                    "hop_size": model_info["model_config"].hop_size,
-                    "symbol_vocab_size": model_info["model_config"].symbol_vocab_size,
-                    "d_model": model_info["model_config"].d_model,
-                    "num_ssm_layers": model_info["model_config"].num_ssm_layers,
-                    "num_attn_layers": model_info["model_config"].num_attn_layers,
-                    "num_heads": model_info["model_config"].num_heads,
-                    "max_frames": model_info["model_config"].max_frames,
-                    "use_rope": model_info["model_config"].use_rope,
-                },
+                "backbone": backbone_name,
+                "config": config_dict,
                 "symbol_to_id": model_info["symbol_to_id"],
                 "id_to_symbol": model_info["id_to_symbol"],
                 "task": "mod",
                 "epochs": args.epochs,
                 "seed": args.seed,
+                # 重要训练参数
+                "training_params": {
+                    "manifest": str(args.manifest),
+                    "split": args.split,
+                    "limit": args.limit,
+                    "pretrain_mirror_epochs": args.pretrain_mirror_epochs,
+                    "pretrain_remainder_epochs": args.pretrain_remainder_epochs,
+                    "blank_penalty_weight": args.blank_penalty_weight,
+                    "remainder_guidance_weight": args.remainder_guidance_weight,
+                    "symbol_warmup_epochs": args.symbol_warmup_epochs,
+                    "mod_lr_factor": args.mod_lr_factor,
+                },
+                "git_commit": get_git_commit(),
+                "cli_argv": sys.argv,
             }, checkpoint_path)
             print(f"Saved checkpoint: {checkpoint_path}")
 

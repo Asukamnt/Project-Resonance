@@ -1,4 +1,8 @@
-"""Manifest generator for Task3 (Arithmetic Mod)."""
+"""Manifest generator for Task3 (Arithmetic Mod).
+
+Key feature: disjoint_splits mode ensures train/val/iid_test have zero expression overlap,
+preventing split leakage and enabling true holdout evaluation.
+"""
 
 from __future__ import annotations
 
@@ -24,6 +28,9 @@ DEFAULT_SPLIT_SIZES: Dict[str, int] = {
 
 BALANCE_BUCKET_MOD = 10
 DEFAULT_PRESET = "full"
+
+# Splits that must be mutually disjoint when disjoint_splits=True
+IID_SPLITS = ("train", "val", "iid_test")
 
 
 @dataclass(frozen=True)
@@ -65,6 +72,24 @@ PRESETS: Dict[str, Task3Preset] = {
         ood_divisor_range=(2, 9),
     ),
 }
+
+
+def compute_iid_capacity(preset: Task3Preset) -> int:
+    """Compute the total number of unique (A%B) expressions in the IID range.
+    
+    Args:
+        preset: The Task3Preset configuration.
+        
+    Returns:
+        The maximum number of unique expressions possible.
+    """
+    div_low, div_high = preset.iid_dividend_range
+    divisor_low, divisor_high = preset.iid_divisor_range
+    
+    num_dividends = div_high - div_low + 1
+    num_divisors = divisor_high - divisor_low + 1
+    
+    return num_dividends * num_divisors
 
 
 def _int_to_tokens(value: int) -> List[str]:
@@ -132,14 +157,53 @@ def build_task3_manifest(
     split_sizes: Dict[str, int] | None = None,
     preset: str = DEFAULT_PRESET,
     balance_remainder: bool = False,
+    disjoint_splits: bool = True,
 ) -> List[ManifestEntry]:
+    """Generate Task3 (Arithmetic Mod) manifest entries.
+    
+    Args:
+        seed: Random seed for reproducibility.
+        split_sizes: Dict mapping split names to sample counts.
+        preset: Curriculum preset name ('tiny', 'easy', 'full').
+        balance_remainder: Whether to balance remainder buckets (mod 10).
+        disjoint_splits: If True (default), ensures train/val/iid_test have
+            zero expression overlap. Raises ValueError if the requested sizes
+            exceed the IID space capacity.
+            
+    Returns:
+        List of ManifestEntry objects.
+        
+    Raises:
+        ValueError: If disjoint_splits=True and requested IID sizes exceed capacity.
+    """
     sizes = split_sizes or DEFAULT_SPLIT_SIZES
     if preset not in PRESETS:
         raise ValueError(f"Unknown Task3 preset '{preset}'. Choices: {sorted(PRESETS)}")
     preset_cfg = PRESETS[preset]
+    
+    # Check IID capacity if disjoint_splits is enabled
+    if disjoint_splits:
+        iid_capacity = compute_iid_capacity(preset_cfg)
+        iid_requested = sum(sizes.get(split, 0) for split in IID_SPLITS)
+        
+        if iid_requested > iid_capacity:
+            raise ValueError(
+                f"disjoint_splits=True but requested IID sizes exceed capacity.\n"
+                f"  Preset '{preset}' IID capacity: {iid_capacity} unique expressions\n"
+                f"  Requested: train={sizes.get('train', 0)} + val={sizes.get('val', 0)} "
+                f"+ iid_test={sizes.get('iid_test', 0)} = {iid_requested}\n"
+                f"  Suggestions:\n"
+                f"    - Reduce sizes so total <= {iid_capacity}\n"
+                f"    - Use a larger preset (e.g., 'full' or 'easy')\n"
+                f"    - Set disjoint_splits=False (not recommended for holdout eval)"
+            )
+    
     rng = np.random.default_rng(seed)
     entries: List[ManifestEntry] = []
     seen_per_split: Dict[str, set[Tuple[str, ...]]] = {}
+    
+    # Global seen set for disjoint IID splits
+    seen_iid_global: set[Tuple[str, ...]] = set()
 
     def _add_samples(
         split: str,
@@ -148,6 +212,7 @@ def build_task3_manifest(
         divisor_range: Tuple[int, int],
         difficulty: str,
     ) -> None:
+        nonlocal seen_iid_global
         attempts = 0
         max_attempts = max(count * 200, 1000)
         local_rng = np.random.default_rng(rng.integers(0, 2**63))
@@ -158,6 +223,10 @@ def build_task3_manifest(
             if buckets:
                 cap = math.ceil(count / len(buckets))
                 bucket_limits = {bucket: cap for bucket in buckets}
+        
+        # Determine if this split needs disjoint checking
+        is_iid_split = split in IID_SPLITS
+        
         while added < count:
             attempts += 1
             if attempts > max_attempts:
@@ -172,6 +241,11 @@ def build_task3_manifest(
             split_seen = seen_per_split.setdefault(split, set())
             if tokens in split_seen:
                 continue
+            
+            # Check global disjoint constraint for IID splits
+            if disjoint_splits and is_iid_split and tokens in seen_iid_global:
+                continue
+                
             remainder_bucket_ok = True
             if bucket_limits is not None:
                 remainder = dividend % divisor
@@ -187,6 +261,11 @@ def build_task3_manifest(
             if not remainder_bucket_ok:
                 continue
             split_seen.add(tokens)
+            
+            # Track globally for disjoint IID splits
+            if disjoint_splits and is_iid_split:
+                seen_iid_global.add(tokens)
+                
             example_id = f"{split}-{added:06d}"
             entry = ManifestEntry(
                 split=split,
@@ -308,6 +387,20 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Balance remainder buckets (mod 10) to avoid degenerate distributions.",
     )
+    disjoint_group = parser.add_mutually_exclusive_group()
+    disjoint_group.add_argument(
+        "--disjoint-splits",
+        action="store_true",
+        dest="disjoint_splits",
+        default=True,
+        help="(Default) Ensure train/val/iid_test have zero expression overlap.",
+    )
+    disjoint_group.add_argument(
+        "--allow-overlap",
+        action="store_false",
+        dest="disjoint_splits",
+        help="Allow expression overlap between train/val/iid_test (not recommended for holdout eval).",
+    )
     return parser.parse_args()
 
 
@@ -326,6 +419,7 @@ def main() -> None:
         split_sizes=split_sizes,
         preset=args.preset,
         balance_remainder=args.balance_remainder,
+        disjoint_splits=args.disjoint_splits,
     )
     write_manifest(entries, args.out)
     

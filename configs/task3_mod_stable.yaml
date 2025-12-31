@@ -35,8 +35,7 @@ pretrain_remainder_lr: 0.001
 pretrain_remainder_freeze_backbone: false
 
 # 答案窗写入稳定
-# NOTE: remainder guidance 暂不支持两位数结果，先禁用
-remainder_guidance_weight: 0.0
+remainder_guidance_weight: 0.8
 remainder_guidance_blank_floor: 0.0
 blank_penalty_weight: 1.0
 answer_digit_mass_floor: 0.3
