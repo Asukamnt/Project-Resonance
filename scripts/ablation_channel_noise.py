@@ -209,6 +209,7 @@ def main():
     print(f"Samples: {len(entries)}")
     
     # Define perturbations
+    # TSAE (Time-Scale Asymmetry Effect) fine-grained scan
     perturbations = {
         "clean": lambda w: w,
         "awgn_30db": lambda w: add_awgn(w, 30),
@@ -216,8 +217,15 @@ def main():
         "awgn_10db": lambda w: add_awgn(w, 10),
         "awgn_5db": lambda w: add_awgn(w, 5),
         "phase_offset": lambda w: random_phase_offset(w, np.pi / 4),
+        # Fine-grained time stretch scan for TSAE analysis
+        "time_stretch_0.92": lambda w: time_stretch(w, 0.92),
         "time_stretch_0.95": lambda w: time_stretch(w, 0.95),
+        "time_stretch_0.98": lambda w: time_stretch(w, 0.98),
+        "time_stretch_1.00": lambda w: w,  # control
+        "time_stretch_1.02": lambda w: time_stretch(w, 1.02),
         "time_stretch_1.05": lambda w: time_stretch(w, 1.05),
+        "time_stretch_1.08": lambda w: time_stretch(w, 1.08),
+        "time_stretch_1.10": lambda w: time_stretch(w, 1.10),
     }
     
     results = {}
