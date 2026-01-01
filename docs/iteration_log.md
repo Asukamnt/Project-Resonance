@@ -1234,3 +1234,37 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 **测试**：44 个 Task3 相关测试全部通过 ✅
 
 **D9 状态: COMPLETE ✅**
+
+---
+
+## D10: P2 Ablation Studies（2026-01-01）
+
+### Thinking Gap Ablation ✅
+
+**目标**：量化 thinking gap 对 Task3 Mod 性能的影响。
+
+**实验设置**：
+- Manifest: `task3.jsonl`（800 train / 400 eval）
+- Epochs: 30
+- Device: CUDA
+- Gaps tested: 0.0, 0.1, 0.25, 0.5, 1.0, 2.0 秒
+
+**结果**：
+
+| Gap (s) | Audio EM | CTC EM | Hybrid EM |
+|---------|----------|--------|-----------|
+| 0.0 | 9.50% | 45.00% | 77.25% |
+| 0.1 | 10.25% | 45.00% | 80.25% |
+| 0.25 | 9.00% | 46.25% | 80.25% |
+| 0.5 | 9.00% | **48.25%** | 80.25% |
+| 1.0 | 9.50% | **48.25%** | 80.25% |
+| 2.0 | 10.75% | 44.75% | **91.00%** |
+
+**结论**：
+1. **CTC EM 在 gap=0.5~1.0 时最高**（48.25%）
+2. **Hybrid EM 随 gap 增加而提升**（77% → 91%）
+3. **gap=0.0（无思考间隙）表现最差**
+4. **推荐值：0.5s**（平衡 CTC EM 和训练效率）
+
+**脚本**：`scripts/ablation_thinking_gap.py`
+**报告**：`reports/ablation_thinking_gap.json`
