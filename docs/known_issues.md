@@ -190,9 +190,9 @@ python scripts/repro_tiny.py  # 5 分钟验证
 
 | 事项 | 说明 | 状态 |
 |------|------|------|
-| 信道扰动压力测试 | AWGN、相位偏移等 | ⏳ |
-| thinking gap ablation | gap vs EM 曲线 | ⏳ |
-| 纯 SSM baseline | 解释 hybrid 优势 | ⏳ |
+| 信道扰动压力测试 | `scripts/ablation_channel_noise.py` | ✅ 脚本就绪 |
+| thinking gap ablation | `scripts/ablation_thinking_gap.py` | ✅ 脚本就绪 |
+| 架构对比 (SSM vs Attn) | `scripts/ablation_architecture.py` | ✅ 脚本就绪 |
 
 ---
 
