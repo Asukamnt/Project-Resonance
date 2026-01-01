@@ -213,11 +213,33 @@ def eval_model(
             # 模型推理
             frame_out, symbol_logits = model(frames, mask)
             
-            # 解码：mod 任务用 CTC 解码（因为音频输出包含表达式）
+            # 解码：mod 任务用 CTC 解码（只在答案窗口内，与训练一致）
             if task == "mod" and symbol_logits is not None:
-                # CTC 解码
+                # 计算答案窗口起始帧（与 task3_mod_audio.py 保持一致）
+                # 表达式长度（samples）= 符号数 * symbol_duration
+                SR = 16000
+                SYMBOL_DURATION = 0.05  # 50ms per symbol
+                expr_len_samples = int(len(entry.symbols) * SYMBOL_DURATION * SR)
+                # 对齐到 hop_size
+                align = hop_size
+                expr_len_aligned = ((expr_len_samples + align - 1) // align) * align
+                # thinking gap（默认 0.5s）
+                thinking_gap_s = checkpoint.get("thinking_gap_s", 0.5)
+                thinking_gap_samples = int(round(thinking_gap_s * SR))
+                thinking_gap_aligned = ((thinking_gap_samples + align - 1) // align) * align if thinking_gap_samples > 0 else 0
+                # 答案窗口起始帧
+                answer_start_samples = expr_len_aligned + thinking_gap_aligned
+                answer_start_frame = answer_start_samples // hop_size
+                
+                # 只在答案窗口内做 CTC 解码
                 probs = symbol_logits.softmax(dim=-1).squeeze(0)
-                pred_ids = probs.argmax(dim=-1).cpu().tolist()
+                # 截取答案窗口部分
+                if answer_start_frame < probs.size(0):
+                    window_probs = probs[answer_start_frame:]
+                else:
+                    window_probs = probs[-1:]  # fallback
+                
+                pred_ids = window_probs.argmax(dim=-1).cpu().tolist()
                 # 简单 CTC 解码：去重 + 去 blank(0)
                 decoded = []
                 prev_id = None

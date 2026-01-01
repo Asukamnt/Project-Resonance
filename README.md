@@ -28,6 +28,23 @@ We designed three progressively challenging tasks, validated across three physic
 
 **Supported Physical Domains**: Audio (sinusoidal) · Optical/IPD (intensity-phase) · RF (amplitude modulation)
 
+### End-to-End Pipeline
+
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│  Manifest   │───▶│   Synth     │───▶│ Mini-JMamba │───▶│ FFT Decode  │
+│  (symbols)  │    │ (sym→wave)  │    │ (reasoning) │    │ (wave→sym)  │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+                         │                   │                   │
+                         ▼                   ▼                   ▼
+                   Input Wave ──────▶ Output Wave ──────▶ Exact Match
+```
+
+| Eval Type | Script | What it tests |
+|-----------|--------|---------------|
+| **Oracle EM** | `evaluate.py` | Encoding/decoding protocol (no model) |
+| **Model EM** | `evaluate_model.py` | Model reasoning (all guidance disabled) |
+
 ---
 
 ## Why does this matter?

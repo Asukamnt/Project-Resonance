@@ -45,18 +45,14 @@
 
 ---
 
-### 4) CTC decode 全序列 vs 答案窗口 ⚠️ 部分实现
+### ~~4) CTC decode 全序列 vs 答案窗口~~ ✅ 已修复
 
-**分析结果**：
-- 代码中已有 `window_logits`, `expr_logits` 等答案窗口处理
-- 在 `task3_mod_audio.py` 中有 `window_mask_ctc` 逻辑
-- 但 `evaluate_model.py` 的简化评测路径可能没有完全使用
+**修复内容**：
+- `evaluate_model.py` 现在对 Task3 mod 计算答案窗口起始帧
+- CTC 解码只在答案窗口内进行，与训练管线一致
+- 计算逻辑：expr_len_aligned + thinking_gap_aligned → answer_start_frame
 
-**当前状态**：训练管线有答案窗口，评测管线可能需要对齐
-
-**建议**：在下一轮重构时统一两边的逻辑
-
-**状态**: ⚠️ 非阻塞，后续优化
+**修复日期**: 2026-01-01
 
 ---
 
@@ -117,7 +113,7 @@ python scripts/repro_tiny.py  # 5 分钟验证
 | P0 | manifest 文件名 | ✅ 已修复 |
 | P0 | unfold 丢尾巴 | ✅ 已修复 |
 | P0 | **答案长度泄漏** | ✅ 已修复 |
-| P0 | CTC 答案窗口 | ⚠️ 部分实现 |
+| P0 | CTC 答案窗口 | ✅ 已修复 |
 | P1 | tasks 参数 | ✅ 已修复 |
 | P2 | 复现脚本 | ✅ 已实现 |
 | P2 | 坑文档 | ✅ 已完成 |
@@ -145,7 +141,7 @@ python scripts/repro_tiny.py  # 5 分钟验证
 | 场景 | 方式 | 当前状态 |
 |------|------|----------|
 | Task3 训练 | 答案窗口 | ✅ 已实现 |
-| Task3 评测 | 答案窗口 | ⚠️ 需确认一致性 |
+| Task3 评测 | 答案窗口 | ✅ 已对齐 |
 | Task2 训练/评测 | 固定答案窗口 | ✅ 无泄漏 |
 
 ---
@@ -166,7 +162,7 @@ python scripts/repro_tiny.py  # 5 分钟验证
 | 实验 | 目的 | 优先级 |
 |------|------|--------|
 | Decoder ceiling | 分离 decoder vs model 贡献 | P2 |
-| Model-only (no guidance) | 纯模型能力上限 | P1 |
+| ~~Model-only (no guidance)~~ | 纯模型能力上限 | ✅ 已确认 |
 | Oracle-guided upper bound | 渲染上限参考 | P2 |
 | Chirp 信号 | 连续域特有逻辑 | P3 |
 | Time Warping | 拓扑鲁棒性 | P3 |
@@ -179,16 +175,16 @@ python scripts/repro_tiny.py  # 5 分钟验证
 
 | 事项 | 说明 | 状态 |
 |------|------|------|
-| docs/ 公开决策 | README 链接目前 404，需决定：解除 .gitignore 或删链接 | ⏳ 待决定 |
+| ~~docs/ 公开决策~~ | 已公开 overview.md, known_issues.md, iteration_log.md | ✅ 已完成 |
 | arXiv endorsement | 需要找人背书才能提交 | ⏳ 待处理 |
 
 ### P1：提升可信度（非阻塞）
 
 | 事项 | 耗时 | 状态 |
 |------|------|------|
-| 端到端闭环图 | 30min | ⏳ |
-| CTC 答案窗口对齐 | 1-2h | ⏳ |
-| Model-only (no guidance) 对照 | 1-2h | ⏳ |
+| ~~端到端闭环图~~ | 30min | ✅ 已完成 |
+| ~~CTC 答案窗口对齐~~ | 1-2h | ✅ 已完成 |
+| ~~Model-only (no guidance) 对照~~ | - | ✅ 已确认（eval_model 不调用任何 guidance 函数） |
 
 ### P2：后续扩展
 
