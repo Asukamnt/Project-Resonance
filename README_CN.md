@@ -32,11 +32,15 @@ Jericho 的流程是：`波形 → 神经网络 → 波形`
 
 ## 为什么这很重要？
 
-1. **信息保真度**：离散化（tokenization）会丢失波形中的相位、时序微结构等信息。直接在波形上推理可以保留更多信息。
+> **核心主张**：符号仅用于监督与评测，推理发生在连续隐状态轨迹中——不是"换皮 token"。
 
-2. **延迟与流式处理**：不需要等待完整的 token 序列，可以做因果/流式推理。
+1. **信息保真**：离散化丢失相位与时序微结构。我们直接在波形上推理，保留完整信号。
 
-3. **跨波域泛化**：我们已验证同一架构可以在不同物理波形间迁移 —— Audio ↔ Optical ↔ RF 迁移学习具有统计显著性。
+2. **因果流式**：SSM 架构天然因果，每帧输出只依赖过去，延迟 = 帧长。
+
+3. **跨域迁移**：同一模型在 Audio / Optical / RF 三种物理波形间迁移成功。
+
+详细实验设置与统计方法见 [`docs/iteration_log.md`](docs/iteration_log.md)
 
 ---
 
@@ -59,6 +63,7 @@ Jericho 的流程是：`波形 → 神经网络 → 波形`
 | 2025-12-28 | **Task 2 OOD 突破** | 括号匹配任务、RoPE + 连续波形生成 |
 | 2025-12-29 | **Phase 1 完成** | 评估工具、消融实验、负对照验证 |
 | 2025-12-31 | **跨域发布** | 音频/光学/射频三域、迁移学习验证 |
+| 2026-01-01 | **代码质量修复** | 答案长度泄漏修复、unfold 尾部修复、一键复现脚本 |
 
 ---
 
@@ -73,7 +78,7 @@ Jericho 的流程是：`波形 → 神经网络 → 波形`
 | **跨域迁移** | +1.7pp (p<0.05, 10-seed) | 统计显著 |
 | **三角验证** | Audio↔IPD↔RF 6/6 | 载体无关证据 |
 
-> ¹ wav2vec2 使用冻结特征提取器 + 线性分类头，参数量 94.57M；Mini-JMamba 全参数训练，0.94M。两者设置不同，仅作参考对比。
+> ¹ wav2vec2 用于验证"通用语音预训练是否适合波形推理"，非公平对比。结论：任务特化架构更优。
 
 ### ✅ 已完成
 
@@ -82,11 +87,13 @@ Jericho 的流程是：`波形 → 神经网络 → 波形`
 - Phase 3: 跨域推理（IPD→Audio）
 - Phase 4: 跨域迁移验证
 - 三物理域完整验证（Audio / IPD / RF）
-- 191 个测试用例全部通过
+- 完整测试套件（187 用例）全部通过
 
 ---
 
 ## 实验结果
+
+> Model EM 评测禁用所有训练时的 guidance，纯模型输出 → FFT 解码。详见 [`docs/iteration_log.md`](docs/iteration_log.md)
 
 ### 单域推理（Audio，Task 3 Mod）
 
@@ -114,11 +121,20 @@ Jericho 的流程是：`波形 → 神经网络 → 波形`
 
 ## 快速开始
 
-### 环境配置（Windows PowerShell）
+### 环境配置
 
+**Windows (PowerShell)**
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+pip install -e .
+pytest -q
+```
+
+**Linux / macOS**
+```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install -e .
 pytest -q
 ```
@@ -149,6 +165,12 @@ python .\evaluate.py --stage final --tasks mirror bracket mod
 
 ## 详细文档
 
+📖 **[技术概览 (docs/overview.md)](docs/overview.md)** — 完整动机、设计哲学、关键概念解释
+
+📋 **[已知问题 (docs/known_issues.md)](docs/known_issues.md)** — 评测口径、对照计划、bug 状态
+
+📊 **[实验日志 (docs/iteration_log.md)](docs/iteration_log.md)** — 完整可复现信息
+
 <details>
 <summary><strong>目录结构</strong></summary>
 
@@ -161,7 +183,7 @@ python .\evaluate.py --stage final --tasks mirror bracket mod
 - `train.py`：统一训练 CLI
 - `evaluate.py`：Oracle/Protocol 闭环评估（系统验收）
 - `evaluate_model.py`：模型能力评估（需要 checkpoint）
-- `tests/`：完整测试套件（191 个用例）
+- `tests/`：完整测试套件（187 个用例）
 
 </details>
 
@@ -212,6 +234,48 @@ python .\train.py --task mod --model oracle_mod --manifest manifests\task3.jsonl
 ## 相关概念
 
 本项目是 **Cross-Wave Physical Reasoning (CWPR)** 研究范式的一部分，探索在任意物理波形上进行端到端推理的可能性。
+
+---
+
+## 常见问题 (FAQ)
+
+<details>
+<summary><strong>采样率问题</strong></summary>
+
+- Audio 域固定使用 16kHz 采样率
+- 所有 `encode_symbols_to_wave` 调用必须使用 `sr=16000`
+- 混用不同采样率会导致 FFT 解码失败
+
+</details>
+
+<details>
+<summary><strong>随机种子</strong></summary>
+
+- 使用 `--seed` 参数确保可复现性
+- 不同 PyTorch 版本可能有轻微数值差异（< 1%）
+- 跨平台（Windows/Linux）可能有浮点误差
+
+</details>
+
+<details>
+<summary><strong>显存不足</strong></summary>
+
+如果遇到 CUDA OOM：
+- 减小 `--batch-size`（建议 4-8）
+- 使用 `--limit` 减少样本数
+- 尝试 `--device cpu`（慢但可用）
+
+</details>
+
+<details>
+<summary><strong>评测结果全 0</strong></summary>
+
+常见原因：
+1. Manifest 文件路径错误
+2. Split 名称拼写错误（`iid_test` 不是 `iid-test`）
+3. Checkpoint 与任务不匹配
+
+</details>
 
 ---
 

@@ -32,11 +32,15 @@ We designed three progressively challenging tasks, validated across three physic
 
 ## Why does this matter?
 
-1. **Information Fidelity**: Tokenization loses phase, temporal microstructure, and other waveform information. Direct waveform reasoning preserves more information.
+> **Core claim**: Symbols are only used for supervision and evaluation — reasoning happens in continuous hidden state trajectories. This is not "tokenization in disguise."
 
-2. **Latency & Streaming**: No need to wait for complete token sequences; enables causal/streaming inference.
+1. **Information Fidelity**: Tokenization loses phase and temporal microstructure. We reason directly on waveforms, preserving the full signal.
 
-3. **Cross-Domain Generalization**: We have validated that the same architecture can reason across different physical waveforms — Audio ↔ Optical ↔ RF transfer learning works with statistical significance.
+2. **Causal Streaming**: SSM architecture is naturally causal; each frame output depends only on the past. Latency = frame length.
+
+3. **Cross-Domain Transfer**: The same model transfers successfully across Audio / Optical / RF physical waveforms.
+
+See [`docs/iteration_log.md`](docs/iteration_log.md) for detailed experimental setup and statistics.
 
 ---
 
@@ -59,6 +63,7 @@ We designed three progressively challenging tasks, validated across three physic
 | 2025-12-28 | **Task 2 OOD Breakthrough** | Bracket matching, RoPE + continuous waveform generation |
 | 2025-12-29 | **Phase 1 Complete** | Evaluation tools, ablations, negative controls |
 | 2025-12-31 | **Cross-Domain Release** | Audio/Optical/RF domains, transfer learning validated |
+| 2026-01-01 | **Code Quality Fixes** | Answer length leakage fix, unfold tail fix, repro script |
 
 ---
 
@@ -73,7 +78,7 @@ We designed three progressively challenging tasks, validated across three physic
 | **Cross-Domain Transfer** | +1.7pp (p<0.05, 10-seed) | Statistically significant |
 | **Triangle Validation** | Audio↔IPD↔RF 6/6 | Carrier-agnostic evidence |
 
-> ¹ wav2vec2 uses frozen feature extractor + linear head (94.57M params); Mini-JMamba is fully trained (0.94M params). Different setups, for reference only.
+> ¹ wav2vec2 tests whether general speech pretraining suits waveform reasoning — not a fair comparison. Conclusion: task-specialized architecture wins.
 
 ### ✅ Completed
 
@@ -82,11 +87,13 @@ We designed three progressively challenging tasks, validated across three physic
 - Phase 3: Cross-domain reasoning (IPD→Audio)
 - Phase 4: Cross-domain transfer validation
 - Full validation across three physical domains (Audio / IPD / RF)
-- 191 test cases all passing
+- Comprehensive test suite (187 cases) all passing
 
 ---
 
 ## Experimental Results
+
+> Model EM evaluation disables all training-time guidance; pure model output → FFT decode. See [`docs/iteration_log.md`](docs/iteration_log.md)
 
 ### Single-Domain Reasoning (Audio, Task 3 Mod)
 
@@ -114,11 +121,20 @@ We designed three progressively challenging tasks, validated across three physic
 
 ## Quick Start
 
-### Environment Setup (Windows PowerShell)
+### Environment Setup
 
+**Windows (PowerShell)**
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+pip install -e .
+pytest -q
+```
+
+**Linux / macOS**
+```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install -e .
 pytest -q
 ```
@@ -149,6 +165,12 @@ python .\evaluate.py --stage final --tasks mirror bracket mod
 
 ## Documentation
 
+📖 **[Technical Overview (docs/overview.md)](docs/overview.md)** — Full motivation, design philosophy, key concepts
+
+📋 **[Known Issues (docs/known_issues.md)](docs/known_issues.md)** — Evaluation protocols, experiment plans, bug status
+
+📊 **[Experiment Log (docs/iteration_log.md)](docs/iteration_log.md)** — Complete reproducibility information
+
 <details>
 <summary><strong>Directory Structure</strong></summary>
 
@@ -161,7 +183,7 @@ python .\evaluate.py --stage final --tasks mirror bracket mod
 - `train.py`: Unified training CLI
 - `evaluate.py`: Oracle/Protocol closed-loop evaluation (system validation)
 - `evaluate_model.py`: Model capability evaluation (requires checkpoint)
-- `tests/`: Complete test suite (191 cases)
+- `tests/`: Complete test suite (187 cases)
 
 </details>
 
@@ -212,6 +234,48 @@ python .\train.py --task mod --model oracle_mod --manifest manifests\task3.jsonl
 ## Related Concepts
 
 This project is part of the **Cross-Wave Physical Reasoning (CWPR)** research paradigm, exploring end-to-end reasoning on arbitrary physical waveforms.
+
+---
+
+## FAQ
+
+<details>
+<summary><strong>Sample Rate Issues</strong></summary>
+
+- Audio domain uses fixed 16kHz sample rate
+- All `encode_symbols_to_wave` calls must use `sr=16000`
+- Mixing sample rates will cause FFT decoding failures
+
+</details>
+
+<details>
+<summary><strong>Random Seeds</strong></summary>
+
+- Use `--seed` argument for reproducibility
+- Minor numerical differences (< 1%) may occur across PyTorch versions
+- Cross-platform (Windows/Linux) may have floating-point variations
+
+</details>
+
+<details>
+<summary><strong>Out of Memory</strong></summary>
+
+If you encounter CUDA OOM:
+- Reduce `--batch-size` (recommended: 4-8)
+- Use `--limit` to reduce sample count
+- Try `--device cpu` (slower but works)
+
+</details>
+
+<details>
+<summary><strong>Evaluation Returns All Zeros</strong></summary>
+
+Common causes:
+1. Incorrect manifest file path
+2. Misspelled split name (`iid_test` not `iid-test`)
+3. Checkpoint-task mismatch
+
+</details>
 
 ---
 

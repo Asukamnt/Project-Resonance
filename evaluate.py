@@ -344,11 +344,23 @@ def main():
     
     args = parser.parse_args()
     
-    # 定义 manifest 路径
+    # 自动探测 manifest 文件（兼容不同命名）
+    def find_manifest(task: str) -> Path:
+        candidates = {
+            "mirror": ["task1.jsonl"],
+            "bracket": ["task2.jsonl"],
+            "mod": ["task3.jsonl", "task3_multistep.jsonl"],
+        }
+        for name in candidates.get(task, []):
+            path = args.manifests_dir / name
+            if path.exists():
+                return path
+        return args.manifests_dir / candidates[task][0]
+    
     manifests = {
-        "mirror": args.manifests_dir / "task1.jsonl",
-        "bracket": args.manifests_dir / "task2.jsonl",
-        "mod": args.manifests_dir / "task3_multistep.jsonl",
+        "mirror": find_manifest("mirror"),
+        "bracket": find_manifest("bracket"),
+        "mod": find_manifest("mod"),
     }
     
     print(f"Running {args.stage} evaluation")

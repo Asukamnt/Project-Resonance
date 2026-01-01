@@ -63,6 +63,7 @@ class Task3TrainingConfig:
     thinking_gap_align: int = 160
     answer_window_only: bool = True
     single_digit_remainder: bool = True
+    max_answer_symbols: int = 2  # 固定最大答案符号数（防止答案长度泄漏）
     remainder_ce_weight: float = 2.0
     remainder_guidance_weight: float = 0.3
     remainder_guidance_blank_floor: float = 0.0
@@ -185,6 +186,16 @@ def _target_content_length(target_tokens: Sequence[str]) -> int:
     gap_samples = int(round(SR * GAP_DUR))
     gaps = max(0, len(target_tokens) - 1)
     return tone_samples * len(target_tokens) + gap_samples * gaps
+
+
+def _max_answer_length(max_symbols: int) -> int:
+    """Compute fixed max answer waveform length (防止答案长度泄漏)."""
+    if max_symbols <= 0:
+        return 0
+    tone_samples = int(round(SR * TONE_DUR))
+    gap_samples = int(round(SR * GAP_DUR))
+    gaps = max(0, max_symbols - 1)
+    return tone_samples * max_symbols + gap_samples * gaps
 
 
 def _align_length(length: int, align: int) -> int:
@@ -890,7 +901,15 @@ def prepare_task3_samples(
             expr_len_aligned = _align_length(len(expr_wave_np), align)
             gap_raw = int(round(config.thinking_gap_s * SR))
             thinking_gap_samples = _align_length(gap_raw, align) if gap_raw > 0 else 0
-            ans_len_aligned = _align_length(len(answer_wave_np), align)
+            
+            # 使用固定最大答案长度（防止答案长度泄漏）
+            max_ans_len_raw = _max_answer_length(config.max_answer_symbols)
+            max_ans_len_aligned = _align_length(max_ans_len_raw, align)
+            
+            # 实际答案长度（用于 target 对齐）
+            actual_ans_len = len(answer_wave_np)
+            ans_len_aligned = _align_length(actual_ans_len, align)
+            
             expression_len_samples = expr_len_aligned
 
             if expr_len_aligned > len(expr_wave_np):
@@ -898,21 +917,24 @@ def prepare_task3_samples(
             if ans_len_aligned > len(answer_wave_np):
                 answer_wave_np = np.pad(answer_wave_np, (0, ans_len_aligned - len(answer_wave_np)))
 
+            # 输入使用固定长度（不泄漏答案位数）
             input_wave_np = np.concatenate(
                 [
                     expr_wave_np.astype(np.float32, copy=False),
-                    np.zeros(thinking_gap_samples + ans_len_aligned, dtype=np.float32),
+                    np.zeros(thinking_gap_samples + max_ans_len_aligned, dtype=np.float32),
                 ]
             )
+            # target 在固定窗口内放置实际答案（末尾可能有 padding）
             target_wave_np = np.concatenate(
                 [
                     np.zeros(expr_len_aligned + thinking_gap_samples, dtype=np.float32),
                     answer_wave_np.astype(np.float32, copy=False),
+                    np.zeros(max_ans_len_aligned - ans_len_aligned, dtype=np.float32),  # 填充到固定长度
                 ]
             )
             answer_start_samples = expr_len_aligned + thinking_gap_samples
-            answer_len_samples = ans_len_aligned
-            target_content_samples = answer_len_samples
+            answer_len_samples = max_ans_len_aligned  # 使用固定窗口大小
+            target_content_samples = ans_len_aligned  # 实际内容长度（用于 loss mask）
 
         total_len = input_wave_np.size
         if answer_len_samples <= 0:

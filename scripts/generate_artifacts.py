@@ -28,6 +28,25 @@ from jericho.task2 import target_symbol_for_task2, synthesise_task2_target_wave
 from jericho.task3 import target_symbols_for_task3, synthesise_task3_target_wave
 
 
+def safe_unfold(wave_tensor: torch.Tensor, frame_size: int = 160, hop_size: int = 160) -> tuple[torch.Tensor, int]:
+    """安全分帧：对波形进行 padding 确保不丢失尾部数据。"""
+    original_len = len(wave_tensor)
+    
+    if original_len < frame_size:
+        wave_tensor = torch.nn.functional.pad(wave_tensor, (0, frame_size - original_len))
+        return wave_tensor.unsqueeze(0), 1
+    
+    remainder = (original_len - frame_size) % hop_size
+    if remainder > 0:
+        pad_len = hop_size - remainder
+        wave_tensor = torch.nn.functional.pad(wave_tensor, (0, pad_len))
+    
+    frames = wave_tensor.unfold(0, frame_size, hop_size)
+    valid_frames = (original_len - frame_size) // hop_size + 1
+    
+    return frames, valid_frames
+
+
 def train_and_save_checkpoint(
     manifest_path: Path,
     task: str,
@@ -83,7 +102,8 @@ def train_and_save_checkpoint(
             input_wave = synthesise_entry_wave(entry)
             input_tensor = torch.from_numpy(input_wave).float()
             
-            input_frames = input_tensor.unfold(0, 160, 160)
+            # 使用 safe_unfold 避免丢失尾部数据
+            input_frames, _ = safe_unfold(input_tensor, 160, 160)
             if input_frames.size(0) == 0:
                 continue
             
@@ -102,7 +122,7 @@ def train_and_save_checkpoint(
                 target_wave = input_wave
             
             target_tensor = torch.from_numpy(target_wave).float()
-            target_frames = target_tensor.unfold(0, 160, 160)
+            target_frames, _ = safe_unfold(target_tensor, 160, 160)
             
             # 对齐长度（取较短的）
             min_len = min(input_frames.size(0), target_frames.size(0))
@@ -212,9 +232,9 @@ def generate_audio_examples(
                 target = target_symbols_for_task3(entry.symbols)
                 target_wave = synthesise_task3_target_wave(entry.symbols)
             
-            # 模型推理
+            # 模型推理（使用 safe_unfold）
             wave_tensor = torch.from_numpy(input_wave).float()
-            frames = wave_tensor.unfold(0, 160, 160)
+            frames, _ = safe_unfold(wave_tensor, 160, 160)
             if frames.size(0) == 0:
                 continue
             
@@ -292,10 +312,23 @@ def main():
     
     args = parser.parse_args()
     
+    # 自动探测 manifest 文件（兼容不同命名）
+    def find_manifest(task: str) -> Path:
+        candidates = {
+            "mirror": ["task1.jsonl"],
+            "bracket": ["task2.jsonl"],
+            "mod": ["task3.jsonl", "task3_multistep.jsonl"],
+        }
+        for name in candidates.get(task, []):
+            path = args.manifests_dir / name
+            if path.exists():
+                return path
+        return args.manifests_dir / candidates[task][0]
+    
     manifests = {
-        "mirror": args.manifests_dir / "task1.jsonl",
-        "bracket": args.manifests_dir / "task2.jsonl",
-        "mod": args.manifests_dir / "task3_multistep.jsonl",
+        "mirror": find_manifest("mirror"),
+        "bracket": find_manifest("bracket"),
+        "mod": find_manifest("mod"),
     }
     
     manifest_path = manifests[args.task]

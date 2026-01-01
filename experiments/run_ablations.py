@@ -36,6 +36,25 @@ from jericho.models import MiniJMamba, MiniJMambaConfig
 from jericho.scorer import decode_wave_to_symbols, exact_match
 
 
+def safe_unfold(wave_tensor: torch.Tensor, frame_size: int = 160, hop_size: int = 160) -> tuple[torch.Tensor, int]:
+    """安全分帧：对波形进行 padding 确保不丢失尾部数据。"""
+    original_len = len(wave_tensor)
+    
+    if original_len < frame_size:
+        wave_tensor = torch.nn.functional.pad(wave_tensor, (0, frame_size - original_len))
+        return wave_tensor.unsqueeze(0), 1
+    
+    remainder = (original_len - frame_size) % hop_size
+    if remainder > 0:
+        pad_len = hop_size - remainder
+        wave_tensor = torch.nn.functional.pad(wave_tensor, (0, pad_len))
+    
+    frames = wave_tensor.unfold(0, frame_size, hop_size)
+    valid_frames = (original_len - frame_size) // hop_size + 1
+    
+    return frames, valid_frames
+
+
 @dataclass
 class AblationConfig:
     """消融实验配置"""
@@ -183,15 +202,11 @@ def run_quick_ablation(
     model = build_model_with_ablation(base_config, ablation)
     model = model.to(device)
     
-    # 准备数据
+    # 准备数据（使用 safe_unfold 避免丢失尾部数据）
     def prepare_sample(entry: ManifestEntry):
         wave = synthesise_entry_wave(entry)
         wave = torch.from_numpy(wave).float()
-        frames = wave.unfold(0, 160, 160)
-        if frames.size(0) == 0:
-            frames = wave.view(1, -1)
-            if frames.size(1) < 160:
-                frames = torch.nn.functional.pad(frames, (0, 160 - frames.size(1)))
+        frames, _ = safe_unfold(wave, 160, 160)
         return frames, [symbol_to_id.get(s, 0) for s in entry.symbols]
     
     train_data = [prepare_sample(e) for e in train_entries]

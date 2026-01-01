@@ -73,6 +73,36 @@ def levenshtein_distance(s1: list[str], s2: list[str]) -> int:
     return previous_row[-1]
 
 
+def safe_unfold(wave_tensor: torch.Tensor, frame_size: int = 160, hop_size: int = 160) -> tuple[torch.Tensor, int]:
+    """
+    安全分帧：对波形进行 padding 确保不丢失尾部数据。
+    
+    Returns:
+        frames: 分帧后的张量 (num_frames, frame_size)
+        valid_frames: 有效帧数（不含 padding 帧）
+    """
+    original_len = len(wave_tensor)
+    
+    # 计算需要的 padding
+    if original_len < frame_size:
+        # 波形太短，padding 到 frame_size
+        wave_tensor = torch.nn.functional.pad(wave_tensor, (0, frame_size - original_len))
+        return wave_tensor.unsqueeze(0), 1
+    
+    # 计算最后不够一个 hop 的部分
+    remainder = (original_len - frame_size) % hop_size
+    if remainder > 0:
+        pad_len = hop_size - remainder
+        wave_tensor = torch.nn.functional.pad(wave_tensor, (0, pad_len))
+    
+    frames = wave_tensor.unfold(0, frame_size, hop_size)
+    
+    # 计算有效帧数（原始数据覆盖的帧）
+    valid_frames = (original_len - frame_size) // hop_size + 1
+    
+    return frames, valid_frames
+
+
 def get_target_symbols(entry: ManifestEntry, task: str) -> list[str]:
     """获取目标符号"""
     if task == "mirror":
@@ -174,15 +204,8 @@ def eval_model(
             frame_size = model.config.frame_size
             hop_size = model.config.hop_size
             
-            # 分帧
-            if len(wave_tensor) < frame_size:
-                wave_tensor = torch.nn.functional.pad(wave_tensor, (0, frame_size - len(wave_tensor)))
-            
-            frames = wave_tensor.unfold(0, frame_size, hop_size)
-            if frames.size(0) == 0:
-                frames = wave_tensor.view(1, -1)
-                if frames.size(1) < frame_size:
-                    frames = torch.nn.functional.pad(frames, (0, frame_size - frames.size(1)))
+            # 分帧（使用 safe_unfold 避免丢失尾部数据）
+            frames, valid_frames = safe_unfold(wave_tensor, frame_size, hop_size)
             
             frames = frames.unsqueeze(0).to(device)
             mask = torch.ones(1, frames.size(1), dtype=torch.bool, device=device)
@@ -298,7 +321,8 @@ def run_ablation_ood(
                 wave = synthesise_entry_wave(entry)
                 wave_tensor = torch.from_numpy(wave).float()
                 
-                frames = wave_tensor.unfold(0, 160, 160)
+                # 使用 safe_unfold 避免丢失尾部数据
+                frames, valid_frames = safe_unfold(wave_tensor, 160, 160)
                 if frames.size(0) == 0:
                     continue
                 
@@ -554,7 +578,9 @@ def generate_ablation_ood_report(
 def main():
     parser = argparse.ArgumentParser(description="模型评测总表")
     parser.add_argument("--checkpoint", type=Path, default=None,
-                       help="模型检查点路径")
+                       help="模型检查点路径（单任务）")
+    parser.add_argument("--checkpoint-dir", type=Path, default=None,
+                       help="检查点目录（自动匹配 {task}_*.pt 或 *_{task}.pt）")
     parser.add_argument("--tasks", type=str, nargs="+", default=["mirror", "bracket", "mod"],
                        help="要评估的任务")
     parser.add_argument("--splits", type=str, nargs="+",
@@ -578,10 +604,24 @@ def main():
     
     args = parser.parse_args()
     
+    # 自动探测 manifest 文件（兼容不同命名）
+    def find_manifest(task: str) -> Path:
+        candidates = {
+            "mirror": ["task1.jsonl"],
+            "bracket": ["task2.jsonl"],
+            "mod": ["task3.jsonl", "task3_multistep.jsonl"],  # 优先 task3.jsonl
+        }
+        for name in candidates.get(task, []):
+            path = args.manifests_dir / name
+            if path.exists():
+                return path
+        # 返回第一个候选（即使不存在，后续会报错）
+        return args.manifests_dir / candidates[task][0]
+    
     manifests = {
-        "mirror": args.manifests_dir / "task1.jsonl",
-        "bracket": args.manifests_dir / "task2.jsonl",
-        "mod": args.manifests_dir / "task3_multistep.jsonl",
+        "mirror": find_manifest("mirror"),
+        "bracket": find_manifest("bracket"),
+        "mod": find_manifest("mod"),
     }
     
     print(f"Tasks: {args.tasks}")
@@ -605,12 +645,26 @@ def main():
     
     model_results = []
     
-    # 2. Model 评测（如果提供 checkpoint）
-    if args.checkpoint and args.checkpoint.exists():
-        print(f"\n[2/4] Model 评测 (checkpoint: {args.checkpoint})...")
-        
-        # 加载 checkpoint
-        checkpoint = torch.load(args.checkpoint, map_location=args.device)
+    # 辅助函数：查找任务对应的 checkpoint
+    def find_checkpoint_for_task(task: str) -> Path | None:
+        if args.checkpoint_dir and args.checkpoint_dir.exists():
+            # 尝试多种命名模式
+            patterns = [
+                f"{task}_*.pt",
+                f"*_{task}.pt",
+                f"{task}.pt",
+                f"*{task}*.pt",
+            ]
+            for pattern in patterns:
+                matches = list(args.checkpoint_dir.glob(pattern))
+                if matches:
+                    # 返回最新的（按修改时间）
+                    return max(matches, key=lambda p: p.stat().st_mtime)
+        return None
+    
+    # 辅助函数：加载 checkpoint 并返回模型
+    def load_model_from_checkpoint(ckpt_path: Path) -> tuple[MiniJMamba, dict, str]:
+        checkpoint = torch.load(ckpt_path, map_location=args.device)
         config_dict = checkpoint["config"]
         
         config = MiniJMambaConfig(
@@ -631,6 +685,13 @@ def main():
         model = model.to(args.device)
         
         task = checkpoint.get("task", "mirror")
+        return model, checkpoint, task
+    
+    # 2. Model 评测
+    if args.checkpoint and args.checkpoint.exists():
+        # 单 checkpoint 模式
+        print(f"\n[2/4] Model 评测 (checkpoint: {args.checkpoint})...")
+        model, checkpoint, task = load_model_from_checkpoint(args.checkpoint)
         manifest_path = manifests.get(task)
         
         if manifest_path and manifest_path.exists():
@@ -638,8 +699,29 @@ def main():
                 result = eval_model(model, manifest_path, task, split, args.device, args.limit, checkpoint)
                 model_results.append(result)
                 print(f"  {task}/{split}: Model EM={result.em:.4f}")
+                
+    elif args.checkpoint_dir and args.checkpoint_dir.exists():
+        # 多任务自动匹配模式
+        print(f"\n[2/4] Model 评测 (checkpoint-dir: {args.checkpoint_dir})...")
+        
+        for task in args.tasks:
+            ckpt_path = find_checkpoint_for_task(task)
+            if not ckpt_path:
+                print(f"  Skip {task}: no checkpoint found")
+                continue
+            
+            print(f"  Loading: {ckpt_path.name}")
+            model, checkpoint, _ = load_model_from_checkpoint(ckpt_path)
+            manifest_path = manifests.get(task)
+            
+            if manifest_path and manifest_path.exists():
+                for split in args.splits:
+                    result = eval_model(model, manifest_path, task, split, args.device, args.limit, checkpoint)
+                    model_results.append(result)
+                    print(f"  {task}/{split}: Model EM={result.em:.4f}")
+                    
     elif not args.oracle_only:
-        print("\n[2/4] Model 评测跳过 (无 checkpoint)")
+        print("\n[2/4] Model 评测跳过 (无 checkpoint 或 checkpoint-dir)")
     
     # 3. 消融 OOD（如果请求）
     if args.ablation_ood:
