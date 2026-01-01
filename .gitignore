@@ -54,7 +54,13 @@ runs/
 # ===================
 # AI 生成未确认内容（暂不公开）
 # ===================
-docs/
+docs/bin/
+docs/phase1/
+docs/phase2-4/
+docs/phase5/
+docs/私人计划/
+docs/arxiv_draft_v1.md
+docs/arxiv_draft_v1_cn.md
 reports/
 artifacts/
 
