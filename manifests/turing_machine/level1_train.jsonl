@@ -1,0 +1,500 @@
+{"id": "counter_0000", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0001", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0002", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0003", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0004", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0005", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0006", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0007", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0008", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0009", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0010", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0011", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0012", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0013", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0014", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0015", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0016", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0017", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0018", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0019", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0020", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0021", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0022", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0023", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0024", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0025", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0026", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0027", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0028", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0029", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0030", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0031", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0032", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0033", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0034", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0035", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0036", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0037", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0038", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0039", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0040", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0041", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0042", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0043", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0044", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0045", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0046", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0047", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0048", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0049", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0050", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0051", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0052", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0053", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0054", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0055", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0056", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0057", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0058", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0059", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0060", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0061", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0062", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0063", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0064", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0065", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0066", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0067", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0068", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0069", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0070", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0071", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0072", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0073", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0074", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0075", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0076", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0077", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0078", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0079", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0080", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0081", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0082", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0083", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0084", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0085", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0086", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0087", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0088", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0089", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0090", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0091", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0092", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0093", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0094", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0095", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0096", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0097", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0098", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0099", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0100", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0101", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0102", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0103", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0104", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0105", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0106", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0107", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0108", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0109", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0110", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0111", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0112", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0113", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0114", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0115", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0116", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0117", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0118", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0119", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0120", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0121", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0122", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0123", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0124", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0125", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0126", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0127", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0128", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0129", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0130", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0131", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0132", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0133", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0134", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0135", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0136", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0137", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0138", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0139", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0140", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0141", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0142", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0143", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0144", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0145", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0146", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0147", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0148", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0149", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0150", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0151", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0152", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0153", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0154", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0155", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0156", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0157", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0158", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0159", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0160", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0161", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0162", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0163", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0164", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0165", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0166", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0167", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0168", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0169", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0170", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0171", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0172", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0173", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0174", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0175", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0176", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0177", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0178", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0179", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0180", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0181", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0182", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0183", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0184", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0185", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0186", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0187", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0188", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0189", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0190", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0191", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0192", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0193", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0194", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0195", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0196", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0197", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0198", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0199", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0200", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0201", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0202", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0203", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0204", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0205", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0206", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0207", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0208", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0209", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0210", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0211", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0212", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0213", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0214", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0215", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0216", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0217", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0218", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0219", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0220", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0221", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0222", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0223", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0224", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0225", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0226", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0227", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0228", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0229", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0230", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0231", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0232", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0233", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0234", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0235", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0236", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0237", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0238", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0239", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0240", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0241", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0242", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0243", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0244", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0245", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0246", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0247", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0248", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0249", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0250", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0251", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0252", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0253", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0254", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0255", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0256", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0257", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0258", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0259", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0260", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0261", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0262", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0263", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0264", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0265", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0266", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0267", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0268", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0269", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0270", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0271", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0272", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0273", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0274", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0275", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0276", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0277", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0278", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0279", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0280", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0281", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0282", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0283", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0284", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0285", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0286", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0287", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0288", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0289", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0290", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0291", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0292", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0293", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0294", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0295", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0296", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0297", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0298", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0299", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0300", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0301", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0302", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0303", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0304", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0305", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0306", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0307", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0308", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0309", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0310", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0311", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0312", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0313", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0314", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0315", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0316", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0317", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0318", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0319", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0320", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0321", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0322", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0323", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0324", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0325", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0326", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0327", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0328", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0329", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0330", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0331", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0332", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0333", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0334", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0335", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0336", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0337", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0338", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0339", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0340", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0341", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "A"}, "split": "train"}
+{"id": "counter_0342", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0343", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0344", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0345", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0346", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0347", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0348", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0349", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0350", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0351", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0352", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0353", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0354", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0355", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0356", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0357", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0358", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0359", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0360", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0361", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0362", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0363", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0364", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0365", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0366", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0367", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0368", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0369", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0370", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0371", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0372", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0373", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0374", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0375", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0376", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0377", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0378", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0379", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0380", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0381", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0382", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0383", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0384", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0385", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0386", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0387", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0388", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0389", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0390", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0391", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0392", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0393", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0394", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0395", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0396", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0397", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0398", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0399", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0400", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0401", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "B"}, "split": "train"}
+{"id": "counter_0402", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0403", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0404", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0405", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0406", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0407", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0408", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0409", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0410", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0411", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0412", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0413", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0414", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0415", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0416", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0417", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0418", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "C"}, "split": "train"}
+{"id": "counter_0419", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0420", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0421", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0422", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0423", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0424", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0425", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0426", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0427", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0428", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0429", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0430", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0431", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0432", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0433", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0434", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0435", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0436", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0437", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0438", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0439", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0440", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0441", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0442", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0443", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "B"}, "split": "train"}
+{"id": "counter_0444", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0445", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "A"}, "split": "train"}
+{"id": "counter_0446", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0447", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0448", "task": "counter", "level": 1, "input_symbols": ["B", "B"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "B"}, "split": "train"}
+{"id": "counter_0449", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0450", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0451", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0452", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "C"}, "split": "train"}
+{"id": "counter_0453", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0454", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0455", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0456", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0457", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "A"}, "split": "train"}
+{"id": "counter_0458", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "B"}, "split": "train"}
+{"id": "counter_0459", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0460", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0461", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0462", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0463", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0464", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0465", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0466", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0467", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "A"}, "split": "train"}
+{"id": "counter_0468", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "A"}, "split": "train"}
+{"id": "counter_0469", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0470", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0471", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0472", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0473", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0474", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0475", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0476", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0477", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0478", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "B"}, "split": "train"}
+{"id": "counter_0479", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0480", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C"], "output_symbols": ["4"], "metadata": {"count": 4, "symbol": "C"}, "split": "train"}
+{"id": "counter_0481", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "B"}, "split": "train"}
+{"id": "counter_0482", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A"], "output_symbols": ["3"], "metadata": {"count": 3, "symbol": "A"}, "split": "train"}
+{"id": "counter_0483", "task": "counter", "level": 1, "input_symbols": ["A"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "A"}, "split": "train"}
+{"id": "counter_0484", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0485", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "B"}, "split": "train"}
+{"id": "counter_0486", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A", "A", "A", "A"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "A"}, "split": "train"}
+{"id": "counter_0487", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "C"}, "split": "train"}
+{"id": "counter_0488", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
+{"id": "counter_0489", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["7"], "metadata": {"count": 7, "symbol": "B"}, "split": "train"}
+{"id": "counter_0490", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["9"], "metadata": {"count": 9, "symbol": "C"}, "split": "train"}
+{"id": "counter_0491", "task": "counter", "level": 1, "input_symbols": ["B", "B", "B", "B", "B", "B", "B", "B"], "output_symbols": ["8"], "metadata": {"count": 8, "symbol": "B"}, "split": "train"}
+{"id": "counter_0492", "task": "counter", "level": 1, "input_symbols": ["C", "C"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "C"}, "split": "train"}
+{"id": "counter_0493", "task": "counter", "level": 1, "input_symbols": ["B"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "B"}, "split": "train"}
+{"id": "counter_0494", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C"], "output_symbols": ["6"], "metadata": {"count": 6, "symbol": "C"}, "split": "train"}
+{"id": "counter_0495", "task": "counter", "level": 1, "input_symbols": ["A", "A", "A", "A", "A"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "A"}, "split": "train"}
+{"id": "counter_0496", "task": "counter", "level": 1, "input_symbols": ["A", "A"], "output_symbols": ["2"], "metadata": {"count": 2, "symbol": "A"}, "split": "train"}
+{"id": "counter_0497", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C", "C", "C", "C", "C", "C"], "output_symbols": ["1", "0"], "metadata": {"count": 10, "symbol": "C"}, "split": "train"}
+{"id": "counter_0498", "task": "counter", "level": 1, "input_symbols": ["C"], "output_symbols": ["1"], "metadata": {"count": 1, "symbol": "C"}, "split": "train"}
+{"id": "counter_0499", "task": "counter", "level": 1, "input_symbols": ["C", "C", "C", "C", "C"], "output_symbols": ["5"], "metadata": {"count": 5, "symbol": "C"}, "split": "train"}
