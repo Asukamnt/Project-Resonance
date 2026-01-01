@@ -47,8 +47,9 @@ def run_ablation(
         
         # 读取数据
         entries = list(read_manifest(manifest_path))
-        train_entries = [e for e in entries if e.split == "iid_train"]
-        eval_entries = [e for e in entries if e.split == "iid_test"]
+        # 支持不同的 split 命名
+        train_entries = [e for e in entries if e.split in ("train", "iid_train")]
+        eval_entries = [e for e in entries if e.split in ("iid_test", "val")]
         
         if limit:
             train_entries = train_entries[:limit]
@@ -67,7 +68,7 @@ def run_ablation(
         
         # 训练
         try:
-            metrics_history, final_state = mini_jmamba_task3_pipeline(
+            predictions, metrics, model_info = mini_jmamba_task3_pipeline(
                 train_entries=train_entries,
                 eval_entries=eval_entries,
                 seed=seed,
@@ -79,18 +80,14 @@ def run_ablation(
             )
             
             # 提取最终指标
-            if metrics_history:
-                final_metrics = metrics_history[-1]
-                best_em = max(m.get("eval_mod_em", 0) for m in metrics_history)
-            else:
-                final_metrics = {}
-                best_em = 0.0
+            final_em = metrics.get("eval_em", metrics.get("em", 0))
+            best_em = final_em  # 单次运行只有最终结果
             
             result = {
                 "thinking_gap_s": gap,
-                "final_em": final_metrics.get("eval_mod_em", 0),
+                "final_em": final_em,
                 "best_em": best_em,
-                "final_loss": final_metrics.get("eval_loss", float("inf")),
+                "final_loss": metrics.get("eval_loss", metrics.get("loss", float("inf"))),
                 "epochs": epochs,
                 "train_samples": len(train_entries),
                 "eval_samples": len(eval_entries),
