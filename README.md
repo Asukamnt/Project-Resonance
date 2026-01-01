@@ -82,6 +82,7 @@ See [`docs/iteration_log.md`](docs/iteration_log.md) for detailed experimental s
 | 2025-12-31 | **Cross-Domain Release** | Audio/Optical/RF domains, transfer learning validated |
 | 2026-01-01 | **Code Quality Fixes** | Answer length leakage fix, unfold tail fix, repro script |
 | 2026-01-01 | **P2 Ablation Studies** | Thinking Gap (0.5s optimal), Architecture (10+2), TSAE discovery |
+| 2026-01-02 | **Sleep Mechanism Study** | Selective >> Random (45pp); k=0.7 helps at 64+ symbols (+2pp) |
 
 ---
 
@@ -91,12 +92,33 @@ See [`docs/iteration_log.md`](docs/iteration_log.md) for detailed experimental s
 
 | Experiment | Result | Significance |
 |------------|--------|--------------|
-| **Single-Domain Reasoning** | Mini-JMamba 45% vs wav2vec2 22%¹ | Small model advantage |
+| **Single-Domain Reasoning** | Mini-JMamba 45% vs wav2vec2 13% | Task-specialized wins |
 | **Cross-Domain Reasoning** | IPD→Audio IID 98.7% | Cross-physical-domain success |
 | **Cross-Domain Transfer** | +1.7pp (p<0.05, 10-seed) | Statistically significant |
-| **Triangle Validation** | Audio↔IPD↔RF 6/6 | Carrier-agnostic evidence |
+| **Triangle Validation** | Audio↔IPD↔RF 9/9 | Carrier-agnostic evidence |
+| **Selective vs Random** | 45pp better than Dropout | Selectivity matters, but full retention optimal |
 
-> ¹ wav2vec2 tests whether general speech pretraining suits waveform reasoning — not a fair comparison. Conclusion: task-specialized architecture wins.
+> wav2vec2 was tested with frozen, partial (32%), and full fine-tuning — all achieved only 13%. This confirms task-specialized architecture is essential.
+
+### 🧠 State Maintenance Discovery
+
+We investigated SSM hidden state dynamics through controlled experiments:
+
+| Experiment | Method | Result |
+|------------|--------|--------|
+| **Hard reset** | `h *= decay` | ❌ Performance collapse |
+| **Random Dropout** | 50% random | ❌ -48pp confidence |
+| **Selective pruning** | keep top 50% | ⚠️ -2.6pp (short seq) |
+| **Learnable Gate** | Model decides | ✅ **Learns keep=100%** |
+| **Long Sequence** | 64+ symbols, k=0.7 | ✅ **+1.5~2.2pp** |
+
+**Key Findings**:
+1. **Selectivity >> Randomness**: Selective pruning outperforms Dropout by 45pp
+2. **Short sequences need full retention**: Learnable gate chooses keep=100%
+3. **Long sequences benefit from pruning**: At 64+ symbols, k=0.7 improves by +2pp
+4. **Critical length exists**: ~64 symbols is the threshold where pruning becomes beneficial
+
+> State accumulation is beneficial for short sequences but becomes a limiting factor for longer ones. Moderate "synaptic downscaling" (k=0.7) helps maintain performance beyond critical length.
 
 ### ✅ Completed
 
@@ -117,9 +139,12 @@ See [`docs/iteration_log.md`](docs/iteration_log.md) for detailed experimental s
 
 | Model | Parameters | IID EM | 
 |-------|------------|--------|
-| wav2vec2-base¹ | 94.57M | 22% |
+| wav2vec2-base (frozen) | 97.3M | 13% |
+| wav2vec2-base (full finetune) | 97.3M | 13% |
 | Transformer | 1.2M | 41% |
 | **Mini-JMamba** | **0.94M** | **45%** |
+
+> **Key Finding**: wav2vec2 achieves only 13% even with full fine-tuning — barely above random chance (10%). General speech pretraining does not transfer to waveform reasoning.
 
 ### Cross-Domain Reasoning (IPD → Audio)
 

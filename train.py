@@ -592,7 +592,7 @@ def main() -> None:
         if eval_noise_snr is None and args.split == "ood_noise":
             eval_noise_snr = 10.0  # Default 10 dB SNR for OOD noise
 
-        predictions, model_metrics = mini_jmamba_task2_pipeline(
+        predictions, model_metrics, model_info = mini_jmamba_task2_pipeline(
             train_entries,
             eval_entries,
             seed=args.seed,
@@ -609,7 +609,43 @@ def main() -> None:
                 answer_window_only=args.task2_answer_window_only,
             ),
             eval_noise_snr_db=eval_noise_snr,
+            return_model_info=True,  # Request model info for checkpoint saving
         )
+        
+        # Save Task2 checkpoint
+        if model_info is not None:
+            checkpoint_path = outdir / f"bracket_seed{args.seed}_epoch{args.epochs}.pt"
+            model_cfg = model_info["model_config"]
+            config_dict = {
+                "frame_size": model_cfg.frame_size,
+                "hop_size": model_cfg.hop_size,
+                "symbol_vocab_size": model_cfg.symbol_vocab_size,
+                "d_model": model_cfg.d_model,
+                "num_ssm_layers": model_cfg.num_ssm_layers,
+                "num_attn_layers": model_cfg.num_attn_layers,
+                "num_heads": model_cfg.num_heads,
+                "max_frames": model_cfg.max_frames,
+                "use_rope": model_cfg.use_rope,
+            }
+            torch.save({
+                "model_state_dict": model_info["model"].state_dict(),
+                "backbone": "mini_jmamba",
+                "config": config_dict,
+                "symbol_to_id": model_info["symbol_to_id"],
+                "id_to_symbol": model_info["id_to_symbol"],
+                "task": "bracket",
+                "epochs": args.epochs,
+                "seed": args.seed,
+                "training_params": {
+                    "manifest": str(args.manifest),
+                    "split": args.split,
+                    "binary_ce_weight": args.task2_binary_ce_weight,
+                    "symbol_guidance_weight": args.task2_symbol_guidance_weight,
+                },
+                "git_commit": get_git_commit(),
+                "cli_argv": sys.argv,
+            }, checkpoint_path)
+            print(f"Checkpoint saved to {checkpoint_path}")
     else:  # Task3 mod
         if args.model not in {"oracle_mod", "mini_jmamba", "transformer", "lstm"}:
             raise SystemExit(f"Model '{args.model}' unsupported for task mod.")

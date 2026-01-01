@@ -793,7 +793,8 @@ def mini_jmamba_task2_pipeline(
     device: torch.device,
     config: Task2TrainingConfig | None = None,
     eval_noise_snr_db: float | None = None,
-) -> Tuple[List[dict], dict]:
+    return_model_info: bool = False,
+) -> Tuple[List[dict], dict] | Tuple[List[dict], dict, dict | None]:
     """Train and evaluate Mini-JMamba on Task2 (bracket validity).
     
     Parameters
@@ -801,6 +802,8 @@ def mini_jmamba_task2_pipeline(
     eval_noise_snr_db:
         If set, add Gaussian noise to evaluation inputs at this SNR (dB).
         Used for OOD noise testing.
+    return_model_info:
+        If True, return model_info dict for checkpoint saving.
     """
 
     if config is None:
@@ -1062,6 +1065,16 @@ def mini_jmamba_task2_pipeline(
         "training_config": asdict(config),
     }
 
+    if return_model_info:
+        model_info = {
+            "model": model,
+            "model_config": model_config,
+            "classification_head": classification_head,
+            "symbol_to_id": vocab,
+            "id_to_symbol": {v: k for k, v in vocab.items()},
+        }
+        return predictions, metrics, model_info
+    
     return predictions, metrics
 
 
