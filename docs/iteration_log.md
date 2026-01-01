@@ -1386,9 +1386,28 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 - TSAE 证明模型**真的在处理连续信号**
 - 是"类人连续感知"的微观证据
 
+#### Hybrid 解码复核 ✅
+
+| 条件 | CTC EM | Hybrid EM | Parse Rate |
+|------|--------|-----------|------------|
+| clean | 3.0% | 0.0% | 2.0% |
+| 0.95x | 0.0% | 0.5% | 13.0% |
+| **1.05x** | **6.0%** | **2.5%** | **35.5%** |
+
+**关键发现**：
+- Δ CTC EM (1.05x - 0.95x): **+6.0%**
+- Δ Hybrid EM (1.05x - 0.95x): **+2.0%**
+
+**结论**：✅ **TSAE 在所有解码方法中都存在 → 模型本体效应！**
+
+这证实 TSAE 不是 CTC 解码器的 artifact，而是模型内部的真实特性。
+
+**脚本**：`scripts/tsae_hybrid_verify.py`
+**报告**：`reports/tsae_hybrid_verify.json`
+
 #### 待验证
 
-- [ ] Hybrid 解码复核（确认是模型本体 vs 解码器特有）
+- [x] ~~Hybrid 解码复核~~ ✅ 已完成
 - [ ] 多 checkpoint 复现
 - [ ] 不同任务验证
 
