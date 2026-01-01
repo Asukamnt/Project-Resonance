@@ -1296,3 +1296,43 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 
 **脚本**：`scripts/ablation_architecture.py`
 **报告**：`reports/ablation_architecture.json`
+
+---
+
+### Channel Noise Robustness ✅
+
+**目标**：测试模型对信道扰动的鲁棒性。
+
+**实验设置**：
+- Checkpoint: `mod_best_em0.75.pt`
+- 扰动类型：AWGN (5-30dB), 相位偏移, 时间拉伸
+
+**结果**：
+
+| 扰动 | 相对 Clean 变化 |
+|------|----------------|
+| **AWGN 30dB** | 无变化 |
+| **AWGN 20dB** | 无变化 |
+| **AWGN 10dB** | 无变化 |
+| **AWGN 5dB** | 无变化 |
+| **相位偏移** | 无变化 |
+| **Time stretch 0.95x** | 下降 |
+| **Time stretch 1.05x** | 上升 |
+
+**结论**：
+1. **对加性噪声极其鲁棒** — AWGN 5-30dB 完全不影响性能
+2. **对时间拉伸敏感** — 符合预期（频率编码依赖精确周期）
+3. **符合物理信号特性** — 频率信息在噪声下保留良好
+
+**脚本**：`scripts/ablation_channel_noise.py`
+**报告**：`reports/ablation_channel_noise.json`
+
+---
+
+## D10 P2 Ablation 完成状态
+
+| 实验 | 主要发现 | 状态 |
+|------|----------|------|
+| Thinking Gap | 最佳 0.5s | ✅ |
+| Architecture | 10+2 最优，Pure SSM 失败 | ✅ |
+| Channel Noise | 对 AWGN 极其鲁棒 | ✅ |

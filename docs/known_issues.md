@@ -190,7 +190,7 @@ python scripts/repro_tiny.py  # 5 分钟验证
 
 | 事项 | 说明 | 状态 |
 |------|------|------|
-| 信道扰动压力测试 | `scripts/ablation_channel_noise.py` | ✅ 脚本就绪 |
+| ~~信道扰动压力测试~~ | 对 AWGN 极其鲁棒 | ✅ 已完成 |
 | ~~thinking gap ablation~~ | 最佳 gap=0.5s，CTC EM 48.25% | ✅ 已完成 |
 | ~~架构对比 (SSM vs Attn)~~ | 10+2 最优，Pure SSM 失败 | ✅ 已完成 |
 

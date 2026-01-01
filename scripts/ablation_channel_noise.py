@@ -183,7 +183,9 @@ def main():
         sys.exit(1)
     
     checkpoint = torch.load(args.checkpoint, map_location="cpu")
-    config = MiniJMambaConfig(**checkpoint.get("model_config", {}))
+    # Handle both 'config' and 'model_config' keys
+    model_cfg = checkpoint.get("model_config") or checkpoint.get("config", {})
+    config = MiniJMambaConfig(**model_cfg)
     model = MiniJMamba(config)
     model.load_state_dict(checkpoint["model_state_dict"])
     model.to(args.device)
