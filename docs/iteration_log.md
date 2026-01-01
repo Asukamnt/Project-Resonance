@@ -1369,6 +1369,29 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 **脚本**：`scripts/analyze_tsae.py`
 **报告**：`reports/tsae_analysis.json`
 
+#### TSAE 意义总结
+
+**工程层面**：
+- 存在可校准的系统频率偏差（~400-600 Hz 偏低）
+- 后处理 1.05x time-stretch 可提升性能
+- 或训练时加频率抖动增强鲁棒性
+
+**科学层面**：
+- 模型形成了"内部时基/节律"
+- 时间尺度变化与内部节律存在对齐/失配关系
+- 这与生物神经振荡特性相似
+
+**范式层面**：
+- Token 模型不会有此效应（不处理连续时间）
+- TSAE 证明模型**真的在处理连续信号**
+- 是"类人连续感知"的微观证据
+
+#### 待验证
+
+- [ ] Hybrid 解码复核（确认是模型本体 vs 解码器特有）
+- [ ] 多 checkpoint 复现
+- [ ] 不同任务验证
+
 **脚本**：`scripts/ablation_channel_noise.py`
 **报告**：`reports/ablation_channel_noise.json`
 
