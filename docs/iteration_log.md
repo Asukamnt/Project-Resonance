@@ -1445,6 +1445,53 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 | ~~多 checkpoint 复现~~ | ✅ | 5/5 可复现 |
 | ~~不同任务验证~~ | ✅ | 任务相关，方向不同 |
 
+---
+
+### TSAE 频率依赖性分析 ✅
+
+**核心预测**：最优校准点应随频率范围可预测地移动。
+
+**已有数据**：
+
+| 任务 | 频率范围 | 最优 Stretch |
+|------|----------|--------------|
+| **Task3 Mod** | 300-1100 Hz（低频） | **1.05x** |
+| **Task2 Bracket** | 1800-1950 Hz（高频） | **0.95x** |
+
+**分析**：
+- 低频任务 → 正向 stretch 最优（扩张时间尺度）
+- 高频任务 → 负向 stretch 最优（压缩时间尺度）
+- **方向相反** → 符合"内部时基与输入频率对齐"的预测
+
+**物理解释**：
+- 模型的"内部时基"存在一个固有频率/周期
+- 低频信号需要拉伸（向内部时基靠拢）
+- 高频信号需要压缩（向内部时基靠拢）
+- 两者从相反方向趋近同一个"甜点"
+
+**结论**：✅ **TSAE 是频率依赖的 → 支持"内部时基"假说**
+
+---
+
+### 生物动力学特征总结
+
+| 特征 | 证据 | 生物类比 |
+|------|------|----------|
+| **内部时基** | TSAE 频率依赖性 | 神经振荡固有频率 |
+| **时间常数分离** | Thinking Gap 效应 | 快/慢变量分离 |
+| **连续承载+离散绑定** | SSM+2Attn 架构 | 皮层动力学+丘脑门控 |
+| **可校准偏置** | 频率偏差可被 stretch 校准 | 稳态调节 |
+
+**论文措辞建议**：
+
+> Our results suggest that continuous waveform reasoning models can exhibit 
+> biologically reminiscent dynamical properties, including an internal time base 
+> (TSAE), time-scale separation effects (thinking gap), and a division of labor 
+> between continuous state evolution and discrete binding/readout (SSM + sparse 
+> attention). We do not claim biological equivalence; rather, these phenomena 
+> provide testable signatures of emergent internal dynamics beyond token-level 
+> processing.
+
 **脚本**：`scripts/ablation_channel_noise.py`
 **报告**：`reports/ablation_channel_noise.json`
 
