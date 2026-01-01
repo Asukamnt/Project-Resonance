@@ -81,6 +81,7 @@ See [`docs/iteration_log.md`](docs/iteration_log.md) for detailed experimental s
 | 2025-12-29 | **Phase 1 Complete** | Evaluation tools, ablations, negative controls |
 | 2025-12-31 | **Cross-Domain Release** | Audio/Optical/RF domains, transfer learning validated |
 | 2026-01-01 | **Code Quality Fixes** | Answer length leakage fix, unfold tail fix, repro script |
+| 2026-01-01 | **P2 Ablation Studies** | Thinking Gap (0.5s optimal), Architecture (10+2), TSAE discovery |
 
 ---
 
