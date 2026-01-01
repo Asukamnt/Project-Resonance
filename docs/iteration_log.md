@@ -1305,6 +1305,7 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 
 **实验设置**：
 - Checkpoint: `mod_best_em0.75.pt`
+- 评测方式：CTC-only 解码（N=200 样本）
 - 扰动类型：AWGN (5-30dB), 相位偏移, 时间拉伸
 
 **结果**：
@@ -1317,12 +1318,38 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 | **AWGN 5dB** | 无变化 |
 | **相位偏移** | 无变化 |
 | **Time stretch 0.95x** | 下降 |
-| **Time stretch 1.05x** | 上升 |
+| **Time stretch 1.05x** | +30pp ⚠️ 异常 |
 
-**结论**：
-1. **对加性噪声极其鲁棒** — AWGN 5-30dB 完全不影响性能
-2. **对时间拉伸敏感** — 符合预期（频率编码依赖精确周期）
-3. **符合物理信号特性** — 频率信息在噪声下保留良好
+#### 层 1：稳定结论
+
+在 CTC-only 解码评测下，模型对 **AWGN（5–30 dB）与全局相位偏移表现出零性能退化**，显示出对加性噪声与相位扰动的强鲁棒性。
+
+相比之下，时间拉伸会显著改变有效频率标尺，使得基于固定频点的编码/解码对时基变换敏感——这**符合物理预期**（频率 = 周期数/时间）。
+
+#### 层 2：待解释现象
+
+⚠️ **1.05× time-stretch 反常提升 +30pp**
+
+可能原因（待验证）：
+- A) 系统性频点偏差被拉伸"校准"到 FFT bin 最甜位置
+- B) 分帧边界/hop size 偶然匹配 CTC 合并规则
+- C) 样本量有限导致的统计波动
+
+**验证路径**：
+1. 统计每个符号的混淆矩阵（哪些符号改善最多）
+2. 分析 peak frequency 偏差分布（扰动前后峰值落在哪些 bin）
+3. 换 hop/FFT size 看提升是否消失
+4. Bootstrap CI 验证统计显著性
+
+> 该现象标记为"待解释"，不作为正式结论。
+
+#### 待补充验证（Hybrid 解码复核）
+
+当前结果基于 CTC-only 解码。为彻底消除解码器依赖的 caveat，计划补充：
+- [ ] AWGN 10dB 在 Hybrid 解码下的 EM
+- [ ] Time stretch 0.95x 在 Hybrid 解码下的 EM
+
+预期：若 Hybrid 结论与 CTC 一致，则噪声鲁棒性结论可信度提升。
 
 **脚本**：`scripts/ablation_channel_noise.py`
 **报告**：`reports/ablation_channel_noise.json`
