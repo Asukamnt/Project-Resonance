@@ -1268,3 +1268,31 @@ input_wave = expr + zeros(gap + max_ans_len_aligned)  # ← 固定长度
 
 **脚本**：`scripts/ablation_thinking_gap.py`
 **报告**：`reports/ablation_thinking_gap.json`
+
+---
+
+### Architecture Ablation (SSM vs Attention) ✅
+
+**目标**：对比不同 SSM/Attention 层比例对性能的影响。
+
+**实验设置**：
+- Manifest: `task3.jsonl`（800 train / 400 eval）
+- Epochs: 30
+- Device: CUDA
+
+**结果**：
+
+| 架构 | Audio EM | CTC EM |
+|------|----------|--------|
+| **Mini-JMamba (10 SSM + 2 Attn)** | 10.5% | **45.5%** |
+| Pure SSM (12 SSM + 0 Attn) | 2.25% | 0.0% |
+| More Attention (8 SSM + 4 Attn) | 9.0% | 43.75% |
+| Balanced (6 SSM + 6 Attn) | 10.25% | 40.5% |
+
+**结论**：
+1. **Pure SSM 完全失败**（CTC EM=0%）— Attention 层对符号解码至关重要
+2. **默认配置（10+2）最优** — 少量 Attention 足够
+3. **增加 Attention 反而降低性能** — SSM 主导连续序列建模更有效
+
+**脚本**：`scripts/ablation_architecture.py`
+**报告**：`reports/ablation_architecture.json`

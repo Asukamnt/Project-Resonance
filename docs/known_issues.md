@@ -192,7 +192,7 @@ python scripts/repro_tiny.py  # 5 分钟验证
 |------|------|------|
 | 信道扰动压力测试 | `scripts/ablation_channel_noise.py` | ✅ 脚本就绪 |
 | ~~thinking gap ablation~~ | 最佳 gap=0.5s，CTC EM 48.25% | ✅ 已完成 |
-| 架构对比 (SSM vs Attn) | `scripts/ablation_architecture.py` | ⏳ 待运行 |
+| ~~架构对比 (SSM vs Attn)~~ | 10+2 最优，Pure SSM 失败 | ✅ 已完成 |
 
 ---
 
