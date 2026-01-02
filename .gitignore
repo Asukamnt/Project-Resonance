@@ -171,7 +171,13 @@ _pdf_content.txt
 *.synctex.gz
 
 # ===================
+# 论文相关（双盲保护）
+# ===================
+docs/paper/
+scripts/generate_paper_*.py
+
+# ===================
 # arXiv 提交包（本地使用）
 # ===================
-docs/paper/arxiv_submission/
-docs/paper/*.zip
+arxiv_submission/
+*.zip
