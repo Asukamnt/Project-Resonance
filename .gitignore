@@ -52,6 +52,24 @@ env/
 runs/
 
 # ===================
+# 大型数据集（用户自行下载）
+# ===================
+data/SpeechCommands/
+data/speech_commands_*/
+data/speech_commands_v0.02.tar.gz
+*.tar.gz
+
+# ===================
+# TTS 合成音频（可重新生成）
+# ===================
+data/tts_task3/
+data/tts_task3_small/
+data/tts_task3_v3/
+manifests/tts_task3/
+manifests/tts_task3_small/
+manifests/tts_task3_v3/
+
+# ===================
 # AI 生成未确认内容（暂不公开）
 # ===================
 docs/bin/
@@ -137,3 +155,23 @@ Desktop.ini
 *.tmp
 *.temp
 _pdf_content.txt
+
+# ===================
+# LaTeX 临时文件
+# ===================
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# ===================
+# arXiv 提交包（本地使用）
+# ===================
+docs/paper/arxiv_submission/
+docs/paper/*.zip

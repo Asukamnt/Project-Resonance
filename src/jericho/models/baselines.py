@@ -215,6 +215,230 @@ class LSTMBaseline(nn.Module):
         return frame_outputs, symbol_logits
 
 
+class S4Block(nn.Module):
+    """Simplified S4-like block using diagonal state space.
+    
+    This is a simplified implementation that captures the essence of S4
+    (structured state space) without the full HiPPO machinery.
+    
+    Based on: https://arxiv.org/abs/2111.00396
+    """
+    
+    def __init__(self, d_model: int, state_size: int = 64, dropout: float = 0.1):
+        super().__init__()
+        self.d_model = d_model
+        self.state_size = state_size
+        
+        # Diagonal state space parameters (learnable)
+        # A: state transition (diagonal, initialized as negative for stability)
+        self.log_A = nn.Parameter(torch.randn(d_model, state_size) * 0.01 - 4.0)
+        # B: input projection
+        self.B = nn.Parameter(torch.randn(d_model, state_size) * 0.01)
+        # C: output projection
+        self.C = nn.Parameter(torch.randn(d_model, state_size) * 0.01)
+        # D: skip connection
+        self.D = nn.Parameter(torch.ones(d_model))
+        
+        # Discretization step
+        self.log_dt = nn.Parameter(torch.randn(d_model) * 0.01 - 4.0)
+        
+        self.norm = nn.LayerNorm(d_model)
+        self.dropout = nn.Dropout(dropout)
+        self.out_proj = nn.Linear(d_model, d_model)
+    
+    def forward(self, x: torch.Tensor, mask: Optional[torch.Tensor] = None) -> torch.Tensor:
+        """
+        x: (B, T, d_model)
+        Returns: (B, T, d_model)
+        """
+        B, T, D = x.shape
+        residual = x
+        x = self.norm(x)
+        
+        # Discretize continuous parameters
+        dt = torch.exp(self.log_dt)  # (d_model,)
+        A = -torch.exp(self.log_A)   # (d_model, state_size) - negative for stability
+        
+        # Discretized A and B (ZOH discretization)
+        dA = torch.exp(A * dt.unsqueeze(-1))  # (d_model, state_size)
+        dB = self.B * dt.unsqueeze(-1)        # (d_model, state_size)
+        
+        # Recurrent computation (could be parallelized with convolution)
+        # For simplicity, use sequential scan
+        h = torch.zeros(B, D, self.state_size, device=x.device, dtype=x.dtype)
+        outputs = []
+        
+        for t in range(T):
+            u = x[:, t, :]  # (B, d_model)
+            # State update: h = A * h + B * u
+            h = dA.unsqueeze(0) * h + dB.unsqueeze(0) * u.unsqueeze(-1)
+            # Output: y = C * h + D * u
+            y = (self.C.unsqueeze(0) * h).sum(-1) + self.D * u
+            outputs.append(y)
+        
+        y = torch.stack(outputs, dim=1)  # (B, T, d_model)
+        y = self.out_proj(y)
+        y = self.dropout(y)
+        
+        return residual + y
+
+
+class S4Baseline(nn.Module):
+    """S4 (Structured State Space) baseline.
+    
+    Uses simplified diagonal S4 blocks for fair comparison.
+    """
+    
+    def __init__(self, config: BaselineConfig):
+        super().__init__()
+        self.config = config
+        
+        self.frame_embed = nn.Linear(config.frame_size, config.d_model)
+        self.dropout = nn.Dropout(config.dropout)
+        
+        # Stack of S4 blocks
+        self.layers = nn.ModuleList([
+            S4Block(config.d_model, state_size=64, dropout=config.dropout)
+            for _ in range(config.num_layers)
+        ])
+        
+        self.final_norm = nn.LayerNorm(config.d_model)
+        self.symbol_head = nn.Linear(config.d_model, config.symbol_vocab_size)
+        self.recon_head = nn.Linear(config.d_model, config.frame_size)
+    
+    def forward(
+        self,
+        frames: torch.Tensor,
+        mask: Optional[torch.Tensor] = None,
+        return_hidden: bool = False,
+    ) -> Union[Tuple[torch.Tensor, torch.Tensor], Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
+        x = self.frame_embed(frames)
+        x = self.dropout(x)
+        
+        for layer in self.layers:
+            x = layer(x, mask)
+        
+        hidden = self.final_norm(x)
+        symbol_logits = self.symbol_head(hidden)
+        frame_outputs = self.recon_head(hidden)
+        
+        if return_hidden:
+            return frame_outputs, symbol_logits, hidden
+        return frame_outputs, symbol_logits
+
+
+class HyenaBlock(nn.Module):
+    """Simplified Hyena-like block using long convolutions.
+    
+    Hyena replaces attention with a combination of:
+    1. Data-controlled gating
+    2. Implicit long convolutions
+    
+    Based on: https://arxiv.org/abs/2302.10866
+    """
+    
+    def __init__(self, d_model: int, kernel_size: int = 128, order: int = 2, dropout: float = 0.1):
+        super().__init__()
+        self.d_model = d_model
+        self.order = order  # Number of Hyena "projections"
+        
+        # Input projections (v, x1, x2, ...)
+        self.in_proj = nn.Linear(d_model, d_model * (order + 1))
+        
+        # Long convolution kernels (learnable)
+        self.kernels = nn.ParameterList([
+            nn.Parameter(torch.randn(1, d_model, kernel_size) * 0.02)
+            for _ in range(order)
+        ])
+        
+        self.norm = nn.LayerNorm(d_model)
+        self.dropout = nn.Dropout(dropout)
+        self.out_proj = nn.Linear(d_model, d_model)
+    
+    def forward(self, x: torch.Tensor, mask: Optional[torch.Tensor] = None) -> torch.Tensor:
+        """
+        x: (B, T, d_model)
+        Returns: (B, T, d_model)
+        """
+        residual = x
+        x = self.norm(x)
+        
+        B, T, D = x.shape
+        
+        # Project to v, x1, x2, ...
+        projections = self.in_proj(x)  # (B, T, d_model * (order + 1))
+        projections = projections.view(B, T, self.order + 1, D)
+        
+        v = projections[:, :, 0, :]  # (B, T, d_model)
+        xs = [projections[:, :, i + 1, :] for i in range(self.order)]
+        
+        # Apply long convolutions with gating
+        y = v
+        for i, (xi, kernel) in enumerate(zip(xs, self.kernels)):
+            # FFT-based long convolution
+            # Pad kernel to match sequence length
+            kernel_padded = F.pad(kernel, (0, max(0, T - kernel.size(-1))))[:, :, :T]
+            
+            # Convolution via FFT (for efficiency)
+            y_fft = torch.fft.rfft(y.transpose(1, 2), n=T * 2)
+            k_fft = torch.fft.rfft(kernel_padded, n=T * 2)
+            conv = torch.fft.irfft(y_fft * k_fft, n=T * 2)[:, :, :T]
+            y = conv.transpose(1, 2)
+            
+            # Gating
+            y = y * xi
+        
+        y = self.out_proj(y)
+        y = self.dropout(y)
+        
+        return residual + y
+
+
+class HyenaBaseline(nn.Module):
+    """Hyena baseline using implicit long convolutions.
+    
+    Hyena is a recent attention-free architecture that achieves
+    competitive performance with subquadratic complexity.
+    """
+    
+    def __init__(self, config: BaselineConfig):
+        super().__init__()
+        self.config = config
+        
+        self.frame_embed = nn.Linear(config.frame_size, config.d_model)
+        self.dropout = nn.Dropout(config.dropout)
+        
+        # Stack of Hyena blocks
+        self.layers = nn.ModuleList([
+            HyenaBlock(config.d_model, kernel_size=128, order=2, dropout=config.dropout)
+            for _ in range(config.num_layers)
+        ])
+        
+        self.final_norm = nn.LayerNorm(config.d_model)
+        self.symbol_head = nn.Linear(config.d_model, config.symbol_vocab_size)
+        self.recon_head = nn.Linear(config.d_model, config.frame_size)
+    
+    def forward(
+        self,
+        frames: torch.Tensor,
+        mask: Optional[torch.Tensor] = None,
+        return_hidden: bool = False,
+    ) -> Union[Tuple[torch.Tensor, torch.Tensor], Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
+        x = self.frame_embed(frames)
+        x = self.dropout(x)
+        
+        for layer in self.layers:
+            x = layer(x, mask)
+        
+        hidden = self.final_norm(x)
+        symbol_logits = self.symbol_head(hidden)
+        frame_outputs = self.recon_head(hidden)
+        
+        if return_hidden:
+            return frame_outputs, symbol_logits, hidden
+        return frame_outputs, symbol_logits
+
+
 def count_parameters(model: nn.Module) -> int:
     """Count trainable parameters."""
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -224,10 +448,14 @@ def create_comparable_configs(frame_size: int = 160, symbol_vocab_size: int = 12
     """Create configs with similar parameter counts for fair comparison.
     
     Returns dict of model name -> (model_class, config)
+    
+    Target: ~1M parameters each for fair comparison with Mini-JMamba.
     """
     # Mini-JMamba: d_model=128, 10 SSM + 2 Attn layers ≈ 1M params
     # Transformer: 6 layers with d_model=128 ≈ 1M params
     # LSTM: 4 layers bidirectional with d_model=128 ≈ 1M params
+    # S4: 8 layers with d_model=128, state_size=64 ≈ 1M params
+    # Hyena: 6 layers with d_model=128, kernel_size=128 ≈ 1M params
     
     base_config = BaselineConfig(
         frame_size=frame_size,
@@ -247,8 +475,31 @@ def create_comparable_configs(frame_size: int = 160, symbol_vocab_size: int = 12
         **{**base_config.__dict__, "num_layers": 4}
     )
     
+    s4_config = BaselineConfig(
+        **{**base_config.__dict__, "num_layers": 8}
+    )
+    
+    hyena_config = BaselineConfig(
+        **{**base_config.__dict__, "num_layers": 6}
+    )
+    
     return {
         "transformer": (TransformerBaseline, transformer_config),
         "lstm": (LSTMBaseline, lstm_config),
+        "s4": (S4Baseline, s4_config),
+        "hyena": (HyenaBaseline, hyena_config),
     }
+
+
+__all__ = [
+    "BaselineConfig",
+    "TransformerBaseline",
+    "LSTMBaseline",
+    "S4Baseline",
+    "HyenaBaseline",
+    "S4Block",
+    "HyenaBlock",
+    "count_parameters",
+    "create_comparable_configs",
+]
 
